@@ -1,5 +1,5 @@
-import { Button } from '@mui/material';
 import React from 'react';
+import Header from './Header';
 
 import { ContentContainer } from './styled';
 
@@ -7,7 +7,7 @@ const MainPage = (): React.ReactElement => {
   return (
     <>
         <ContentContainer>
-            <Button >dsdsdsd </Button>
+          <Header />
         </ContentContainer>
     </>
   );
