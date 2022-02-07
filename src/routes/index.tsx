@@ -11,11 +11,13 @@ import { Container } from './styled';
 const IndexRoute = (): React.ReactElement => {
   const [theme, setTheme] = React.useState(DarkTheme);
   const onClick = (event: any ) => {
+    console.log(event.target.childNodes)
     if(
       event.target.localName === 'a' ||
       event.target.localName === 'button' ||
       event.target.localName === 'input' ||
-      event.target.localName === 'textarea'
+      event.target.localName === 'textarea' ||
+      event.target.lacelName === 'button'
       ){
       return false
     }

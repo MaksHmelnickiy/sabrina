@@ -6,6 +6,8 @@ export interface IButtonBaseProps extends React.ComponentProps<'button'> {
   startIcon?: React.ReactElement;
   sizeIcon?: number;
   arrowPosition?: 'top' | 'left' | 'right' | 'bottom';
+  arrowLong?: boolean;
+  arrowShort?: boolean;
 }
 
 export const DefaultBtnStyles = styled.button<IButtonBaseProps>`
@@ -17,6 +19,9 @@ export const DefaultBtnStyles = styled.button<IButtonBaseProps>`
   outline: none;
   cursor: pointer;
   width: 100%;
+  & * {
+    pointer-events: none;
+  }
 `;
 
 export const ArrowLongIcon = styled.div`
