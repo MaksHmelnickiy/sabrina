@@ -1,15 +1,14 @@
 import React from 'react';
-import Header from './Header';
-
 import { ContentContainer } from './styled';
+import ChangeYour from './ChangeYour';
+import About from './About';
 
 const MainPage = (): React.ReactElement => {
   return (
-    <>
-        <ContentContainer>
-          <Header />
-        </ContentContainer>
-    </>
+    <ContentContainer>
+      <ChangeYour />
+      <About />
+    </ContentContainer>
   );
 };
 

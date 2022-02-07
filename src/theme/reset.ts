@@ -26,6 +26,9 @@ const GlobalReset = createGlobalStyle`
     font-family: "Biotif", sans-serif;
     font-weight: 400;
   }
+  button{
+    cursort: pointer;
+  }
 
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure,

@@ -6,7 +6,7 @@ const Logo = (): React.ReactElement => {
 
   return (
     <Container to="/">
-        <ICONS_MAP.LogoIcon />
+        <ICONS_MAP.CircleIcon />
         <Text>CYM</Text>
     </Container>
   );
