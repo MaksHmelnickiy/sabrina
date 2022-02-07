@@ -30,6 +30,7 @@ const Button = ({
   onClick,
   arrowLong,
   arrowShort,
+  arrowPosition,
 }: IButtonProps) => {
 
   const getBtnComponent = React.useCallback(() => {
@@ -62,6 +63,9 @@ const Button = ({
         className={className}
         onClick={onClick}
         sizeIcon={sizeIcon}
+        arrowLong={arrowLong}
+        arrowShort={arrowShort}
+        arrowPosition={arrowPosition}
       >
         {arrowLong && 
           <ArrowLongIcon>

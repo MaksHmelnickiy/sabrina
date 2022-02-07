@@ -2,11 +2,13 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-  padding-top: 32px;
+  padding-top: 30px;
   position: fixed;
   left:0;
   right: 0;
-
+  z-index: 5;
+  padding-bottom: 30px;
+  background: ${props => props.theme.headerBg};
 `
 export const MenuList = styled.ul`
   display: flex;

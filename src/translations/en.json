@@ -9,6 +9,23 @@
     "monday": "Monday",
     "we_are_boutique": "We are a boutique headhunter specialized in IT",
     "change_your_life": "Change your life",
-    "we_are_a_headhunting": "We are a headhunting company, specialized in IT and also Jobs in the field of Marketing and Sales"
+    "we_are_a_headhunting": "We are a headhunting company, specialized in IT and also Jobs in the field of Marketing and Sales",
+    "we_does_now": "Who doesn't know it or hasn't experienced it at least once in their professional career? And to those who don't know it - lucky you! It's Sunday afternoon and the weekly carousel of thoughts about the approaching Monday begins. Not in the mood for Mondays? Then it's time to change something.",
+    "we_have_made": "We have made it our mission to find a job for you that will change your Monday. That will make it an enjoyable day of the week. And even if it still doesn't become your favourite day, it can be better, right?",
+    "what_do_we_do_differently": "What do we do differently?",
+    "in_order_to_really": "In order to really be absorbed in a job and a role, the task is of course important first and foremost. However, everything else around it is at least as important and that is different for everyone. Because we are all different and value different things",
+    "thats_why_we_dont": "That's why we don't just ask our clients about their tech stack, but also",
+    "in_this_way": "In this way, our candidates learn much more about the position to be filled and do not experience any unpleasant surprises on site. Neither our candidates nor our clients waste valuable time in interviews in which it turns out that a very important point for one party is not given at all. If this had been clear in advance, the interview would not have taken place in the first place. Every person ticks differently. And in the same way, different points are important for each person",
+    "it_is_our_job": "It is our job to recognise this. Our job is to look as deeply as possible into the company and also the role in advance in order to present it as transparently as possible to the candidates. In return, of course, we also want to learn something about candidates before we make contact with our clients. Our clients know us and trust our years of experience with IT experts.",
+    "of_course_even": "Of course, even we cannot guarantee 100% that it will always be a perfect fit in the end. But we can do a lot to ensure that both sides only find out about each other if we ourselves believe that it is a good fit",
+    "list": {
+      "1": "What is the team like?",
+      "2": "Do the people make a happy impression?",
+      "3": "Do they talk to each other a lot?",
+      "4": "What is the mindset of the owners?",
+      "5": "How new is the equipment?",
+      "6": "How are the working hours regulated?",
+      "7": "Is there flexibility, home office and trust?"
+    }
   }
 }

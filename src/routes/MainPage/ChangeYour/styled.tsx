@@ -4,7 +4,7 @@ import Button from '../../../components/Button';
 import Title  from '../../../components/Title';
 
 export const Container = styled.div`
-  max-width: 1550px;
+  max-width: 1520px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
