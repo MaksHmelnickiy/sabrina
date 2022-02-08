@@ -21,7 +21,14 @@ export const DarkTheme = {
     titleH4: '#fff',
     text: '#696E76',
     list: '#D89477',
-    marker: '#696E76'
+    marker: '#696E76',
+    expBg: '#111111',
+    expIcon: '#D89477',
+    expArrowIcon: '#2A2A2A',
+    buttonSecondary: '#2A2A2A',
+    buttonSecondaryHover: '#D89477',
+    buttonSecondaryText: '#fff',
+    buttonSecondaryTextHover: '#D89477',
 };
 
 export const LightTheme = {
@@ -46,7 +53,14 @@ export const LightTheme = {
     titleH4: '#24324F',
     text: '#868A91',
     list: '#24324F',
-    marker: '#DDA99D'
+    marker: '#DDA99D',
+    expBg: '#F4E2D8',
+    expIcon: '#24324F',
+    expArrowIcon: '#DDA99D',
+    buttonSecondary: '#DDA99D',
+    buttonSecondaryHover: '#24324F',
+    buttonSecondaryText: '#24324F',
+    buttonSecondaryTextHover: '#24324F',
 }
 
 export const GreenTheme = {
@@ -72,4 +86,11 @@ export const GreenTheme = {
     text: '#868A91',
     list: '#111A1B',
     marker: '#D89477',
+    expBg: '#DCE3E0',
+    expIcon: '#D89477',
+    expArrowIcon: '#FFFFFF',
+    buttonSecondary: '#D89477',
+    buttonSecondaryHover: '#24324F',
+    buttonSecondaryText: '#24324F',
+    buttonSecondaryTextHover: '#24324F',
 }

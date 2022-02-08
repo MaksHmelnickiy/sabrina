@@ -78,7 +78,8 @@ const Button = ({
           </ArrowShortIcon>
         }
         <Text>
-          <ICONS_MAP.CircleIcon />
+          {variant === 'primary' || !variant ? <ICONS_MAP.CircleIcon /> : ''}
+          {variant === 'secondary' ? <ICONS_MAP.Drawing /> : ''}
           {children && <i>{children}</i>}
         </Text>
     </BtnComponent>

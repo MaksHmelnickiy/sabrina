@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Button from '../../../components/Button';
 import Title from '../../../components/Title';
-import snowFlake from '../../../assets/img/snowflake.svg'
 
 export const Container = styled.div`
   max-width: 1520px;
