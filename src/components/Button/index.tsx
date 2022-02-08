@@ -14,10 +14,10 @@ interface IButtonProps extends React.ComponentProps<'button'> {
   loading?: boolean;
   variant?: TButtonTypes;
   className?: string;
-  sizeIcon?: number;
   arrowLong?: boolean;
   arrowShort?: boolean;
   arrowPosition?: 'top' | 'left' | 'right' | 'bottom';
+  colorIcon?: any;
 }
 
 const Button = ({
@@ -26,11 +26,11 @@ const Button = ({
   className,
   type = 'button',
   disabled,
-  sizeIcon,
   onClick,
   arrowLong,
   arrowShort,
   arrowPosition,
+  colorIcon
 }: IButtonProps) => {
 
   const getBtnComponent = React.useCallback(() => {
@@ -62,10 +62,10 @@ const Button = ({
         disabled={disabled}
         className={className}
         onClick={onClick}
-        sizeIcon={sizeIcon}
         arrowLong={arrowLong}
         arrowShort={arrowShort}
         arrowPosition={arrowPosition}
+        colorIcon={colorIcon}
       >
         {arrowLong && 
           <ArrowLongIcon>

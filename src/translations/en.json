@@ -35,6 +35,17 @@
       "2": "We are experts to fill IT/Tech roles",
       "3": "We understand that not only skills are important to decide for a new employee. But also the personality is key. So we take our time to find out what is important to the client if he hires new team members and do deep briefings with the candidates.",
       "4": "We provide fast results"
+    },
+    "contact": {
+      "title": "You or your team have a tricky position to fill?",
+      "text": "Finding the right talent in the market has become an almost insurmountable task, especially in the field of tech and digitalisation.",
+      "button": "Contact Us",
+      "description": "We are specialists in exactly this area, with over a decade of experience",
+      "offer": "Contact us and we will make you an individual offer"
+    },
+    "net": {
+      "title": "Network",
+      "text": "In this section I want to show some of my partners I work with and recommend"
     }
 
   }

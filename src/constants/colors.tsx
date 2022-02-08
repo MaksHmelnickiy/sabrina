@@ -29,6 +29,7 @@ export const DarkTheme = {
     buttonSecondaryHover: '#D89477',
     buttonSecondaryText: '#fff',
     buttonSecondaryTextHover: '#D89477',
+    arrowDark: '#111A1B'
 };
 
 export const LightTheme = {
@@ -61,6 +62,7 @@ export const LightTheme = {
     buttonSecondaryHover: '#24324F',
     buttonSecondaryText: '#24324F',
     buttonSecondaryTextHover: '#24324F',
+    arrowDark: '#111A1B'
 }
 
 export const GreenTheme = {
@@ -93,4 +95,5 @@ export const GreenTheme = {
     buttonSecondaryHover: '#24324F',
     buttonSecondaryText: '#24324F',
     buttonSecondaryTextHover: '#24324F',
+    arrowDark: '#111A1B'
 }

@@ -22,7 +22,7 @@ export const PrimaryBtn = styled(DefaultBtnStyles)<IButtonBaseProps>`
     color: ${props => props.theme.buttonPrimaryText};
   }
   & > div {
-    color: ${props => props.theme.buttonPrimaryArrow};
+    color: ${props => props.colorIcon ? props.colorIcon : props.theme.buttonPrimaryArrow};
     transform: rotate(0deg);
     position: absolute;
     transition: 0.2s;
@@ -59,7 +59,24 @@ export const PrimaryBtn = styled(DefaultBtnStyles)<IButtonBaseProps>`
       switch (props.arrowPosition) {
         case 'top':
           return `
-
+            & > div {
+              left: -36%;
+              top: -31%;
+              transform: rotate(186deg);
+            };
+            & > span {
+              transform: rotate(19.2deg);
+            }
+            &:hover {
+              & > span {
+                transform: rotate(-19.2deg);
+              }
+              & > div {
+                top: 0%;
+                transform: rotate(160deg);
+                left: -50%;
+              }
+            }
           `;
         case 'left':
           return `
