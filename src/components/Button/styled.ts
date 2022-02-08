@@ -4,10 +4,10 @@ import styled from 'styled-components';
 export interface IButtonBaseProps extends React.ComponentProps<'button'> {
   endIcon?: React.ReactElement;
   startIcon?: React.ReactElement;
-  sizeIcon?: number;
   arrowPosition?: 'top' | 'left' | 'right' | 'bottom';
   arrowLong?: boolean;
   arrowShort?: boolean;
+  colorIcon?: any;
 }
 
 export const DefaultBtnStyles = styled.button<IButtonBaseProps>`
