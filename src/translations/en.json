@@ -26,6 +26,16 @@
       "5": "How new is the equipment?",
       "6": "How are the working hours regulated?",
       "7": "Is there flexibility, home office and trust?"
+    },
+
+    "exp": {
+      "title": "What are you waiting for?",
+      "text": "How often do you ask yourself what is keeping you in your current job? Too often we expect something to change, but every day we do the same thing as before. But one thing is clear: nothing will change if you don't take the first step.",
+      "1": "We are experts with an experience of 15 years in the headhunting industry",
+      "2": "We are experts to fill IT/Tech roles",
+      "3": "We understand that not only skills are important to decide for a new employee. But also the personality is key. So we take our time to find out what is important to the client if he hires new team members and do deep briefings with the candidates.",
+      "4": "We provide fast results"
     }
+
   }
 }
