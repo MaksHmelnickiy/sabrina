@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 export const Container = styled.div`
   padding-top: 30px;
   position: fixed;
   left:0;
   right: 0;
+
   z-index: 5;
   padding-bottom: 30px;
   background: ${props => props.theme.headerBg};
@@ -22,6 +23,7 @@ export const StyledLink = styled(Link)`
   color: ${props => props.theme.headerLink};
   transition: 0.2s;
   font-size: 18px;
+  cursor: pointer;
   &:hover {
     color: ${props => props.theme.headerLinkHover};
   }

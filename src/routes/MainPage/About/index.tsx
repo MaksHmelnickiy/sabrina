@@ -19,7 +19,11 @@ import {
   Item
 } from './styled';
 
-const About = (): React.ReactElement => {
+interface Props {
+  id?: string;
+}
+
+const About = ({id}:Props): React.ReactElement => {
   const {t} = useTranslation()
   const dataList = [
     t('about.list.1'),
@@ -32,7 +36,7 @@ const About = (): React.ReactElement => {
   ]
   return (
     <>
-      <TickerWrapper>
+      <TickerWrapper id={id}>
         <Ticker speed={5}>
         {({ index }) => (
           <TickerText key ={index}>{t('about.title')}&nbsp;&nbsp;</TickerText>

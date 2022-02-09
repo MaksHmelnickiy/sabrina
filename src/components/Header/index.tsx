@@ -32,19 +32,19 @@ const Header = (): React.ReactElement => {
         <Logo />
         <MenuList>
           <Item>
-            <StyledLink to='/'>{t('header.home')}</StyledLink>
+            <StyledLink spy={true} smooth={true} to='main'>{t('header.home')}</StyledLink>
           </Item>
           <Item>
-            <StyledLink to='/'>{t('header.why_us')}</StyledLink>
+            <StyledLink spy={true} smooth={true} to='about'>{t('header.why_us')}</StyledLink>
           </Item>
           <Item>
-            <StyledLink to='/'>{t('header.about_us')}</StyledLink>
+            <StyledLink spy={true} smooth={true} offset={-20} to='exp'>{t('header.about_us')}</StyledLink>
           </Item>
           <Item>
-            <StyledLink to='/'>{t('header.network')}</StyledLink>
+            <StyledLink spy={true} smooth={true} to='contact'>{t('header.network')}</StyledLink>
           </Item>
           <Item>
-            <StyledLink to='/'>{t('header.jobs')}</StyledLink>
+            <StyledLink spy={true} smooth={true} to='jobs'>{t('header.jobs')}</StyledLink>
           </Item>
         </MenuList>
         <SwitchLanguage defaultLang={defaultLanguage} languages={data} onChange={(e) => i18n.changeLanguage(e.value)} />
