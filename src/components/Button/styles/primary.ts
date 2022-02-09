@@ -139,7 +139,9 @@ export const PrimaryBtn = styled(DefaultBtnStyles)<IButtonBaseProps>`
             transform: rotate(-19.2deg);
           }
           & > div {
-            top: -27%;
+            top: -50%;
+            transform: rotate(15deg);
+            left: -55%;
           }
         }
       `

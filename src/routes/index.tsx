@@ -1,10 +1,11 @@
 import React, { Suspense } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { ThemeProvider } from "styled-components";
 import { DarkTheme, GreenTheme, LightTheme } from '../constants/colors';
 import Header from '../components/Header';
 
 import MainPage from './MainPage';
+import NotFoundPage from './NotFoundPage';
 
 import { Container } from './styled';
 import Footer from '../components/Footer';
@@ -39,6 +40,8 @@ const IndexRoute = (): React.ReactElement => {
             <Header />
             <Switch>
               <Route component={MainPage} path="/" exact />
+              <Route path="/404" component={NotFoundPage} />
+              <Redirect to="/404" />
             </Switch>
             <Footer />
           </Suspense>

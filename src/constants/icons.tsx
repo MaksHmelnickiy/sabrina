@@ -27,6 +27,7 @@ import { ReactComponent as InstagramIcon } from '../assets/img/inst.svg';
 import { ReactComponent as TelegramIcon } from '../assets/img/telega.svg';
 import { ReactComponent as FacebookIcon } from '../assets/img/facebook.svg';
 import { ReactComponent as UpIcon } from '../assets/img/up.svg';
+import { ReactComponent as NotFoundIcon } from '../assets/img/404.svg';
 
 export const ICONS_MAP = {
     CircleIcon: CircleLogo,
@@ -57,5 +58,6 @@ export const ICONS_MAP = {
     Telegram: TelegramIcon,
     Facebook: FacebookIcon,
     Instagram: InstagramIcon,
-    Up: UpIcon
+    Up: UpIcon,
+    NotFound: NotFoundIcon
 };
