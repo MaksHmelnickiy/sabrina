@@ -7,7 +7,7 @@ export interface IButtonBaseProps extends React.ComponentProps<'button'> {
   arrowPosition?: 'top' | 'left' | 'right' | 'bottom';
   arrowLong?: boolean;
   arrowShort?: boolean;
-  colorIcon?: any;
+  arrowDark?: boolean;
 }
 
 export const DefaultBtnStyles = styled.button<IButtonBaseProps>`
@@ -33,4 +33,7 @@ export const ArrowShortIcon = styled.div`
 `
 export const Text = styled.span`
 
+`
+export const ArrowDarkIcon = styled.div`
+  z-index: 1;
 `

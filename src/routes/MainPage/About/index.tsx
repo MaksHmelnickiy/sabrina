@@ -33,7 +33,7 @@ const About = (): React.ReactElement => {
   return (
     <>
       <TickerWrapper>
-        <Ticker speed={10}>
+        <Ticker speed={5}>
         {({ index }) => (
           <TickerText key ={index}>{t('about_us')}&nbsp;&nbsp;</TickerText>
         )}

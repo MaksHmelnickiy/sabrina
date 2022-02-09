@@ -14,6 +14,14 @@ import { ReactComponent as ExpArrIcon2 } from '../assets/img/expArr2.svg';
 import { ReactComponent as ExpArrIcon3 } from '../assets/img/expArr3.svg';
 import { ReactComponent as PlainIcon } from '../assets/img/plain.svg';
 import { ReactComponent as DrawingIcon } from '../assets/img/btnSolid.svg';
+import { ReactComponent as BrandCircleIcon1 } from '../assets/img/brandCircle1.svg';
+import { ReactComponent as BrandCircleIcon2 } from '../assets/img/brandCircle2.svg';
+import { ReactComponent as BrandCircleIcon3 } from '../assets/img/brandCircle3.svg';
+import { ReactComponent as BrandCircleIcon4 } from '../assets/img/brandCircle4.svg';
+import { ReactComponent as BrandCircleIcon5 } from '../assets/img/brandCircle5.svg';
+import { ReactComponent as BrandIcon1 } from '../assets/img/brand1.svg';
+import { ReactComponent as BrandIcon2 } from '../assets/img/brand2.svg';
+import { ReactComponent as BrandIcon3 } from '../assets/img/brand3.svg';
 
 export const ICONS_MAP = {
     CircleIcon: CircleLogo,
@@ -31,5 +39,13 @@ export const ICONS_MAP = {
     ExpArr2: ExpArrIcon2,
     ExpArr3: ExpArrIcon3,
     Plain: PlainIcon,
-    Drawing: DrawingIcon
+    Drawing: DrawingIcon,
+    BrandCircle1: BrandCircleIcon1,
+    BrandCircle2: BrandCircleIcon2,
+    BrandCircle3: BrandCircleIcon3,
+    BrandCircle4: BrandCircleIcon4,
+    BrandCircle5: BrandCircleIcon5,
+    Brand1: BrandIcon1,
+    Brand2: BrandIcon2,
+    Brand3: BrandIcon3
 };

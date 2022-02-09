@@ -29,7 +29,11 @@ export const DarkTheme = {
     buttonSecondaryHover: '#D89477',
     buttonSecondaryText: '#fff',
     buttonSecondaryTextHover: '#D89477',
-    arrowDark: '#111A1B'
+    buttonTertiaryArrow: '#111A1B',
+    buttonTertiary: '#D89477',
+    buttonTertiaryText: '#121C1C',
+    brandCircle: '#2A2A2A',
+    brand: '#D89477',
 };
 
 export const LightTheme = {
@@ -62,7 +66,11 @@ export const LightTheme = {
     buttonSecondaryHover: '#24324F',
     buttonSecondaryText: '#24324F',
     buttonSecondaryTextHover: '#24324F',
-    arrowDark: '#111A1B'
+    buttonTertiaryArrow: '#111A1B',
+    buttonTertiary: '#DDA99D',
+    buttonTertiaryText: '#121C1C',
+    brandCircle: '#DDA99D',
+    brand: '#24324F',
 }
 
 export const GreenTheme = {
@@ -95,5 +103,9 @@ export const GreenTheme = {
     buttonSecondaryHover: '#24324F',
     buttonSecondaryText: '#24324F',
     buttonSecondaryTextHover: '#24324F',
-    arrowDark: '#111A1B'
+    buttonTertiaryArrow: '#111A1B',
+    buttonTertiary: '#D89477',
+    buttonTertiaryText: '#121C1C',
+    brandCircle: '#ADBBB5',
+    brand: '#111A1B',
 }

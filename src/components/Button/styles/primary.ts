@@ -22,7 +22,7 @@ export const PrimaryBtn = styled(DefaultBtnStyles)<IButtonBaseProps>`
     color: ${props => props.theme.buttonPrimaryText};
   }
   & > div {
-    color: ${props => props.colorIcon ? props.colorIcon : props.theme.buttonPrimaryArrow};
+    color: ${props => props.theme.buttonPrimaryArrow};
     transform: rotate(0deg);
     position: absolute;
     transition: 0.2s;
