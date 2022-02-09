@@ -9,13 +9,13 @@ import Jobs from './Jobs';
 
 const MainPage = (): React.ReactElement => {
   return (
-    <ContentContainer>
+    <ContentContainer id="main">
       <ChangeYour />
-      <About />
-      <Experience />
-      <ContactUs />
-      <Network />
-      <Jobs />
+      <About id="about"/>
+      <Experience id="exp" />
+      <ContactUs id="contact" />
+      <Network id="network" />
+      <Jobs id="jobs" />
     </ContentContainer>
   );
 };

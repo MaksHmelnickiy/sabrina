@@ -13,12 +13,16 @@ import {
   Image
 } from './styled';
 
-const ContactUs = (): React.ReactElement => {
+interface Props {
+  id?: string;
+}
+
+const ContactUs = ({id}:Props): React.ReactElement => {
   const {t} = useTranslation()
 
   return (
     <>
-      <Container>
+      <Container id={id}>
         <CustomTitle variant='h2'>{t('contact.title')}</CustomTitle>
         <Text>{t('contact.text')}</Text>
         <Box>

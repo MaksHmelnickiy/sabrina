@@ -30,22 +30,22 @@ const Footer = (): React.ReactElement => {
         <CustomLogo />
         <MenuList>
           <Item>
-            <StyledLink to='/'>{t('footer.menu.1')}</StyledLink>
+            <StyledLink spy={true} smooth={true} to='main'>{t('footer.menu.1')}</StyledLink>
           </Item>
           <Item>
-            <StyledLink to='/'>{t('footer.menu.2')}</StyledLink>
+            <StyledLink spy={true} smooth={true} to='about'>{t('footer.menu.2')}</StyledLink>
           </Item>
           <Item>
-            <StyledLink to='/'>{t('footer.menu.3')}</StyledLink>
+            <StyledLink spy={true} smooth={true} offset={-20} to='network'>{t('footer.menu.3')}</StyledLink>
           </Item>
           <Item>
-            <StyledLink to='/'>{t('footer.menu.4')}</StyledLink>
+            <StyledLink spy={true} smooth={true} to='contact'>{t('footer.menu.4')}</StyledLink>
           </Item>
           <Item>
-            <StyledLink to='/'>{t('footer.menu.5')}</StyledLink>
+            <StyledLink spy={true} smooth={true} to='exp'>{t('footer.menu.5')}</StyledLink>
           </Item>
           <Item>
-            <StyledLink to='/'>{t('footer.menu.6')}</StyledLink>
+            <StyledLink spy={true} smooth={true} to='jobs'>{t('footer.menu.6')}</StyledLink>
           </Item>
         </MenuList>
         <Social>
@@ -58,7 +58,7 @@ const Footer = (): React.ReactElement => {
         </Social>
         <Box>
           <LinkEmail to='/'>{t('footer.button')}</LinkEmail>
-          <CustomButton variant='icon'><ICONS_MAP.Up /></CustomButton>
+          <CustomButton spy={true} smooth={true} to='main'><ICONS_MAP.Up /></CustomButton>
         </Box>
       </FooterTop> 
       <FooterBottom>

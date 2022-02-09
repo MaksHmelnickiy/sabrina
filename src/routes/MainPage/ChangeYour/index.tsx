@@ -16,10 +16,14 @@ import {
   StyledButton
 } from './styled';
 
-const ChangeYour = (): React.ReactElement => {
+interface Props {
+  id?: string;
+}
+
+const ChangeYour = ({id}:Props): React.ReactElement => {
   const {t} = useTranslation()
   return (
-    <Container>
+    <Container id={id}>
       <SvgIcon>
         <ICONS_MAP.Planet />
       </SvgIcon>

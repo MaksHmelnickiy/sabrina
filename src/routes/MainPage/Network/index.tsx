@@ -11,12 +11,16 @@ import {
   BrandContainer,
 } from './styled';
 
-const Network = (): React.ReactElement => {
+interface Props {
+  id?: string;
+}
+
+const Network = ({id}:Props): React.ReactElement => {
   const {t} = useTranslation()
 
   return (
     <>
-      <Container>
+      <Container id={id}>
         <CustomTitle variant='h2'>{t('net.title')}</CustomTitle>
         <Text>{t('net.text')}</Text>
       </Container>

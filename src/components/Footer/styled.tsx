@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Logo from '../Logo';
+import { Link as Anchor } from 'react-scroll';
 import { Link } from 'react-router-dom';
 import Button from '../Button';
 
@@ -19,13 +20,14 @@ export const Item = styled.li`
   width: 33.3333%;
   margin-bottom: 23px;
 `
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(Anchor)`
   color: ${props => props.theme.footerLink};
   display: block;
   transition: 0.2s;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
+  cursor: pointer;
   &:hover {
     color: ${props => props.theme.headerLinkHover};
   }
@@ -83,6 +85,7 @@ export const SocialLink = styled(Link)`
   color: ${props => props.theme.footerLink};
   transition: 0.2s;
   margin-right: 34px;
+  cursor: pointer;
   &:nth-last-of-type(1){
     margin-right: 0;
   }
@@ -92,6 +95,7 @@ export const SocialLink = styled(Link)`
 `
 export const LinkEmail = styled(Link)`
   height: 80px;
+  cursor: pointer;
   white-space: nowrap;
   padding: 0 26px;
   color: ${props => props.theme.footerLink};
@@ -113,14 +117,29 @@ export const LinkEmail = styled(Link)`
     color: ${props => props.theme.headerLinkHover};
   }
 `
-export const CustomButton = styled(Button)`
+export const CustomButton = styled(Anchor)`
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid ${props => props.theme.footerLink};
+  background: none;
+  color: ${props => props.theme.footerLink};
+  transition: 0.2s;
   margin-left: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    color: ${props => props.theme.headerLinkHover};
+    border-color: ${props => props.theme.headerLinkHover};
+  }
 `
 export const Box = styled.div`
   display: flex;
 `
 export const FooterLink = styled(Link)`
   display: flex;
+  cursor: pointer;
   color: ${props => props.theme.footerLink};
   transition: 0.2s;
   font-weight:400;

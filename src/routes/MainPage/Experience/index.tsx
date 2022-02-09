@@ -10,7 +10,11 @@ import {
   CustomTitle
 } from './styled';
 
-const Experience = (): React.ReactElement => {
+interface Props {
+  id?: string;
+}
+
+const Experience = ({id}:Props): React.ReactElement => {
   const {t} = useTranslation()
   const experienceData = [
     {
@@ -31,7 +35,7 @@ const Experience = (): React.ReactElement => {
     },
   ]
   return (
-    <Container>
+    <Container id={id}>
       <IconWrapper><ICONS_MAP.Plain /></IconWrapper>
       <CustomTitle variant='h2'>{t('exp.title')}</CustomTitle>
       <Text>{t('exp.text')}</Text>
