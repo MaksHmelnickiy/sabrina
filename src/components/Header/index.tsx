@@ -35,10 +35,10 @@ const Header = (): React.ReactElement => {
             <StyledLink spy={true} smooth={true} to='main'>{t('header.home')}</StyledLink>
           </Item>
           <Item>
-            <StyledLink spy={true} smooth={true} to='about'>{t('header.why_us')}</StyledLink>
+            <StyledLink spy={true} smooth={true} to='exp'>{t('header.why_us')}</StyledLink>
           </Item>
           <Item>
-            <StyledLink spy={true} smooth={true} offset={-20} to='exp'>{t('header.about_us')}</StyledLink>
+            <StyledLink spy={true} smooth={true} offset={-20} to='about'>{t('header.about_us')}</StyledLink>
           </Item>
           <Item>
             <StyledLink spy={true} smooth={true} to='contact'>{t('header.network')}</StyledLink>
