@@ -7,10 +7,10 @@ import {
   Text,
   StyledButton,
   CustomTitle,
-  Box,
+  TitleBox,
   Description,
-  BoxText,
-  Image
+  Image,
+  DescriptionBox
 } from './styled';
 
 const Jobs = (): React.ReactElement => {
@@ -19,9 +19,16 @@ const Jobs = (): React.ReactElement => {
   return (
     <>
       <Container>
-        <CustomTitle variant='h2'>JOBS</CustomTitle>
-        <Text>Dont see a job that suits you? Send us your CV and we will contact you to discuss your interests.</Text>
-
+        <TitleBox>
+          <CustomTitle variant='h2'>{t('jobs.title')}</CustomTitle>
+          <Text>{t('jobs.text')}</Text>
+          <StyledButton variant='secondary' arrowShort>{t('jobs.button')}</StyledButton>
+        </TitleBox>
+        <Image />
+        <DescriptionBox>
+          <ICONS_MAP.Pack />
+          <Description>{t('jobs.description')}</Description>
+        </DescriptionBox>
       </Container>
       {/* <Image>
         <StyledButton variant='tertiary' arrowDark>{t('contact.button')}</StyledButton>

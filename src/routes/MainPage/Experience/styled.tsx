@@ -15,6 +15,9 @@ export const StyledButton = styled(Button)`
   position: absolute; 
   left: 181px;
   bottom: 49px;
+  & > div {
+    color: ${props => props.theme.buttonPrimaryArrow};
+  }
 `
 export const Text = styled.div`
   font-weight: normal;
