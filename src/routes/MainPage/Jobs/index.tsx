@@ -13,25 +13,21 @@ import {
   Image
 } from './styled';
 
-const ContactUs = (): React.ReactElement => {
+const Jobs = (): React.ReactElement => {
   const {t} = useTranslation()
 
   return (
     <>
       <Container>
-        <CustomTitle variant='h2'>{t('contact.title')}</CustomTitle>
-        <Text>{t('contact.text')}</Text>
-        <Box>
-          <ICONS_MAP.SnowFlake />
-          <Description>{t('contact.description')}</Description>
-          <BoxText>{t('contact.offer')}</BoxText>
-        </Box>
+        <CustomTitle variant='h2'>JOBS</CustomTitle>
+        <Text>Dont see a job that suits you? Send us your CV and we will contact you to discuss your interests.</Text>
+
       </Container>
-      <Image>
+      {/* <Image>
         <StyledButton variant='tertiary' arrowDark>{t('contact.button')}</StyledButton>
-      </Image>
+      </Image> */}
     </>
   );
 };
 
-export default ContactUs;
+export default Jobs;

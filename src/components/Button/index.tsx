@@ -4,11 +4,11 @@ import { ICONS_MAP } from '../../constants/icons';
 import { PrimaryBtn } from './styles/primary';
 import { Secondary } from './styles/secondary';
 import { DangerBtn } from './styles/danger';
-import { LightBtn } from './styles/light';
+import { TertiaryBtn } from './styles/tertiary';
 import { TransparentBtn } from './styles/transparent';
 import { IconBtn } from './styles/icon';
 import { IconSolid } from './styles/iconSolid';
-import { ArrowLongIcon, ArrowShortIcon, Text } from './styled';
+import { ArrowLongIcon, ArrowShortIcon, Text, ArrowDarkIcon } from './styled';
 
 interface IButtonProps extends React.ComponentProps<'button'> {
   loading?: boolean;
@@ -16,8 +16,8 @@ interface IButtonProps extends React.ComponentProps<'button'> {
   className?: string;
   arrowLong?: boolean;
   arrowShort?: boolean;
+  arrowDark?: boolean;
   arrowPosition?: 'top' | 'left' | 'right' | 'bottom';
-  colorIcon?: any;
 }
 
 const Button = ({
@@ -29,8 +29,8 @@ const Button = ({
   onClick,
   arrowLong,
   arrowShort,
+  arrowDark,
   arrowPosition,
-  colorIcon
 }: IButtonProps) => {
 
   const getBtnComponent = React.useCallback(() => {
@@ -39,8 +39,8 @@ const Button = ({
         return PrimaryBtn;
       case 'danger':
         return DangerBtn;
-      case 'light':
-        return LightBtn;
+      case 'tertiary':
+        return TertiaryBtn;
       case 'transparent':
         return TransparentBtn;
       case 'icon':
@@ -64,8 +64,8 @@ const Button = ({
         onClick={onClick}
         arrowLong={arrowLong}
         arrowShort={arrowShort}
+        arrowDark={arrowDark}
         arrowPosition={arrowPosition}
-        colorIcon={colorIcon}
       >
         {arrowLong && 
           <ArrowLongIcon>
@@ -77,8 +77,15 @@ const Button = ({
             <ICONS_MAP.ArrowShort />
           </ArrowShortIcon>
         }
+        {arrowDark && 
+          <ArrowDarkIcon>
+            <ICONS_MAP.ArrowDark />
+          </ArrowDarkIcon>
+        }
+        
         <Text>
           {variant === 'primary' || !variant ? <ICONS_MAP.CircleIcon /> : ''}
+          {variant === 'tertiary' && <ICONS_MAP.CircleIcon />}
           {variant === 'secondary' ? <ICONS_MAP.Drawing /> : ''}
           {children && <i>{children}</i>}
         </Text>

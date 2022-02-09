@@ -5,6 +5,7 @@ import About from './About';
 import Experience from './Experience';
 import ContactUs from './ContactUs';
 import Network from './Network';
+import Jobs from './Jobs';
 
 const MainPage = (): React.ReactElement => {
   return (
@@ -14,6 +15,7 @@ const MainPage = (): React.ReactElement => {
       <Experience />
       <ContactUs />
       <Network />
+      <Jobs />
     </ContentContainer>
   );
 };

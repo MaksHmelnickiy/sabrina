@@ -13,8 +13,8 @@ export const Container = styled.div`
 `
 export const TickerWrapper = styled.div`
 	overflow: hidden;
-	width: 100%;
   padding-top: 109px;
+  margin: 0 -15px;
 `
 export const TickerText = styled.div`
   font-size: 240px;
