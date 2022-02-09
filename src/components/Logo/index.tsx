@@ -8,7 +8,7 @@ interface ILogo {
 
 const Logo = ({className}:ILogo): React.ReactElement => {
   return (
-    <Container className={className} to="/">
+    <Container className={className} spy={true} smooth={true} to='main'>
         <ICONS_MAP.CircleIcon />
         <Text>CYM</Text>
     </Container>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 interface ILogoProps {
   className?: string 
@@ -8,6 +8,7 @@ interface ILogoProps {
 export const Container = styled(Link)<ILogoProps>`
   color: ${props => props.theme.logoIcon};
   display: flex;
+  cursor: pointer;
   align-items: center;
   & * {
     pointer-events: none;

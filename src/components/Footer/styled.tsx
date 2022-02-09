@@ -129,6 +129,7 @@ export const CustomButton = styled(Anchor)`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   &:hover {
     color: ${props => props.theme.headerLinkHover};
     border-color: ${props => props.theme.headerLinkHover};
