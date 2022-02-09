@@ -1,10 +1,17 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const Container = styled(Link)`
+interface ILogoProps {
+  className?: string 
+}
+
+export const Container = styled(Link)<ILogoProps>`
   color: ${props => props.theme.logoIcon};
   display: flex;
   align-items: center;
+  & * {
+    pointer-events: none;
+  }
 `
 export const Text = styled.div`
   color: ${props => props.theme.logoText};

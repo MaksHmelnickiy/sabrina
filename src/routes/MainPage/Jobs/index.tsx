@@ -30,9 +30,6 @@ const Jobs = (): React.ReactElement => {
           <Description>{t('jobs.description')}</Description>
         </DescriptionBox>
       </Container>
-      {/* <Image>
-        <StyledButton variant='tertiary' arrowDark>{t('contact.button')}</StyledButton>
-      </Image> */}
     </>
   );
 };

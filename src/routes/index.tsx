@@ -7,6 +7,7 @@ import Header from '../components/Header';
 import MainPage from './MainPage';
 
 import { Container } from './styled';
+import Footer from '../components/Footer';
 
 const IndexRoute = (): React.ReactElement => {
   const [theme, setTheme] = React.useState(DarkTheme);
@@ -39,6 +40,7 @@ const IndexRoute = (): React.ReactElement => {
             <Switch>
               <Route component={MainPage} path="/" exact />
             </Switch>
+            <Footer />
           </Suspense>
       </Container>
     </ThemeProvider>
