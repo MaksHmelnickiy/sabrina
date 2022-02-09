@@ -1,16 +1,17 @@
 {
   "common": {
-    "home": "Heim",
-    "why_us": "Warum wir",
-    "about_us": "Über uns",
-    "network": "Netzwerk",
-    "jobs": "Arbeitsplätze",
-    "change_your": "Ändere dein ",
-    "monday": "Montag",
-    "we_are_boutique": "Wir sind ein Boutique Headhunter spezialisiert auf IT",
-    "change_your_life": "Verändere dein Leben",
-    "we_are_a_headhunting": "We are a headhunting company, specialized in IT and also Jobs in the field of Marketing and Sales",
-    "we_does_now": "Who doesn't know it or hasn't experienced it at least once in their professional career? And to those who don't know it - lucky you! It's Sunday afternoon and the weekly carousel of thoughts about the approaching Monday begins. Not in the mood for Mondays? Then it's time to change something.",
-    "we_have_made": "We have made it our mission to find a job for you that will change your Monday. That will make it an enjoyable day of the week. And even if it still doesn't become your favourite day, it can be better, right?"
+    "header": {
+      "home": "Heim",
+      "why_us": "Warum wir",
+      "about_us": "Über uns",
+      "network": "Netzwerk",
+      "jobs": "Arbeitsplätze"
+    },
+    "main": {
+      "change_your": "Ändere dein ",
+      "monday": "Montag",
+      "we_are_boutique": "Wir sind ein Boutique Headhunter spezialisiert auf IT",
+      "change_your_life": "Verändere dein Leben"
+    }
   }
 }

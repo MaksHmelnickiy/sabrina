@@ -22,39 +22,39 @@ import {
 const About = (): React.ReactElement => {
   const {t} = useTranslation()
   const dataList = [
-    t('list.1'),
-    t('list.2'),
-    t('list.3'),
-    t('list.4'),
-    t('list.5'),
-    t('list.6'),
-    t('list.7'),
+    t('about.list.1'),
+    t('about.list.2'),
+    t('about.list.3'),
+    t('about.list.4'),
+    t('about.list.5'),
+    t('about.list.6'),
+    t('about.list.7'),
   ]
   return (
     <>
       <TickerWrapper>
         <Ticker speed={5}>
         {({ index }) => (
-          <TickerText key ={index}>{t('about_us')}&nbsp;&nbsp;</TickerText>
+          <TickerText key ={index}>{t('about.title')}&nbsp;&nbsp;</TickerText>
         )}
         </Ticker>
       </TickerWrapper>
       <Container>
         <TextContainer>
-          <SecondaryTitle variant='h3' >{t('we_are_a_headhunting')}</SecondaryTitle>
-          <Text>{t('we_does_now')}<br/>{t('we_have_made')}</Text>
-          <CustomTitle variant='h4' >{t('what_do_we_do_differently')}</CustomTitle>
-          <Text>{t('in_order_to_really')}</Text>
-          <CustomTitle variant='h4' >{t('thats_why_we_dont')}</CustomTitle>
-          <Text>{t('in_this_way')}</Text>
-          <Text>{t('it_is_our_job')}</Text>
-          <Text>{t('of_course_even')}</Text>
+          <SecondaryTitle variant='h3' >{t('about.we_are_a_headhunting')}</SecondaryTitle>
+          <Text>{t('about.we_does_now')}<br/>{t('about.we_have_made')}</Text>
+          <CustomTitle variant='h4' >{t('about.what_do_we_do_differently')}</CustomTitle>
+          <Text>{t('about.in_order_to_really')}</Text>
+          <CustomTitle variant='h4' >{t('about.thats_why_we_dont')}</CustomTitle>
+          <Text>{t('about.in_this_way')}</Text>
+          <Text>{t('about.it_is_our_job')}</Text>
+          <Text>{t('about.of_course_even')}</Text>
         </TextContainer>
         <ImageContainer>
           <VideoContainer>
             <video autoPlay muted loop><source  src={videoUrl} type='video/mp4' /></video>
             <img src={imgUrl} alt="Girl" />
-            <StyledButton arrowPosition='bottom' arrowShort>{t('change_your_life')}</StyledButton>
+            <StyledButton arrowPosition='bottom' arrowShort>{t('about.button')}</StyledButton>
           </VideoContainer>
           <List>
             {dataList.map((item, index) => {

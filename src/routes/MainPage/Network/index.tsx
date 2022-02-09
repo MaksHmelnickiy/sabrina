@@ -6,7 +6,6 @@ import {
   Container, 
   Text,
   CustomTitle,
-  TickerText,
   TickerWrapper,
   Brand,
   BrandContainer,

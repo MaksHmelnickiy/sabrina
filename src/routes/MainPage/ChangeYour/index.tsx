@@ -27,12 +27,12 @@ const ChangeYour = (): React.ReactElement => {
         <Photo src={photo1} alt="photo1" />
         <Photo src={photo2} alt="photo2" />
       </PhotoWrapper>
-      <StyledButton arrowLong>{t('change_your_life')}</StyledButton>
+      <StyledButton arrowLong>{t('main.change_your_life')}</StyledButton>
       <CustomTitle variant='h1'>
-        {t('change_your')}
-        <PartTitle>{t('monday')}</PartTitle> 
+        {t('main.change_your')}
+        <PartTitle>{t('main.monday')}</PartTitle> 
       </CustomTitle>
-      <Text>{t('we_are_boutique')}</Text>
+      <Text>{t('main.we_are_boutique')}</Text>
     </Container>
   );
 };

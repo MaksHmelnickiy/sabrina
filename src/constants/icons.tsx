@@ -22,6 +22,7 @@ import { ReactComponent as BrandCircleIcon5 } from '../assets/img/brandCircle5.s
 import { ReactComponent as BrandIcon1 } from '../assets/img/brand1.svg';
 import { ReactComponent as BrandIcon2 } from '../assets/img/brand2.svg';
 import { ReactComponent as BrandIcon3 } from '../assets/img/brand3.svg';
+import { ReactComponent as PackIcon } from '../assets/img/pack.svg';
 
 export const ICONS_MAP = {
     CircleIcon: CircleLogo,
@@ -47,5 +48,6 @@ export const ICONS_MAP = {
     BrandCircle5: BrandCircleIcon5,
     Brand1: BrandIcon1,
     Brand2: BrandIcon2,
-    Brand3: BrandIcon3
+    Brand3: BrandIcon3,
+    Pack: PackIcon
 };
