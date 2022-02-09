@@ -35,6 +35,9 @@ export const DarkTheme = {
     buttonTertiaryText: '#121C1C',
     brandCircle: '#2A2A2A',
     brand: '#D89477',
+    border: 'rgba(105, 110, 118, 0.4)',
+    footerLink: '#696E76',
+    linkEmail: '#161616'
 };
 
 export const LightTheme = {
@@ -42,10 +45,10 @@ export const LightTheme = {
     headerBg: '#DDA99D',
     titleH1: '#24324F',
     boutiqueText: '#24324F',
-    logoIcon: '#111A1B',
-    logoText: '#000000',
+    logoIcon: '#24324F',
+    logoText: '#24324F',
     headerLink: '#24324F',
-    headerLinkHover: '#DDA99D',
+    headerLinkHover: '#fff',
     language: 'rgba(36, 50, 79, 0.5)',
     languageActive: '#24324F',
     iconDefault: '#DDA99D',
@@ -73,6 +76,9 @@ export const LightTheme = {
     buttonTertiaryText: '#121C1C',
     brandCircle: '#DDA99D',
     brand: '#24324F',
+    border: 'rgba(36, 50, 79, 0.15)',
+    footerLink: '#24324F',
+    linkEmail: 'rgba(36, 50, 79, 0.05)'
 }
 
 export const GreenTheme = {
@@ -111,4 +117,7 @@ export const GreenTheme = {
     buttonTertiaryText: '#121C1C',
     brandCircle: '#ADBBB5',
     brand: '#111A1B',
+    border: 'rgba(36, 50, 79, 0.15)',
+    footerLink: '#111A1B',
+    linkEmail: 'rgba(17, 26, 27, 0.05)'
 }

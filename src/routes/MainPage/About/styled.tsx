@@ -15,6 +15,7 @@ export const TickerWrapper = styled.div`
 	overflow: hidden;
   padding-top: 109px;
   margin: 0 -15px;
+  min-height: 326px;
 `
 export const TickerText = styled.div`
   font-size: 240px;

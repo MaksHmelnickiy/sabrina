@@ -63,6 +63,21 @@
       "text": "Don't see a job that suits you? Send us your CV and we will contact you to discuss your interests.",
       "button": "Browse Jobs",
       "description": "We help our clients find the right candidates for their vacancies quickly and in a solution-oriented manner. In doing so, we not only change our candidates' Mondays, but also your team's Mondays. Tasks are completed faster, deadlines are met, growth is secured"
+    },
+    "footer": {
+      "menu": {
+        "1": "Home",
+        "2": "About Us",
+        "3": "Network",
+        "4": "Experts",
+        "5": "Companies",
+        "6": "Jobs"
+      },
+      "social": "Social network",
+      "button": "example@gmail.com",
+      "text": "All rights reserved 2021  ©  Radius.",
+      "policy": "Privacy policy",
+      "term": "Term of use"
     }
   }
 }

@@ -23,6 +23,10 @@ import { ReactComponent as BrandIcon1 } from '../assets/img/brand1.svg';
 import { ReactComponent as BrandIcon2 } from '../assets/img/brand2.svg';
 import { ReactComponent as BrandIcon3 } from '../assets/img/brand3.svg';
 import { ReactComponent as PackIcon } from '../assets/img/pack.svg';
+import { ReactComponent as InstagramIcon } from '../assets/img/inst.svg';
+import { ReactComponent as TelegramIcon } from '../assets/img/telega.svg';
+import { ReactComponent as FacebookIcon } from '../assets/img/facebook.svg';
+import { ReactComponent as UpIcon } from '../assets/img/up.svg';
 
 export const ICONS_MAP = {
     CircleIcon: CircleLogo,
@@ -49,5 +53,9 @@ export const ICONS_MAP = {
     Brand1: BrandIcon1,
     Brand2: BrandIcon2,
     Brand3: BrandIcon3,
-    Pack: PackIcon
+    Pack: PackIcon,
+    Telegram: TelegramIcon,
+    Facebook: FacebookIcon,
+    Instagram: InstagramIcon,
+    Up: UpIcon
 };

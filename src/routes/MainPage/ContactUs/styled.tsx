@@ -50,6 +50,7 @@ export const Box = styled.div`
     width: 100%;
     left: 69px;
     top: 27px;
+    opacity: 0.7;
   }
 `
 export const Description = styled.div`
