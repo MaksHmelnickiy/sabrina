@@ -18,6 +18,7 @@ interface IButtonProps extends React.ComponentProps<'button'> {
   arrowShort?: boolean;
   arrowDark?: boolean;
   arrowPosition?: 'top' | 'left' | 'right' | 'bottom';
+  onClick?: React.MouseEventHandler<HTMLButtonElement>; 
 }
 
 const Button = ({

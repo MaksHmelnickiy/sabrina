@@ -6,16 +6,19 @@ import Experience from './Experience';
 import ContactUs from './ContactUs';
 import Network from './Network';
 import Jobs from './Jobs';
+import ModalContact from '../../modals/ModalContact';
 
 const MainPage = (): React.ReactElement => {
+  const [showModalContact, setShowModalContact] = React.useState(false)
   return (
     <ContentContainer id="main">
-      <ChangeYour />
-      <About id="about"/>
-      <Experience id="exp" />
-      <ContactUs id="contact" />
+      <ModalContact isShow={showModalContact} />
+      <ChangeYour onClick={() => setShowModalContact(true)}/>
+      <About onClick={() => setShowModalContact(true)} id="about"/>
+      <Experience id="exp" onClick={() => setShowModalContact(true)}/>
+      <ContactUs id="contact" onClick={() => setShowModalContact(true)}/>
       <Network id="network" />
-      <Jobs id="jobs" />
+      <Jobs id="jobs" onClick={() => setShowModalContact(true)}/>
     </ContentContainer>
   );
 };

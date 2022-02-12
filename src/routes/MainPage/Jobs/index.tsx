@@ -15,9 +15,10 @@ import {
 
 interface Props {
   id?: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Jobs = ({id}:Props): React.ReactElement => {
+const Jobs = ({id, onClick}:Props): React.ReactElement => {
   const {t} = useTranslation()
 
   return (
@@ -25,7 +26,7 @@ const Jobs = ({id}:Props): React.ReactElement => {
       <TitleBox>
         <CustomTitle variant='h2'>{t('jobs.title')}</CustomTitle>
         <Text>{t('jobs.text')}</Text>
-        <StyledButton variant='secondary' arrowShort>{t('jobs.button')}</StyledButton>
+        <StyledButton onClick={onClick} variant='secondary' arrowShort>{t('jobs.button')}</StyledButton>
       </TitleBox>
       <Image />
       <DescriptionBox>

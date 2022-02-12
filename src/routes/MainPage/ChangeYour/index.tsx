@@ -18,9 +18,10 @@ import {
 
 interface Props {
   id?: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const ChangeYour = ({id}:Props): React.ReactElement => {
+const ChangeYour = ({id, onClick}:Props): React.ReactElement => {
   const {t} = useTranslation()
   return (
     <Container id={id}>
@@ -31,7 +32,7 @@ const ChangeYour = ({id}:Props): React.ReactElement => {
         <Photo src={photo1} alt="photo1" />
         <Photo src={photo2} alt="photo2" />
       </PhotoWrapper>
-      <StyledButton arrowLong>{t('main.change_your_life')}</StyledButton>
+      <StyledButton onClick={onClick} arrowLong>{t('main.change_your_life')}</StyledButton>
       <CustomTitle variant='h1'>
         {t('main.change_your')}
         <PartTitle>{t('main.monday')}</PartTitle> 

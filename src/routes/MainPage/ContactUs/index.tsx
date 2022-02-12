@@ -15,9 +15,10 @@ import {
 
 interface Props {
   id?: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const ContactUs = ({id}:Props): React.ReactElement => {
+const ContactUs = ({id, onClick}:Props): React.ReactElement => {
   const {t} = useTranslation()
 
   return (
@@ -32,7 +33,7 @@ const ContactUs = ({id}:Props): React.ReactElement => {
         </Box>
       </Container>
       <Image>
-        <StyledButton variant='tertiary' arrowDark>{t('contact.button')}</StyledButton>
+        <StyledButton onClick={onClick} variant='tertiary' arrowDark>{t('contact.button')}</StyledButton>
       </Image>
     </>
   );
