@@ -21,9 +21,10 @@ import {
 
 interface Props {
   id?: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const About = ({id}:Props): React.ReactElement => {
+const About = ({id, onClick}:Props): React.ReactElement => {
   const {t} = useTranslation()
   const dataList = [
     t('about.list.1'),
@@ -58,7 +59,7 @@ const About = ({id}:Props): React.ReactElement => {
           <VideoContainer>
             <video autoPlay muted loop><source  src={videoUrl} type='video/mp4' /></video>
             <img src={imgUrl} alt="Girl" />
-            <StyledButton arrowPosition='bottom' arrowShort>{t('about.button')}</StyledButton>
+            <StyledButton onClick={onClick} arrowPosition='bottom' arrowShort>{t('about.button')}</StyledButton>
           </VideoContainer>
           <List>
             {dataList.map((item, index) => {
