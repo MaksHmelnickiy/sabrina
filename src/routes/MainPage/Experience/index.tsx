@@ -12,9 +12,10 @@ import {
 
 interface Props {
   id?: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Experience = ({id}:Props): React.ReactElement => {
+const Experience = ({id, onClick}:Props): React.ReactElement => {
   const {t} = useTranslation()
   const experienceData = [
     {
@@ -40,7 +41,7 @@ const Experience = ({id}:Props): React.ReactElement => {
       <CustomTitle variant='h2'>{t('exp.title')}</CustomTitle>
       <Text>{t('exp.text')}</Text>
       <ExperienceList data={experienceData} />
-      <StyledButton variant='secondary'>{t('exp.button')}</StyledButton>
+      <StyledButton onClick={onClick} variant='secondary'>{t('exp.button')}</StyledButton>
     </Container>
   );
 };
