@@ -18,11 +18,13 @@ const IndexRoute = (): React.ReactElement => {
       event.target.localName === 'button' ||
       event.target.localName === 'input' ||
       event.target.localName === 'textarea' ||
-      event.target.lacelName === 'button'
+      event.target.lacelName === 'button' ||
+      document.querySelector('.modal')
       ){
       return false
     }
     else {
+      console.log('yes')
       if(theme === DarkTheme) {
         setTheme(GreenTheme)
       } if(theme === GreenTheme){

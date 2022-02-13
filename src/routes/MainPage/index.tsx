@@ -12,7 +12,7 @@ const MainPage = (): React.ReactElement => {
   const [showModalContact, setShowModalContact] = React.useState(false)
   return (
     <ContentContainer id="main">
-      <ModalContact isShow={showModalContact} />
+      <ModalContact onClose={() => setShowModalContact(false)} isShow={showModalContact} />
       <ChangeYour onClick={() => setShowModalContact(true)}/>
       <About onClick={() => setShowModalContact(true)} id="about"/>
       <Experience id="exp" onClick={() => setShowModalContact(true)}/>
