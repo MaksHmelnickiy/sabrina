@@ -3,26 +3,32 @@ import { appReactMemo } from '../../hooks';
 
 import {
   StyledButton,
+  Container,
+  Label
 } from './styled';
 
-interface IOption {
-  label: string;
+export interface IOption {
+  text: string;
   value: string;
 }
 
 interface IChipsProps {
   options: IOption[];
+  className?: string;
   onChange?: (option: IOption | null) => void;
+  label?: string;
 }
 
 const Chips = ({
   options,
   onChange,
+  className,
+  label,
 }: IChipsProps) => {
   const [value, setValue] = React.useState('');
-  console.log(value)
   return (
-    <>
+    <Container className={className}>
+      <Label>{label}</Label>
       {options.map((option, index) => {
         const onClick = () => {
           if (option.value === value) {
@@ -37,13 +43,14 @@ const Chips = ({
           <StyledButton
             key={index}
             onClick={onClick}
+            type='button'
             selected={option.value === value}
           >
-            {option.label}
+            {option.text}
           </StyledButton>
         );
       })}
-    </>
+    </Container>
   );
 };
 

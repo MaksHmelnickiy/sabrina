@@ -28,6 +28,10 @@ import { ReactComponent as TelegramIcon } from '../assets/img/telega.svg';
 import { ReactComponent as FacebookIcon } from '../assets/img/facebook.svg';
 import { ReactComponent as UpIcon } from '../assets/img/up.svg';
 import { ReactComponent as NotFoundIcon } from '../assets/img/404.svg';
+import { ReactComponent as SnowflakeOutlineIcon } from '../assets/img/snowflakeOutline.svg';
+import { ReactComponent as CloseIcon } from '../assets/img/close.svg';
+import { ReactComponent as ClipIcon } from '../assets/img/clip.svg';
+import { ReactComponent as ArrTabIcon } from '../assets/img/arrTab.svg';
 
 export const ICONS_MAP = {
     CircleIcon: CircleLogo,
@@ -59,5 +63,9 @@ export const ICONS_MAP = {
     Facebook: FacebookIcon,
     Instagram: InstagramIcon,
     Up: UpIcon,
-    NotFound: NotFoundIcon
+    NotFound: NotFoundIcon,
+    SnowflakeOutline: SnowflakeOutlineIcon,
+    Close: CloseIcon,
+    Clip: ClipIcon,
+    ArrTab: ArrTabIcon
 };

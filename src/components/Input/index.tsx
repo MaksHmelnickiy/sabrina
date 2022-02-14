@@ -13,7 +13,6 @@ export interface IInputProps {
 const Input = ({
   className,
   type,
-  value,
   placeholder,
   label,
   name

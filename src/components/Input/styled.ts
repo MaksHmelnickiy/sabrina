@@ -7,7 +7,7 @@ interface ILabelProps {
 
 export const Container = styled.div`
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 61px;
 `;
 
 export const CustomInput = styled.input`

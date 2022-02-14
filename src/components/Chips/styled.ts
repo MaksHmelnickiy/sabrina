@@ -4,6 +4,9 @@ interface IButtonProps {
   selected: boolean
 }
 
+export const Container = styled.div`
+  padding-top: 22px;
+`
 export const StyledButton = styled.button<IButtonProps>`
     margin: 0px 4px;
     background: rgba(255,255,255,0);
@@ -27,6 +30,7 @@ export const StyledButton = styled.button<IButtonProps>`
     }
     &:hover {
       box-shadow: none;
+      color: #D89477;
     }
   
     &:active {
@@ -35,4 +39,13 @@ export const StyledButton = styled.button<IButtonProps>`
 
   
 `;
+export const Label = styled.label`
+  color: #F0EEF4;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  font-family: 'Biotif';
+  display: block;
+  margin-bottom: 30px;
+`
 
