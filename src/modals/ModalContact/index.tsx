@@ -36,7 +36,8 @@ const data = [
 const ModalContact = ({isShow, onClose}: IModal) => {
   const formCandidate = React.useRef<any>();
   const formCompany = React.useRef<any>();
-  const [val, setVal] = React.useState('')
+  const [show, setShow] = React.useState<boolean>(false)
+  const [val, setVal] = React.useState('');
   const sendEmailCandidate = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
@@ -52,7 +53,7 @@ const ModalContact = ({isShow, onClose}: IModal) => {
 
     emailjs.sendForm('service_e4ucrho', 'template_45jmp9c', formCompany.current, 'user_qG7tG1JMI4lTtZkA9TI5V')
       .then((result) => {
-          console.log(result.text);
+          console.log(result);
       }, (error) => {
           console.log(error.text);
       });
