@@ -15,6 +15,9 @@ export const Container = styled.div`
    max-width: 1200px; 
    padding: 133px 0 209px 0;
   }
+  @media ${device.xl}{
+    max-width: 1000px; 
+   }
 `;
 
 export const PartTitle = styled.div`
@@ -24,6 +27,14 @@ export const Photo = styled.img`
   max-width: calc(50% - 13px);
   &:nth-of-type(2){
     margin-top: 98px;
+  }
+  @media ${device.xl}{
+    &:nth-of-type(2){
+      margin-top: 103px;
+    }
+    &:nth-of-type(1){
+      margin-top: 20px;
+    }
   }
 `;
 export const PhotoWrapper = styled.div`
@@ -39,6 +50,9 @@ export const PhotoWrapper = styled.div`
   @media ${device.xxl}{
     max-width: 716px;
   }
+  @media ${device.xl}{
+    max-width: 660px;
+  }
 `;
 export const SvgIcon = styled.div`
   color: ${props => props.theme.iconDefault};
@@ -53,6 +67,12 @@ export const SvgIcon = styled.div`
     width: 167px;
     top: -6px;
     margin-left: 9%;
+  }
+  @media ${device.xl}{
+    width: 167px;
+    top: -78px;
+    margin-left: 0;
+    left: 87px;
   }
 `;
 export const Text = styled.div`
@@ -71,6 +91,11 @@ export const Text = styled.div`
     max-width: 175px;
     top: 16%;
   }
+  @media ${device.xl}{
+    max-width: 282px;
+    top: 7%;
+    right: 17%;
+  }
 `;
 export const StyledButton = styled(Button)`
   position: absolute;
@@ -79,6 +104,9 @@ export const StyledButton = styled(Button)`
   z-index: 2;
   @media ${device.xxl}{
     left: 13%;
+  }
+  @media ${device.xl}{
+    left: 8%;
   }
 `;
 export const CustomTitle = styled(Title)`

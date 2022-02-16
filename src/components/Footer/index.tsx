@@ -17,7 +17,8 @@ import {
   LinkEmail,
   CustomButton,
   Box,
-  FooterLink
+  FooterLink,
+  SocialBox
 } from './styled';
 
 
@@ -48,18 +49,20 @@ const Footer = (): React.ReactElement => {
             <StyledLink spy={true} smooth={true} to='jobs'>{t('footer.menu.6')}</StyledLink>
           </Item>
         </MenuList>
-        <Social>
-          <SocialLabel>{t('footer.social')}</SocialLabel>
-          <SocialList>
-            <SocialLink to='/'><ICONS_MAP.Instagram /></SocialLink>
-            <SocialLink to='/'><ICONS_MAP.Facebook /></SocialLink>
-            <SocialLink to='/'><ICONS_MAP.Telegram /></SocialLink>
-          </SocialList>
-        </Social>
-        <Box>
-          <LinkEmail to='/'>{t('footer.button')}</LinkEmail>
-          <CustomButton spy={true} smooth={true} to='main'><ICONS_MAP.Up /></CustomButton>
-        </Box>
+        <SocialBox>
+          <Social>
+            <SocialLabel>{t('footer.social')}</SocialLabel>
+            <SocialList>
+              <SocialLink to='/'><ICONS_MAP.Instagram /></SocialLink>
+              <SocialLink to='/'><ICONS_MAP.Facebook /></SocialLink>
+              <SocialLink to='/'><ICONS_MAP.Telegram /></SocialLink>
+            </SocialList>
+          </Social>
+          <Box>
+            <LinkEmail to='/'>{t('footer.button')}</LinkEmail>
+            <CustomButton spy={true} smooth={true} to='main'><ICONS_MAP.Up /></CustomButton>
+          </Box>
+        </SocialBox>
       </FooterTop> 
       <FooterBottom>
         <Text>{t('footer.text')}</Text>

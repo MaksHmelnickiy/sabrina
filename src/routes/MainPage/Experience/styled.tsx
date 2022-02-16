@@ -15,6 +15,11 @@ export const Container = styled.div`
     max-width: 1200px;
     padding-top: 117px;
   }
+  @media ${device.xl}{
+    max-width: 1000px;
+    padding-top: 117px;
+    padding-bottom: 204px;
+  }
 `
 export const StyledButton = styled(Button)`
   position: absolute; 
@@ -22,6 +27,11 @@ export const StyledButton = styled(Button)`
   bottom: 49px;
   & > div {
     color: ${props => props.theme.buttonPrimaryArrow};
+  }
+  @media ${device.xl}{
+    left: auto;
+    bottom: 68px;
+    right: 82px;
   }
 `
 export const Text = styled.div`
@@ -35,6 +45,9 @@ export const Text = styled.div`
   max-width: 742px;
   @media ${device.xxl}{
     padding-top: 24px;
+  }
+  @media ${device.xl}{
+    padding-bottom: 23px
   }
 `
 export const IconWrapper = styled.div`
@@ -50,10 +63,17 @@ export const IconWrapper = styled.div`
       max-width: 100%;
     }
   }
+  @media ${device.xl}{
+    top: 140px;
+  }
 `
 export const CustomTitle = styled(Title)`
   padding-right: 375px;
   @media ${device.xxl}{
     padding-right: 275px;
+  }
+  @media ${device.xl}{
+    padding-right: 0;
+    max-width: 500px;
   }
 `

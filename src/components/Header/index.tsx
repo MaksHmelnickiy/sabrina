@@ -3,7 +3,7 @@ import Logo from '../Logo';
 import SwitchLanguage from '../SwitchLanguage';
 import {useTranslation} from "react-i18next";
 import { availableLanguages } from '../../i18n';
-import { Container, Item, MenuList, StyledLink, Wrapper } from './styled';
+import { Container, Gamburger, Item, MenuList, StyledLink, Wrapper } from './styled';
 import useDocumentScrollThrottled from '../../hooks/useDocumentScrollThrottled';
 
 
@@ -30,7 +30,7 @@ const Header = (): React.ReactElement => {
   const TIMEOUT_DELAY = 200;
 
   useDocumentScrollThrottled(callbackData => {
-    if(window.innerWidth > 1200){
+    if(window.innerWidth > 1024){
       const { previousScrollTop, currentScrollTop } = callbackData;
       const isScrolledDown = previousScrollTop < currentScrollTop;
       const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;

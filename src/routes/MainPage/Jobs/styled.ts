@@ -17,6 +17,10 @@ export const Container = styled.div`
     max-width: 1200px;
     padding-bottom: 153px;
   }
+  @media ${device.xl}{
+    max-width: 1000px;
+    padding-bottom: 153px;
+  }
 `
 export const StyledButton = styled(Button)`
   position: relative; 
@@ -52,11 +56,9 @@ export const Text = styled.div`
     padding-bottom: 11px;
   }
 `
-
 export const CustomTitle = styled(Title)`
 
 `
-
 export const Description = styled.div`
   color: ${props => props.theme.titleH4};
   font-weight: normal;
@@ -83,6 +85,11 @@ export const Image = styled.div`
     background-position: top;
     width: calc(50% - 118px);
     position: relative;
+  }
+  @media ${device.xl}{
+    background-position: center;
+    width: calc(40% - 40px);
+    position: relative;
 
   }
 `
@@ -90,6 +97,9 @@ export const TitleBox = styled.div`
   width: 22.5%;
   @media ${device.xxl}{
     width: 25%;
+  }
+  @media ${device.xl}{
+    width: 30%;
   }
 `
 export const DescriptionBox = styled.div`
@@ -112,5 +122,8 @@ export const DescriptionBox = styled.div`
       top: 0;
       left: 47%; margin-left: -90px;
     }
+  }
+  @media ${device.xl}{
+    width: 30%;
   }
 ` 
