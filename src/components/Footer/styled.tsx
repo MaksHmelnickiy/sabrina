@@ -16,6 +16,9 @@ export const MenuList = styled.ul`
   @media ${device.xxl}{
     width: 34%;
   }
+  @media ${device.xl}{
+    width: calc(40% - 50px);
+  }
 `
 export const Item = styled.li`
   padding-left: 10px;
@@ -39,12 +42,12 @@ export const StyledLink = styled(Anchor)`
   }
 `;
 export const CustomLogo = styled(Logo)`
-  margin-right: 87px;
+  margin-right: 25px;
   &  div {
     color: ${props => props.theme.logoIcon} !important;
   }
   @media ${device.xxl}{
-    margin-right: 59px;
+    margin-right: 25px;
     & svg {
       width: 26px;
     }
@@ -56,7 +59,7 @@ export const FooterTop = styled.div`
   width: 100%;
   margin-left: auto;
   padding-top: 103px;
-  padding-bottom: 41px;
+  padding-bottom: 24px;
   margin-right: auto;
   border-bottom: 1px solid rgba(105, 110, 118, 0.4);
   display: flex;
@@ -64,6 +67,10 @@ export const FooterTop = styled.div`
   align-items: flex-start;
   @media ${device.xxl}{
     max-width: 1200px;
+    padding-bottom: 27px;
+  }
+  @media ${device.xl}{
+    max-width: 1000px;
     padding-bottom: 27px;
   }
 `
@@ -78,6 +85,10 @@ export const FooterBottom = styled.div`
     max-width: 1200px;
     
   }
+  @media ${device.xxl}{
+    max-width: 1000px;
+    
+  }
 `
 export const Text = styled.div`
   font-weight: normal;
@@ -89,9 +100,17 @@ export const Text = styled.div`
 `
 export const Social = styled.div`
   position: relative;
-  left: -80px;
+  left: -150px;
   @media ${device.xxl}{
-    left: -50px;
+    left: -107px;
+  }
+  @media ${device.xl}{
+    left: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: -10px;
+    margin-bottom: 22px;
   }
 `
 export const SocialLabel = styled.div`
@@ -99,9 +118,12 @@ export const SocialLabel = styled.div`
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  margin-bottom: 23px;
+  margin-bottom: 16px;
   @media ${device.xxl}{
     margin-bottom: 19px;
+  }
+  @media ${device.xl}{
+    margin-bottom: 0px;
   }
 `
 export const SocialList = styled.div`
@@ -159,6 +181,15 @@ export const CustomButton = styled(Anchor)`
   &:hover {
     color: ${props => props.theme.headerLinkHover};
     border-color: ${props => props.theme.headerLinkHover};
+  }
+`
+export const SocialBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  @media ${device.xl}{
+    width: auto;
+    display: block;
+    max-width: 364px;
   }
 `
 export const Box = styled.div`

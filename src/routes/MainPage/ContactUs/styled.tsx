@@ -16,6 +16,10 @@ export const Container = styled.div`
     padding-top: 9px;
     max-width: 1200px;
   }
+  @media ${device.xl}{
+    max-width: 1000px;
+
+  }
 `
 export const StyledButton = styled(Button)`
   position: absolute; 
@@ -28,6 +32,11 @@ export const StyledButton = styled(Button)`
   @media ${device.xxl}{
     right: 19%;
     bottom: -104px;
+  }
+  @media ${device.xl}{
+    right: auto;
+    bottom: -84px;
+    left: 17%;
   }
 `
 export const Text = styled.div`
@@ -76,6 +85,10 @@ export const Box = styled.div`
       top: -123px;
     }
   }
+  @media ${device.xl}{
+    top: 186px;
+    max-width: 340px;
+  }
 `
 export const Description = styled.div`
   color: ${props => props.theme.titleH4};
@@ -95,6 +108,9 @@ export const BoxText = styled(Text)`
   @media ${device.xxl}{
     padding-top: 43px;
   }
+  @media ${device.xl}{
+    padding-top: 30px;
+  }
 `
 export const Image = styled.div`
   height: 686px;
@@ -108,5 +124,9 @@ export const Image = styled.div`
   @media ${device.xxl}{
     margin-top: -112px;
     height: 572px;
+  }
+  @media ${device.xl}{
+    margin-top: -191px;
+    height: 674px;
   }
 `

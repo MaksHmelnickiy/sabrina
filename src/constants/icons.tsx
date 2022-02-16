@@ -32,6 +32,7 @@ import { ReactComponent as SnowflakeOutlineIcon } from '../assets/img/snowflakeO
 import { ReactComponent as CloseIcon } from '../assets/img/close.svg';
 import { ReactComponent as ClipIcon } from '../assets/img/clip.svg';
 import { ReactComponent as ArrTabIcon } from '../assets/img/arrTab.svg';
+import { ReactComponent as MenuIcon } from '../assets/img/menu.svg';
 
 export const ICONS_MAP = {
     CircleIcon: CircleLogo,
@@ -67,5 +68,6 @@ export const ICONS_MAP = {
     SnowflakeOutline: SnowflakeOutlineIcon,
     Close: CloseIcon,
     Clip: ClipIcon,
-    ArrTab: ArrTabIcon
+    ArrTab: ArrTabIcon,
+    Menu: MenuIcon,
 };

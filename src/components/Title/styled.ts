@@ -19,6 +19,9 @@ export const Container = styled.div<ITitle>`
           @media ${device.xxl}{
             font-size: 180px;
           }
+          @media ${device.xl}{
+            font-size: 160px;
+          }
         `;
       case 'h2':
         return `
@@ -28,6 +31,10 @@ export const Container = styled.div<ITitle>`
           color: ${props.color ? props.color : props.theme.titleH2};
           @media ${device.xxl}{
             font-size: 80px;
+            line-height: 120%;
+          }
+          @media ${device.xl}{
+            font-size: 72px;
             line-height: 120%;
           }
         `;

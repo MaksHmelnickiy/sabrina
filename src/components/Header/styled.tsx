@@ -22,6 +22,9 @@ export const Container = styled.div<IHeaderProps>`
   ` : ``}
   ${props => props.show ? `top: -100px;` : `top: 0;`
 }
+  @media ${device.xl} {
+    padding: 25px 0;
+  }
 `
 export const MenuList = styled.ul`
   display: flex;
@@ -51,5 +54,13 @@ export const Wrapper = styled.div`
   align-items: center;
   @media ${device.xxl}{
     max-width: 1230px;
+  };
+  @media ${device.xl} {
+    max-width: 1000px;
   }
+
+
+`
+export const Gamburger = styled.div`
+  
 `

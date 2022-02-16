@@ -13,6 +13,9 @@ export const Container = styled.div`
   @media ${device.xxl}{
     max-width: 1200px;
   }
+  @media ${device.xl}{
+    max-width: 1000px;
+  }
 `
 export const TickerWrapper = styled.div`
 	overflow: hidden;
@@ -20,8 +23,12 @@ export const TickerWrapper = styled.div`
   margin: 0 -15px;
   min-height: 435px;
   @media ${device.xxl}{
-    padding-top: 130px;
+    padding-top: 131px;
     min-height: 350px;
+  }
+  @media ${device.xl}{
+    padding-top: 126px;
+    min-height: 250px;
   }
 `
 export const TickerText = styled.div`
@@ -30,6 +37,12 @@ export const TickerText = styled.div`
   text-transform: uppercase;
   @media ${device.xxl}{
     line-height: 1;
+  }
+  @media ${device.xl}{
+    font-size: 200px;
+  }
+  @media (max-width: 1300px){
+    font-size: 170px;
   }
 `
 export const SecondaryTitle = styled(Title)`
@@ -46,6 +59,9 @@ export const TextContainer = styled.div`
     padding-right: 0px;
     padding-top: 108px;
   }
+  @media ${device.xl}{
+    padding-right: 100px;
+  }
 `
 export const ImageContainer = styled.div`
   width: 50%;
@@ -54,6 +70,12 @@ export const ImageContainer = styled.div`
   @media ${device.xxl}{
     padding-left: 119px;
     padding-top: 98px;
+    position: relative;
+    padding-bottom: 400px;
+  }
+  @media ${device.xl}{
+    padding-left: 11px;
+    padding-top: 108px;
     position: relative;
     padding-bottom: 400px;
   }
@@ -87,8 +109,9 @@ export const VideoContainer = styled.div`
   & img {
     max-width: 100%;
     position: absolute;
-    top: -100px;
-    left: -25px;
+    top: -80px;
+    left: 63px;
+    width: 474px;
   }
   @media ${device.xxl}{
     max-width: 477px;
@@ -96,7 +119,18 @@ export const VideoContainer = styled.div`
     top: 100px;
     & img {
       max-width: 518px;
-      top: -81px;
+      top: -55px;
+      width: 361px;
+      left: 52px;
+    }
+  }
+  @media ${device.xl}{
+    max-width: 490px;
+
+    & img {
+
+      width: 368px;
+
     }
   }
 `
@@ -105,9 +139,29 @@ export const StyledButton = styled(Button)`
   left: 50%;
   margin-left: -156px;
   bottom: -107px;
+  & > div {
+    color: #fff;
+  }
   @media ${device.xxl}{
     bottom: -124px;
     left: 60%;
+  }
+  @media ${device.xl} {
+    
+    bottom: -108px;
+    left: 64%;
+    & > div {
+      left: 14%;
+      top: -50%;
+      transform: rotate(-127deg);
+    }
+    &:hover {
+      & > div {
+        left: 39%;
+        top: -47%;
+        transform: rotate(-99deg);
+      }
+    }
   }
 `
 export const List = styled.ul`
