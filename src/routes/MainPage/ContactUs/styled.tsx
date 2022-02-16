@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Button from '../../../components/Button';
 import Title from '../../../components/Title';
 import BgImage from '../../../assets/img/man.png';
+import { device } from '../../../constants/breakpoints';
 
 export const Container = styled.div`
   max-width: 1520px;
@@ -11,6 +12,10 @@ export const Container = styled.div`
   padding-top: 107px;
   position: relative;
   padding-bottom: 0px;
+  @media ${device.xxl}{
+    padding-top: 9px;
+    max-width: 1200px;
+  }
 `
 export const StyledButton = styled(Button)`
   position: absolute; 
@@ -19,6 +24,10 @@ export const StyledButton = styled(Button)`
   z-index: 1;
   & i {
     max-width: 80px;
+  }
+  @media ${device.xxl}{
+    right: 19%;
+    bottom: -104px;
   }
 `
 export const Text = styled.div`
@@ -30,10 +39,14 @@ export const Text = styled.div`
   color: ${props => props.theme.text};
   font-family: 'Biotif';
   max-width: 404px;
+
 `
 
 export const CustomTitle = styled(Title)`
   padding-right: 510px;
+  @media ${device.xxl}{
+    padding-right: 330px;
+  }
 `
 export const Box = styled.div`
   position: absolute;
@@ -52,6 +65,17 @@ export const Box = styled.div`
     top: 27px;
     opacity: 0.7;
   }
+  @media ${device.xxl}{
+    padding-top: 0px;
+    padding-right: 10px;
+    max-width: 430px;
+
+    & > svg {
+      left: auto;
+      right: 0;
+      top: -123px;
+    }
+  }
 `
 export const Description = styled.div`
   color: ${props => props.theme.titleH4};
@@ -68,6 +92,9 @@ export const Description = styled.div`
 export const BoxText = styled(Text)`
   max-width: 420px;
   padding-top: 30px;
+  @media ${device.xxl}{
+    padding-top: 43px;
+  }
 `
 export const Image = styled.div`
   height: 686px;
@@ -78,4 +105,8 @@ export const Image = styled.div`
   margin: 0 -15px;
   margin-top: -196px;
   position: relative;
+  @media ${device.xxl}{
+    margin-top: -112px;
+    height: 572px;
+  }
 `

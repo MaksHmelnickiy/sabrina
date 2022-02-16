@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Title from '../../../components/Title';
+import { device } from '../../../constants/breakpoints';
 
 export const Container = styled.div`
   max-width: 1520px;
@@ -8,6 +9,10 @@ export const Container = styled.div`
   margin-right: auto;
   padding-top: 180px;
   position: relative;
+  @media ${device.xxl}{
+    max-width: 1200px;
+    padding-top: 160px;
+  }
 `
 
 export const Text = styled.div`
@@ -19,6 +24,9 @@ export const Text = styled.div`
   color: ${props => props.theme.text};
   font-family: 'Biotif';
   max-width: 422px;
+  @media ${device.xxl}{
+    padding-top: 10px;
+  }
 `
 
 export const CustomTitle = styled(Title)`
@@ -29,6 +37,10 @@ export const TickerWrapper = styled.div`
   padding-top: 100px;
   margin: 0 -15px;
   padding-bottom: 228px;
+  @media ${device.xxl}{
+    padding-top: 50px;
+    padding-bottom: 162px;
+  }
 `
 export const TickerText = styled.div`
   font-size: 240px;
@@ -53,6 +65,15 @@ export const Brand = styled.div`
       top: 0;
       width: 100%;
       height: 100%;
+    }
+  }
+  @media ${device.xxl}{
+    width: 290px;
+    height: 300px;
+    & svg {
+      &:nth-of-type(2){
+        transform: scale(0.8);
+      }
     }
   }
 `
