@@ -24,9 +24,9 @@ const Header = (): React.ReactElement => {
   const {t, i18n} = useTranslation()
 
   const [shouldHideHeader, setShouldHideHeader] = React.useState(false);
-  const [shouldShowShadow, setShouldShowShadow] = React.useState(false);
+  const [shouldShowBg, setShouldShowBg] = React.useState(false);
 
-  const MINIMUM_SCROLL = 80;
+  const MINIMUM_SCROLL = 120;
   const TIMEOUT_DELAY = 200;
 
   useDocumentScrollThrottled(callbackData => {
@@ -35,7 +35,7 @@ const Header = (): React.ReactElement => {
       const isScrolledDown = previousScrollTop < currentScrollTop;
       const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
 
-      setShouldShowShadow(currentScrollTop > 2);
+      setShouldShowBg(currentScrollTop > 2);
 
       setTimeout(() => {
         setShouldHideHeader(isScrolledDown && isMinimumScrolled);
@@ -48,7 +48,7 @@ const Header = (): React.ReactElement => {
   });
 
   return (
-    <Container show={shouldHideHeader} minScroll={shouldShowShadow}>
+    <Container show={shouldHideHeader} minScroll={shouldShowBg}>
       <Wrapper>
         <Logo />
         <MenuList>

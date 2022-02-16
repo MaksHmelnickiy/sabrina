@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
+import { device } from '../../constants/breakpoints';
 
 interface IHeaderProps {
   show?: boolean;
@@ -48,7 +49,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media (max-width: 1600px){
+  @media ${device.xxl}{
     max-width: 1230px;
   }
 `

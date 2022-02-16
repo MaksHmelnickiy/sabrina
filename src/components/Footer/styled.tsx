@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Logo from '../Logo';
 import { Link as Anchor } from 'react-scroll';
 import { Link } from 'react-router-dom';
-import Button from '../Button';
+import { device } from '../../constants/breakpoints';
 
 export const Container = styled.div`
   padding: 0 15px;
@@ -13,12 +13,18 @@ export const MenuList = styled.ul`
   justify-content: space-between;
   flex-wrap: wrap;
   width: 40%;
+  @media ${device.xxl}{
+    width: 34%;
+  }
 `
 export const Item = styled.li`
   padding-left: 10px;
   padding-right: 10px;
   width: 33.3333%;
   margin-bottom: 23px;
+  @media ${device.xxl}{
+    width: 50%;
+  }
 `
 export const StyledLink = styled(Anchor)`
   color: ${props => props.theme.footerLink};
@@ -33,10 +39,16 @@ export const StyledLink = styled(Anchor)`
   }
 `;
 export const CustomLogo = styled(Logo)`
-margin-right: 87px;
+  margin-right: 87px;
   &  div {
     color: ${props => props.theme.logoIcon} !important;
   }
+  @media ${device.xxl}{
+    margin-right: 59px;
+    & svg {
+      width: 26px;
+    }
+  } 
 `
 
 export const FooterTop = styled.div`
@@ -50,6 +62,10 @@ export const FooterTop = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @media ${device.xxl}{
+    max-width: 1200px;
+    padding-bottom: 27px;
+  }
 `
 export const FooterBottom = styled.div`
   max-width: 1520px;
@@ -58,6 +74,10 @@ export const FooterBottom = styled.div`
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  @media ${device.xxl}{
+    max-width: 1200px;
+    
+  }
 `
 export const Text = styled.div`
   font-weight: normal;
@@ -70,6 +90,9 @@ export const Text = styled.div`
 export const Social = styled.div`
   position: relative;
   left: -80px;
+  @media ${device.xxl}{
+    left: -50px;
+  }
 `
 export const SocialLabel = styled.div`
   color: ${props => props.theme.footerLink};
@@ -77,6 +100,9 @@ export const SocialLabel = styled.div`
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 23px;
+  @media ${device.xxl}{
+    margin-bottom: 19px;
+  }
 `
 export const SocialList = styled.div`
   display: flex;

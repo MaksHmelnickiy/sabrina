@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { device } from '../../constants/breakpoints';
 export interface ITitle{
   variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   color?: string
@@ -16,6 +16,9 @@ export const Container = styled.div<ITitle>`
           font-size: 200px;
           line-height: 120%;
           color: ${props.color ? props.color : props.theme.titleH1};
+          @media ${device.xxl}{
+            font-size: 180px;
+          }
         `;
       case 'h2':
         return `
@@ -23,6 +26,10 @@ export const Container = styled.div<ITitle>`
           font-size: 96px;
           line-height: 120%;
           color: ${props.color ? props.color : props.theme.titleH2};
+          @media ${device.xxl}{
+            font-size: 80px;
+            line-height: 120%;
+          }
         `;
       case 'h3':
         return `

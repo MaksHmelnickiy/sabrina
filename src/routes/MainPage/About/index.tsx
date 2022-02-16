@@ -1,5 +1,6 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
+import StickyBox from "react-sticky-box";
 import videoUrl from '../../../assets/img/video.mp4';
 import imgUrl from '../../../assets/img/girlVideo.png';
 import Ticker from 'react-ticker'
@@ -16,7 +17,7 @@ import {
   VideoContainer,
   StyledButton,
   List,
-  Item
+  Item,
 } from './styled';
 
 interface Props {

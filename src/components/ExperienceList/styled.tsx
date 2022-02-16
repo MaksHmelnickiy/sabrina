@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../constants/breakpoints';
 
 export const List = styled.div`
   display: flex;
@@ -56,6 +57,49 @@ export const Item = styled.div`
     position: absolute;
     z-index: 1;
     color: ${props => props.theme.expArrowIcon};
+  }
+  @media ${device.xxl}{
+    &:nth-of-type(1){
+      padding: 24px 60px 42px 58px;
+      & > div > svg {
+        max-width: 100%;
+      }
+      & > div{
+        min-width: 194px;
+        padding-top: 17px;
+      }
+      & > svg { 
+        top: 66%;
+        width: 171px;
+      }
+      & > span {
+        padding-left: 58px;
+      }
+    }
+    &:nth-of-type(2){
+      padding: 49px 90px 39px 61px;
+      & > svg {
+        right: 39%;
+        bottom: -111px;
+        width: 71px;
+      }
+    }
+    &:nth-of-type(3){
+      padding: 38px 55px 46px 59px;
+      & > svg {
+        right: -62px;
+        top: auto;
+        transform: none;
+        bottom: 13%;
+        width: 110px;
+      }
+    }
+    &:nth-of-type(4){
+      padding: 100px 44px 36px 41px;
+      & > span {
+        padding-top: 0px;
+      }
+    }
   }
 `
 export const Text = styled.span`
