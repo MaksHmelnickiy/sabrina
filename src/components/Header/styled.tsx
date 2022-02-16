@@ -1,15 +1,26 @@
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
-export const Container = styled.div`
+interface IHeaderProps {
+  show?: boolean;
+  minScroll?: boolean;
+}
+
+export const Container = styled.div<IHeaderProps>`
   padding-top: 30px;
   position: fixed;
   left:0;
   right: 0;
-
   z-index: 5;
   padding-bottom: 30px;
-  background: ${props => props.theme.headerBg};
+  top:0;
+  transition: 0.2s;
+  background: rgba(255,255,255,0);
+  ${props => props.minScroll ? `
+    background: ${props.theme.headerBg};
+  ` : ``}
+  ${props => props.show ? `top: -100px;` : `top: 0;`
+}
 `
 export const MenuList = styled.ul`
   display: flex;
@@ -37,4 +48,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 1600px){
+    max-width: 1230px;
+  }
 `

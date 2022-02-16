@@ -17,6 +17,7 @@
     "express-mailer": "^0.3.1",
     "i18next": "^20.3.1",
     "i18next-browser-languagedetector": "^6.1.2",
+    "lodash": "^4.17.21",
     "nodemailer": "^6.7.2",
     "nodemailer-react": "^1.0.2",
     "npm": "^8.4.0",
@@ -56,6 +57,7 @@
     ]
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.178",
     "@types/nodemailer": "^6.4.4",
     "@types/react-router-dom": "^5.3.3",
     "@types/react-scroll": "^1.8.3",

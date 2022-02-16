@@ -39,7 +39,6 @@ const IndexRoute = (): React.ReactElement => {
       <Container onClick={event => onClick(event)}>
           <Suspense fallback={null}>
             <Header />
-            <Link to="/">Home</Link>
             <Switch>
               <Route component={MainPage} path="/" exact />
               <Route path="/404" component={NotFoundPage} />

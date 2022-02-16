@@ -4,6 +4,7 @@ import SwitchLanguage from '../SwitchLanguage';
 import {useTranslation} from "react-i18next";
 import { availableLanguages } from '../../i18n';
 import { Container, Item, MenuList, StyledLink, Wrapper } from './styled';
+import useDocumentScrollThrottled from '../../hooks/useDocumentScrollThrottled';
 
 
 const data = [
@@ -22,12 +23,32 @@ const data = [
 const Header = (): React.ReactElement => {
   const {t, i18n} = useTranslation()
 
+  const [shouldHideHeader, setShouldHideHeader] = React.useState(false);
+  const [shouldShowShadow, setShouldShowShadow] = React.useState(false);
+
+  const MINIMUM_SCROLL = 80;
+  const TIMEOUT_DELAY = 200;
+
+  useDocumentScrollThrottled(callbackData => {
+    if(window.innerWidth > 1200){
+      const { previousScrollTop, currentScrollTop } = callbackData;
+      const isScrolledDown = previousScrollTop < currentScrollTop;
+      const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
+
+      setShouldShowShadow(currentScrollTop > 2);
+
+      setTimeout(() => {
+        setShouldHideHeader(isScrolledDown && isMinimumScrolled);
+      }, TIMEOUT_DELAY);
+    }
+  });
+
   const defaultLanguage = data.findIndex((lang) => {
     return lang.value === i18n.language
   });
 
   return (
-    <Container>
+    <Container show={shouldHideHeader} minScroll={shouldShowShadow}>
       <Wrapper>
         <Logo />
         <MenuList>

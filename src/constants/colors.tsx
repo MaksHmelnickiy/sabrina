@@ -38,7 +38,8 @@ export const DarkTheme = {
     border: 'rgba(105, 110, 118, 0.4)',
     footerLink: '#696E76',
     linkEmail: '#161616',
-    notFoundIcon: '#fff'
+    notFoundIcon: '#fff',
+
 };
 
 export const LightTheme = {

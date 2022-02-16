@@ -1,5 +1,5 @@
 import React from 'react';
-import { appReactMemo } from '../../hooks';
+import { appReactMemo } from '../../hooks/useMemo';
 
 import {
   StyledButton,
