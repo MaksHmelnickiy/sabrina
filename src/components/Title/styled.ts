@@ -22,6 +22,9 @@ export const Container = styled.div<ITitle>`
           @media ${device.xl}{
             font-size: 160px;
           }
+          @media ${device.lg}{
+            font-size: 100px;
+          }
         `;
       case 'h2':
         return `

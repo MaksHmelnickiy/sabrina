@@ -18,7 +18,12 @@ export const Container = styled.div`
   @media ${device.xl}{
     max-width: 1000px;
     padding-top: 117px;
-    padding-bottom: 204px;
+    padding-bottom: 104px;
+  }
+  @media ${device.lg}{
+    max-width: none;
+    padding-top: 109px;
+    padding-bottom: 104px;
   }
 `
 export const StyledButton = styled(Button)`
@@ -32,6 +37,11 @@ export const StyledButton = styled(Button)`
     left: auto;
     bottom: 68px;
     right: 82px;
+  }
+  @media ${device.lg}{
+    bottom: -6px;
+    right: 50%;
+    margin-right: -95px;
   }
 `
 export const Text = styled.div`
@@ -65,6 +75,10 @@ export const IconWrapper = styled.div`
   }
   @media ${device.xl}{
     top: 140px;
+  }
+  @media ${device.xl}{
+    top: 109px;
+    right: -3px;
   }
 `
 export const CustomTitle = styled(Title)`

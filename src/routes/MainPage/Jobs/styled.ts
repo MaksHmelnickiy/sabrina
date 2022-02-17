@@ -21,6 +21,10 @@ export const Container = styled.div`
     max-width: 1000px;
     padding-bottom: 153px;
   }
+  @media ${device.lg}{
+    display: block;
+    padding-bottom: 79px;
+  }
 `
 export const StyledButton = styled(Button)`
   position: relative; 
@@ -41,6 +45,24 @@ export const StyledButton = styled(Button)`
       top: 14%;
     }
   }
+  @media ${device.lg}{
+    position: absolute;
+    bottom: 76px;
+    right: 21px;
+    z-index: 2;
+    & > div {
+      transform: rotate(-103deg);
+      left: 27%;
+      top: -48%;
+    }
+    &:hover {
+      & > div {
+        transform: rotate(-103deg);
+        left: 27%;
+        top: -48%;
+      }
+    }
+  }
 `
 export const Text = styled.div`
   font-weight: normal;
@@ -55,9 +77,14 @@ export const Text = styled.div`
     padding-top: 11px;
     padding-bottom: 11px;
   }
+  @media ${device.lg}{
+    max-width: 502px;;
+    padding-top: 22px;
+    padding-bottom: 60px;
+  }
 `
 export const CustomTitle = styled(Title)`
-
+  text-transform: uppercase;
 `
 export const Description = styled.div`
   color: ${props => props.theme.titleH4};
@@ -73,6 +100,11 @@ export const Description = styled.div`
   @media ${device.xxl}{
     padding-top: 0px;
     margin-top: 91px;
+  }
+  @media ${device.lg}{
+    max-width: none;
+    margin-top: 80px;
+    padding-right: 224px;
   }
 `
 export const Image = styled.div`
@@ -92,6 +124,12 @@ export const Image = styled.div`
     position: relative;
 
   }
+  @media ${device.lg}{
+    width: 100%;
+    height: 620px;
+    position: relative;
+    z-index:1;
+  }
 `
 export const TitleBox = styled.div`
   width: 22.5%;
@@ -100,6 +138,9 @@ export const TitleBox = styled.div`
   }
   @media ${device.xl}{
     width: 30%;
+  }
+  @media ${device.lg}{
+    width: 100%;
   }
 `
 export const DescriptionBox = styled.div`
@@ -125,5 +166,18 @@ export const DescriptionBox = styled.div`
   }
   @media ${device.xl}{
     width: 30%;
+  }
+  @media ${device.lg}{
+    width: 100%;
+    padding: 0;
+    position: static;
+    & > svg {
+      width: 317px;
+      height: 284px;
+      position: absolute;
+      top: 0;
+      left: auto; margin-left: 0px;
+      right: 25px;
+    }
   }
 ` 

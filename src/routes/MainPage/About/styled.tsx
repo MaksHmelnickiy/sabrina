@@ -16,6 +16,12 @@ export const Container = styled.div`
   @media ${device.xl}{
     max-width: 1000px;
   }
+  @media ${device.lg}{
+    max-width: none;
+    display: block;
+    position: relative;
+    padding-top: 973px;
+  }
 `
 export const TickerWrapper = styled.div`
 	overflow: hidden;
@@ -30,6 +36,10 @@ export const TickerWrapper = styled.div`
     padding-top: 126px;
     min-height: 250px;
   }
+  @media ${device.lg}{
+    padding-top: 102px;
+    margin: 0 -50px;
+  }
 `
 export const TickerText = styled.div`
   font-size: 240px;
@@ -43,6 +53,10 @@ export const TickerText = styled.div`
   }
   @media (max-width: 1300px){
     font-size: 170px;
+  }
+  @media ${device.lg}{
+    font-size: 130px;
+    white-space: nowrap;
   }
 `
 export const SecondaryTitle = styled(Title)`
@@ -62,6 +76,11 @@ export const TextContainer = styled.div`
   @media ${device.xl}{
     padding-right: 100px;
   }
+  @media ${device.lg}{
+    width: 100%;
+    padding-right: 0;
+    padding-top: 0;
+  }
 `
 export const ImageContainer = styled.div`
   width: 50%;
@@ -79,6 +98,13 @@ export const ImageContainer = styled.div`
     position: relative;
     padding-bottom: 400px;
   }
+  @media ${device.lg}{
+    width: 100%;
+    padding-left: 0;
+    padding-top: 55px;
+    padding-bottom: 0px;
+    position: static;
+  }
 `
 export const Text = styled.p`
   font-weight: normal;
@@ -95,6 +121,9 @@ export const Text = styled.p`
     &:nth-of-type(1){
       padding-right: 0px;
     }
+  }
+  @media ${device.lg}{
+    position: static;
   }
 `
 export const CustomTitle = styled(Title)`
@@ -133,6 +162,28 @@ export const VideoContainer = styled.div`
 
     }
   }
+  @media ${device.lg}{
+    & img{
+      width: 279px;
+    }
+  }
+  @media ${device.lg}{
+    max-width: 668px;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 124px;;
+    & video {
+      width: 100%;
+      display: block
+    }
+    & img {
+      width: 76%;
+      bottom: -1px;
+      top: auto;
+      left: 70px;
+    }
+  }
 `
 export const StyledButton = styled(Button)`
   position: absolute;
@@ -163,12 +214,58 @@ export const StyledButton = styled(Button)`
       }
     }
   }
+  @media ${device.lg}{
+    display: none;
+  }
+`
+export const StyledButtonMobile = styled(Button)`
+  position: absolute;
+  left: 50%;
+  margin-left: -156px;
+  bottom: -107px;
+  display: none;
+  & > div {
+    color: #fff;
+  }
+  @media ${device.xl} {
+    
+    bottom: -108px;
+    left: 64%;
+    & > div {
+      left: 14%;
+      top: -50%;
+      transform: rotate(-127deg);
+    }
+    &:hover {
+      & > div {
+        left: 39%;
+        top: -47%;
+        transform: rotate(-99deg);
+      }
+    }
+  }
+  @media ${device.lg}{
+    display: block;
+    bottom: 3px;
+    left: auto;
+    right: -4px;
+    & > div {
+      left: 3%;
+      top: -60%;
+      transform: rotate(-127deg);
+    }
+  }
 `
 export const List = styled.ul`
   margin-top: 200px;
   @media ${device.xxl}{
     position: absolute;
     bottom: 20px;
+  }
+  @media ${device.lg}{
+    position: static;
+    margin-top: 0;
+    padding-right: 200px;
   }
 `
 export const Item = styled.li`

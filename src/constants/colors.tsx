@@ -39,7 +39,7 @@ export const DarkTheme = {
     footerLink: '#696E76',
     linkEmail: '#161616',
     notFoundIcon: '#fff',
-
+    gamburger: '#fff'
 };
 
 export const LightTheme = {
@@ -81,7 +81,8 @@ export const LightTheme = {
     border: 'rgba(36, 50, 79, 0.15)',
     footerLink: '#24324F',
     linkEmail: 'rgba(36, 50, 79, 0.05)',
-    notFoundIcon: '#cc998d'
+    notFoundIcon: '#cc998d',
+    gamburger: '#24324F'
 }
 
 export const GreenTheme = {
@@ -123,5 +124,6 @@ export const GreenTheme = {
     border: 'rgba(36, 50, 79, 0.15)',
     footerLink: '#111A1B',
     linkEmail: 'rgba(17, 26, 27, 0.05)',
-    notFoundIcon: '#9baba4'
+    notFoundIcon: '#9baba4',
+    gamburger: '#111A1B'
 }

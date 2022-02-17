@@ -7,6 +7,9 @@ import { device } from '../../constants/breakpoints';
 export const Container = styled.div`
   padding: 0 15px;
   background: ${props => props.theme.headerBg};
+  @media ${device.lg}{
+    padding: 0 50px;
+  }
 `
 export const MenuList = styled.ul`
   display: flex;
@@ -19,6 +22,11 @@ export const MenuList = styled.ul`
   @media ${device.xl}{
     width: calc(40% - 50px);
   }
+  @media ${device.lg}{
+    width: 100%;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(105, 110, 118, 0.4);
+  }
 `
 export const Item = styled.li`
   padding-left: 10px;
@@ -27,6 +35,11 @@ export const Item = styled.li`
   margin-bottom: 23px;
   @media ${device.xxl}{
     width: 50%;
+  }
+  @media ${device.lg}{
+    width: 33.3333%;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 `
 export const StyledLink = styled(Anchor)`
@@ -52,6 +65,9 @@ export const CustomLogo = styled(Logo)`
       width: 26px;
     }
   } 
+  @media ${device.lg}{
+    display: none;
+  }
 `
 
 export const FooterTop = styled.div`
@@ -72,6 +88,14 @@ export const FooterTop = styled.div`
   @media ${device.xl}{
     max-width: 1000px;
     padding-bottom: 27px;
+  }
+  @media ${device.lg}{
+    display: block;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 51px;
+    padding-bottom: 18px;
   }
 `
 export const FooterBottom = styled.div`
@@ -112,6 +136,10 @@ export const Social = styled.div`
     top: -10px;
     margin-bottom: 22px;
   }
+  @media ${device.lg}{
+    top: 0;
+    display: block;
+  }
 `
 export const SocialLabel = styled.div`
   color: ${props => props.theme.footerLink};
@@ -124,6 +152,9 @@ export const SocialLabel = styled.div`
   }
   @media ${device.xl}{
     margin-bottom: 0px;
+  }
+  @media ${device.lg}{
+    margin-bottom: 15px;
   }
 `
 export const SocialList = styled.div`
@@ -191,6 +222,13 @@ export const SocialBox = styled.div`
     display: block;
     max-width: 364px;
   }
+  @media ${device.lg}{
+    width: 100%;
+    display: flex;
+    max-width: none;
+    padding-top: 40px;
+  }
+  
 `
 export const Box = styled.div`
   display: flex;

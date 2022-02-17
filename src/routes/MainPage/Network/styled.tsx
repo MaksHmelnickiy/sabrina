@@ -17,6 +17,10 @@ export const Container = styled.div`
     max-width: 1000px;
     padding-top: 168px;
   }
+  @media ${device.lg}{
+    padding-top: 130px;
+    max-width: none;
+  }
 `
 
 export const Text = styled.div`
@@ -51,6 +55,10 @@ export const TickerWrapper = styled.div`
   @media ${device.xl}{
     padding-top: 40px;
     padding-bottom: 136px;
+  }
+  @media ${device.lg}{
+    margin: 0 -50px;
+    padding-bottom: 118px;
   }
 `
 export const TickerText = styled.div`

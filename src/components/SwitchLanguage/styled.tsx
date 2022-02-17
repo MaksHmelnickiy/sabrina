@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../constants/breakpoints';
 
 interface IItemProps {
   selected: boolean
@@ -8,6 +9,10 @@ export const Container = styled.div`
   color: ${props => props.theme.logoIcon};
   display: flex;
   align-items: center;
+  @media ${device.lg}{
+    margin-left: auto;
+    margin-right: 80px;
+  }
 `
 export const Item = styled.button<IItemProps>`
   color: ${props => (!props.selected ? props.theme.language : props.theme.languageActive)};
@@ -29,4 +34,5 @@ export const Item = styled.button<IItemProps>`
     margin-left: 20px;
     
   }
+  
 `

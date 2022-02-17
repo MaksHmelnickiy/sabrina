@@ -18,6 +18,7 @@ import {
   StyledButton,
   List,
   Item,
+  StyledButtonMobile
 } from './styled';
 
 interface Props {
@@ -72,6 +73,7 @@ const About = ({id, onClick}:Props): React.ReactElement => {
               )
             })}
           </List>
+          <StyledButtonMobile onClick={onClick} arrowPosition='bottom' arrowShort>{t('about.button')}</StyledButtonMobile>
         </ImageContainer>
       </Container>
     </>

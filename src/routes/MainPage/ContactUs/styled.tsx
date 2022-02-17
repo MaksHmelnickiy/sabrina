@@ -18,7 +18,12 @@ export const Container = styled.div`
   }
   @media ${device.xl}{
     max-width: 1000px;
-
+    padding-top: 109px;
+  }
+  @media ${device.lg}{
+    max-width: none;
+    padding-top: 100px;
+    position: static;
   }
 `
 export const StyledButton = styled(Button)`
@@ -38,6 +43,23 @@ export const StyledButton = styled(Button)`
     bottom: -84px;
     left: 17%;
   }
+  @media ${device.lg}{
+    right: 14%;
+    bottom: -217px;
+    left: auto;
+    & > div {
+      left: -2%;
+      top: -51%;
+      transform: rotate(62deg);
+    }
+    &:hover {
+      & > div {
+        left: -2%;
+        top: -51%;
+        transform: rotate(62deg);
+      }
+    }
+  }
 `
 export const Text = styled.div`
   font-weight: normal;
@@ -55,6 +77,9 @@ export const CustomTitle = styled(Title)`
   padding-right: 510px;
   @media ${device.xxl}{
     padding-right: 330px;
+  }
+  @media ${device.lg}{
+    padding-right: 0px;
   }
 `
 export const Box = styled.div`
@@ -88,6 +113,18 @@ export const Box = styled.div`
   @media ${device.xl}{
     top: 186px;
     max-width: 340px;
+  }
+  @media ${device.lg}{
+    top: auto;
+    bottom: -57px;
+    z-index: 1;
+    right: auto;
+    left: 19px;
+    & > svg {
+      right: auto;
+      left: -16px;
+      top: -77px;
+    }
   }
 `
 export const Description = styled.div`
@@ -129,4 +166,18 @@ export const Image = styled.div`
     margin-top: -191px;
     height: 674px;
   }
+  @media ${device.lg}{
+    margin-top: -107px;
+    height: 508px;
+    margin-left: -50px;
+    margin-right: -50px;
+    background-position: 28%;
+  }
 `
+export const Wrapper =styled.div`
+  @media ${device.lg}{
+    position: relative;
+    padding-bottom: 200px;
+  }
+
+`;

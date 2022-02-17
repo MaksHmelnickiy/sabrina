@@ -10,7 +10,8 @@ import {
   Box,
   Description,
   BoxText,
-  Image
+  Image,
+  Wrapper
 } from './styled';
 
 interface Props {
@@ -22,7 +23,7 @@ const ContactUs = ({id, onClick}:Props): React.ReactElement => {
   const {t} = useTranslation()
 
   return (
-    <>
+    <Wrapper>
       <Container id={id}>
         <CustomTitle variant='h2'>{t('contact.title')}</CustomTitle>
         <Text>{t('contact.text')}</Text>
@@ -35,7 +36,7 @@ const ContactUs = ({id, onClick}:Props): React.ReactElement => {
       <Image>
         <StyledButton onClick={onClick} variant='tertiary' arrowDark>{t('contact.button')}</StyledButton>
       </Image>
-    </>
+    </Wrapper>
   );
 };
 
