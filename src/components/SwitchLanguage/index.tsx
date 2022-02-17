@@ -12,12 +12,13 @@ interface ISwitchLanguages {
   onChange: (item: IItem) => void;
   defaultLang: number;
   className?: string;
+  showOnMobile?: boolean;
 }
 
-const SwitchLanguage = ({languages, onChange, className, defaultLang}: ISwitchLanguages) => {
+const SwitchLanguage = ({languages, onChange, className, showOnMobile, defaultLang}: ISwitchLanguages) => {
   const [value, setValue] = React.useState(languages[Math.abs(defaultLang)].value);
   return (
-    <Container className={className}>
+    <Container showOnMobile={showOnMobile} className={className}>
       {languages.map((item, index) => {
         const onClick = () => {
           setValue(item.value);

@@ -73,7 +73,7 @@ const Header = (): React.ReactElement => {
             </Item>
           </MenuList>
         </OverflowMenu>
-        <SwitchLanguage defaultLang={defaultLanguage} languages={data} onChange={(e) => i18n.changeLanguage(e.value)} />
+        <SwitchLanguage showOnMobile={showMenu} defaultLang={defaultLanguage} languages={data} onChange={(e) => i18n.changeLanguage(e.value)} />
         <Gamburger showMenu={showMenu} onClick={() => setShowMenu(!showMenu)}><ICONS_MAP.Menu/></Gamburger>
       </Wrapper>
     </Container>

@@ -12,4 +12,8 @@ export const ContentContainer = styled.div`
   @media ${device.lg}{
     padding: 182px 50px 0px 50px;
   }
+  @media ${device.md}{
+    padding: 149px 25px 0px 25px;
+    overflow: hidden;
+  }
 `

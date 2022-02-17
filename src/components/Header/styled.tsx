@@ -32,6 +32,10 @@ export const Container = styled.div<IHeaderProps>`
   @media ${device.lg} {
     background: ${props => props.theme.headerBg};
   }
+  @media ${device.md} {
+    background: ${props => props.theme.headerBg};
+    padding: 15px 0;
+  }
 `
 export const MenuList = styled.ul`
   display: flex;
@@ -53,6 +57,13 @@ export const OverflowMenu = styled.div<IShowMenu>`
     padding-right: 50px;
     transition: 0.4s;
     ${props => props.showMenu && `left: 0;`}
+  }
+  @media ${device.md} {
+    padding-left: 25px;
+    padding-top: 25px;
+    height: calc(100vh - 50px);
+    top: 50px;
+    padding-top: 74px;
   }
 `
 export const Item = styled.li`
@@ -77,6 +88,9 @@ export const StyledLink = styled(Link)`
     line-height: 120%;
     display: inline;
   }
+  @media ${device.md} {
+    font-size: 40px;
+  }
 `;
 export const Wrapper = styled.div`
   max-width: 1550px;
@@ -92,10 +106,15 @@ export const Wrapper = styled.div`
   };
   @media ${device.xl} {
     max-width: 1000px;
+    padding: 0;
   };
   @media ${device.lg} {
     max-width: none;
     padding: 0 50px;
+  };
+  @media ${device.md} {
+    max-width: none;
+    padding: 0 25px;
   };
 `
 export const Gamburger = styled.button<IShowMenu>`

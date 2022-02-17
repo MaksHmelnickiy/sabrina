@@ -25,6 +25,9 @@ export const Container = styled.div<ITitle>`
           @media ${device.lg}{
             font-size: 100px;
           }
+          @media ${device.md}{
+            font-size: 50px;
+          }
         `;
       case 'h2':
         return `
@@ -40,6 +43,11 @@ export const Container = styled.div<ITitle>`
             font-size: 72px;
             line-height: 120%;
           }
+          @media ${device.md}{
+            font-size: 30px;
+            line-height: 120%;
+            font-weight: normal;
+          }
         `;
       case 'h3':
         return `
@@ -47,6 +55,11 @@ export const Container = styled.div<ITitle>`
           font-size: 40px;
           line-height: 120%;
           color: ${props.color ? props.color : props.theme.titleH3};
+          @media ${device.md}{
+            font-size: 30px;
+            line-height: 120%;
+            font-weight: normal;
+          }
         `;
       case 'h4':
         return `

@@ -22,6 +22,10 @@ export const Container = styled.div`
     position: relative;
     padding-top: 973px;
   }
+  @media ${device.md}{
+    padding-top: 491px;
+    padding-bottom: 191px;
+  }
 `
 export const TickerWrapper = styled.div`
 	overflow: hidden;
@@ -40,6 +44,11 @@ export const TickerWrapper = styled.div`
     padding-top: 102px;
     margin: 0 -50px;
   }
+  @media ${device.md}{
+    padding-top: 64px;
+    margin: 0 -50px;
+    min-height: 155px;
+  }
 `
 export const TickerText = styled.div`
   font-size: 240px;
@@ -51,16 +60,23 @@ export const TickerText = styled.div`
   @media ${device.xl}{
     font-size: 200px;
   }
-  @media (max-width: 1300px){
+  @media (max-width: 1150px){
     font-size: 170px;
   }
   @media ${device.lg}{
     font-size: 130px;
     white-space: nowrap;
   }
+  @media ${device.md}{
+    font-size: 88px;
+    white-space: nowrap;
+  }
 `
 export const SecondaryTitle = styled(Title)`
   margin-bottom: 38px;
+  @media ${device.md}{
+    margin-bottom: 30px;
+  }
 `
 export const Flex = styled.div`
 
@@ -128,6 +144,9 @@ export const Text = styled.p`
 `
 export const CustomTitle = styled(Title)`
   padding-top: 55px;
+  @media ${device.md}{
+    padding-top: 29px;
+  }
 
 `
 export const VideoContainer = styled.div`
@@ -182,6 +201,17 @@ export const VideoContainer = styled.div`
       bottom: -1px;
       top: auto;
       left: 70px;
+    }
+  }
+  @media ${device.md}{
+    top: 64px;
+    max-width: 325px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    & img {
+      left: 49%;
+      transform: translateX(-50%);
     }
   }
 `
@@ -255,6 +285,24 @@ export const StyledButtonMobile = styled(Button)`
       transform: rotate(-127deg);
     }
   }
+  @media ${device.md}{
+    display: block;
+    bottom: 3px;
+    left: 37%;
+    margin: 0;
+    & > div {
+      left: -52%;
+      top: -17%;
+      transform: rotate(-186deg);
+    }
+    &:hover {
+      & > div {
+        left: -52%;
+        top: -17%;
+        transform: rotate(-186deg);
+      }
+    }
+  }
 `
 export const List = styled.ul`
   margin-top: 200px;
@@ -266,6 +314,11 @@ export const List = styled.ul`
     position: static;
     margin-top: 0;
     padding-right: 200px;
+  }
+  @media ${device.md}{
+    position: static;
+    margin-top: 0;
+    padding-right: 0px;
   }
 `
 export const Item = styled.li`
@@ -283,5 +336,16 @@ export const Item = styled.li`
     width: 13px;
     height: 13px;
     color: ${props => props.theme.marker};
+  }
+  @media ${device.md}{
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 26px;
+    & svg {
+      width: 10px;
+      height: 10px;
+      top: 6px;
+      margin: 0;
+    }
   }
 `

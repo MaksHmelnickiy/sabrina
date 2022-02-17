@@ -25,6 +25,10 @@ export const Container = styled.div`
     padding-top: 100px;
     position: static;
   }
+  @media ${device.md}{
+    padding-top: 63px;
+    
+  }
 `
 export const StyledButton = styled(Button)`
   position: absolute; 
@@ -60,6 +64,22 @@ export const StyledButton = styled(Button)`
       }
     }
   }
+  @media ${device.md}{
+    right: 156px;
+    bottom: -371px;
+    & > div{
+      left: 80%;
+      top: 12%;
+      transform: rotate(146deg);
+    }
+    &:hover{
+      & > div{
+        left: 80%;
+        top: 12%;
+        transform: rotate(146deg);
+      }
+    }
+  }
 `
 export const Text = styled.div`
   font-weight: normal;
@@ -70,7 +90,9 @@ export const Text = styled.div`
   color: ${props => props.theme.text};
   font-family: 'Biotif';
   max-width: 404px;
-
+  @media ${device.md}{
+    padding-top: 18px;
+  }
 `
 
 export const CustomTitle = styled(Title)`
@@ -111,7 +133,7 @@ export const Box = styled.div`
     }
   }
   @media ${device.xl}{
-    top: 186px;
+    top: 286px;
     max-width: 340px;
   }
   @media ${device.lg}{
@@ -126,6 +148,16 @@ export const Box = styled.div`
       top: -77px;
     }
   }
+  @media ${device.md}{
+    padding-right: 0;
+    bottom: 160px;
+    left: auto;
+    right: 0;
+    & > svg{
+      left: -54px;
+      top: -98px;
+    }
+  }
 `
 export const Description = styled.div`
   color: ${props => props.theme.titleH4};
@@ -138,6 +170,9 @@ export const Description = styled.div`
   margin-left: auto;
   position: relative;
   z-index: 1;
+  @media ${device.md}{
+    padding-left: 40px;
+  }
 `
 export const BoxText = styled(Text)`
   max-width: 420px;
@@ -165,6 +200,7 @@ export const Image = styled.div`
   @media ${device.xl}{
     margin-top: -191px;
     height: 674px;
+    background-position: 36%;
   }
   @media ${device.lg}{
     margin-top: -107px;
@@ -173,11 +209,20 @@ export const Image = styled.div`
     margin-right: -50px;
     background-position: 28%;
   }
+  @media ${device.md}{
+    margin-left: -25px;
+    margin-right: -25px;
+    height: 366px;
+    background-position: center;
+    margin-top: -38px;
+  }
 `
 export const Wrapper =styled.div`
   @media ${device.lg}{
     position: relative;
     padding-bottom: 200px;
   }
-
+  @media ${device.md}{
+    padding-bottom: 400px;
+  }
 `;

@@ -269,6 +269,32 @@ export const Item = styled.div`
       }
     } 
   }
+  @media ${device.md}{
+    &:nth-of-type(n){
+      padding: 40px;
+      display: block;
+      text-align: center;
+      & > svg{
+        display: none;
+      }
+      & > div{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 25px;
+        & > svg{
+          height: auto;
+        }
+      }
+      & > span{
+        width: 100%;
+        padding: 0;
+      }
+    }
+    &:nth-of-type(4){
+      padding-bottom: 80px;
+    }
+  }
 `
 export const Text = styled.span`
   color: ${props => props.theme.titleH4};
@@ -277,6 +303,7 @@ export const Text = styled.span`
   line-height: 33px;
   padding-left: 41px; 
   display: block;
+  
 `
 export const IconWrapper = styled.div`
   color: ${props => props.theme.expIcon};

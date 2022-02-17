@@ -10,6 +10,9 @@ export const Container = styled.div`
   @media ${device.lg}{
     padding: 0 50px;
   }
+  @media ${device.md}{
+    padding: 0 25px;
+  }
 `
 export const MenuList = styled.ul`
   display: flex;
@@ -27,6 +30,9 @@ export const MenuList = styled.ul`
     padding-bottom: 28px;
     border-bottom: 1px solid rgba(105, 110, 118, 0.4);
   }
+  @media ${device.md}{
+    padding-bottom: 12px;
+  }
 `
 export const Item = styled.li`
   padding-left: 10px;
@@ -40,6 +46,12 @@ export const Item = styled.li`
     width: 33.3333%;
     padding-left: 0px;
     padding-right: 0px;
+  }
+  @media ${device.md}{
+    width: calc(50% - 40px);
+    padding-left: 0px;
+    padding-right: 0px;
+    min-width: 92px;
   }
 `
 export const StyledLink = styled(Anchor)`
@@ -95,6 +107,10 @@ export const FooterTop = styled.div`
     margin-left: 0;
     margin-right: 0;
     padding-top: 51px;
+    padding-bottom: 11px;
+  }
+  @media ${device.md}{
+    border: none;
     padding-bottom: 18px;
   }
 `
@@ -109,9 +125,28 @@ export const FooterBottom = styled.div`
     max-width: 1200px;
     
   }
-  @media ${device.xxl}{
+  @media ${device.xl}{
     max-width: 1000px;
     
+  }
+  @media ${device.md}{
+    flex-wrap: wrap;
+    padding: 77px 0;
+    justify-content: center;
+    text-align: center;
+    & a:nth-of-type(1){
+      margin-left: 0;
+      order: -1;
+    }
+    & a:nth-of-type(2){
+      order: 0;
+    }
+    div{
+      width: 100%;
+      order: 1;
+      margin-top:14px;
+    }
+    padding: 23px 0;
   }
 `
 export const Text = styled.div`
@@ -139,6 +174,7 @@ export const Social = styled.div`
   @media ${device.lg}{
     top: 0;
     display: block;
+    margin-bottom: 31px;
   }
 `
 export const SocialLabel = styled.div`
@@ -159,6 +195,7 @@ export const SocialLabel = styled.div`
 `
 export const SocialList = styled.div`
   display: flex;
+  
 `
 export const SocialLink = styled(Link)`
   color: ${props => props.theme.footerLink};
@@ -195,6 +232,9 @@ export const LinkEmail = styled(Link)`
     border-color: ${props => props.theme.headerLinkHover};
     color: ${props => props.theme.headerLinkHover};
   }
+  @media ${device.md}{
+    width: 100%;
+  }
 `
 export const CustomButton = styled(Anchor)`
   width: 80px;
@@ -213,10 +253,16 @@ export const CustomButton = styled(Anchor)`
     color: ${props => props.theme.headerLinkHover};
     border-color: ${props => props.theme.headerLinkHover};
   }
+  @media ${device.md}{
+    position: absolute;
+    right: 0;
+    top: 41px;
+  }
 `
 export const SocialBox = styled.div`
   display: flex;
   justify-content: space-between;
+  position: relative;
   @media ${device.xl}{
     width: auto;
     display: block;
@@ -227,6 +273,10 @@ export const SocialBox = styled.div`
     display: flex;
     max-width: none;
     padding-top: 40px;
+  }
+  @media ${device.md}{
+    display: block;
+
   }
   
 `

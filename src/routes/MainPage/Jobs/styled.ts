@@ -25,6 +25,10 @@ export const Container = styled.div`
     display: block;
     padding-bottom: 79px;
   }
+  @media ${device.md}{
+    padding-top: 75px;
+    padding-bottom: 211px;
+  }
 `
 export const StyledButton = styled(Button)`
   position: relative; 
@@ -63,6 +67,23 @@ export const StyledButton = styled(Button)`
       }
     }
   }
+  @media ${device.md}{
+    bottom: 49px;
+    right: 28px;
+    z-index: 2;
+    & > div {
+      transform: rotate(-233deg);
+      left: -54%;
+      top: 19%;
+    }
+    &:hover {
+      & > div {
+        transform: rotate(-233deg);
+        left: -54%;
+        top: 19%;
+      }
+    }
+  }
 `
 export const Text = styled.div`
   font-weight: normal;
@@ -82,9 +103,14 @@ export const Text = styled.div`
     padding-top: 22px;
     padding-bottom: 60px;
   }
+  @media ${device.md}{
+    padding-bottom: 37px;
+  }
 `
 export const CustomTitle = styled(Title)`
-  text-transform: uppercase;
+  @media ${device.lg}{
+    text-transform: uppercase;
+  }
 `
 export const Description = styled.div`
   color: ${props => props.theme.titleH4};
@@ -105,6 +131,10 @@ export const Description = styled.div`
     max-width: none;
     margin-top: 80px;
     padding-right: 224px;
+  }
+  @media ${device.md}{
+    margin-top: 39px;
+    padding-right: 0;
   }
 `
 export const Image = styled.div`
@@ -129,6 +159,9 @@ export const Image = styled.div`
     height: 620px;
     position: relative;
     z-index:1;
+  }
+  @media ${device.md}{
+    height: 301px;
   }
 `
 export const TitleBox = styled.div`
@@ -178,6 +211,11 @@ export const DescriptionBox = styled.div`
       top: 0;
       left: auto; margin-left: 0px;
       right: 25px;
+    }
+  }
+  @media ${device.lg}{
+    & > svg{
+      display: none;
     }
   }
 ` 
