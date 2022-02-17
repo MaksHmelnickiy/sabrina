@@ -22,6 +22,9 @@ export const Container = styled.div`
     max-width: none;
     padding: 148px 0px 209px 0px;
   }
+  @media ${device.md}{
+    padding: 142px 0px 191px 0px;
+  }
 `;
 
 export const PartTitle = styled.div`
@@ -44,6 +47,11 @@ export const Photo = styled.img`
     max-width: calc(50% - 5px);
     &:nth-of-type(2){
       margin-top: 78px;
+    }
+  }
+  @media ${device.md} {
+    &:nth-of-type(2){
+      margin-top: 61px;
     }
   }
 `;
@@ -91,6 +99,15 @@ export const SvgIcon = styled.div`
     width: 111px;
     left: 56px;
   }
+  @media ${device.md}{
+    width: 87px;
+    height: 100px;
+    left: 36px;
+    top: -35px;
+    & > svg {
+      max-height: 100%;
+    }
+  }
 `;
 export const Text = styled.div`
   font-weight: 600;
@@ -117,7 +134,15 @@ export const Text = styled.div`
     right: 0%;
     top: 7%;
   }
+  @media ${device.md}{
+    right: 0%;
+    top: 4%;
+    font-size: 14px;
+    max-width: 200px;
+    line-height: 140%;
+  }
 `;
+
 export const StyledButton = styled(Button)`
   position: absolute;
   bottom: 20%;
@@ -146,6 +171,12 @@ export const CustomTitle = styled(Title)`
   @media ${device.lg}{
     & div {
       padding-top:0px;
+    }
+  }
+  @media ${device.md}{
+    text-align: center;
+    & > div {
+      text-align: center;
     }
   }
 `;

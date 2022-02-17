@@ -25,6 +25,11 @@ export const Container = styled.div`
     padding-top: 109px;
     padding-bottom: 104px;
   }
+  @media ${device.md}{
+    max-width: none;
+    padding-top: 66px;
+    padding-bottom: 104px;
+  }
 `
 export const StyledButton = styled(Button)`
   position: absolute; 
@@ -35,13 +40,18 @@ export const StyledButton = styled(Button)`
   }
   @media ${device.xl}{
     left: auto;
-    bottom: 68px;
+    bottom: -32px;
     right: 82px;
   }
   @media ${device.lg}{
     bottom: -6px;
     right: 50%;
     margin-right: -95px;
+  }
+  @media ${device.md}{
+    bottom: 3px;
+    right: 50%;
+    margin-right: -84px;
   }
 `
 export const Text = styled.div`
@@ -76,9 +86,19 @@ export const IconWrapper = styled.div`
   @media ${device.xl}{
     top: 140px;
   }
-  @media ${device.xl}{
+  @media ${device.lg}{
     top: 109px;
     right: -3px;
+  }
+  @media ${device.md}{
+    top: 84px;
+    right: -23px;
+    width: 100px;
+    height: 147px;
+    &  svg {
+      max-width: 100%;
+      max-height: 100%;;
+    }
   }
 `
 export const CustomTitle = styled(Title)`
@@ -89,5 +109,8 @@ export const CustomTitle = styled(Title)`
   @media ${device.xl}{
     padding-right: 0;
     max-width: 500px;
+  }
+  @media ${device.xl}{
+    padding-right: 63px;
   }
 `

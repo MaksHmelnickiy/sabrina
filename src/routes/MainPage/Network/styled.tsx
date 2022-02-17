@@ -21,6 +21,10 @@ export const Container = styled.div`
     padding-top: 130px;
     max-width: none;
   }
+  @media ${device.md}{
+    padding-top: 56px;
+
+  }
 `
 
 export const Text = styled.div`
@@ -42,6 +46,10 @@ export const Text = styled.div`
 
 export const CustomTitle = styled(Title)`
   padding-right: 375px;
+  @media ${device.md}{
+    padding-right: 0px;
+    text-transform: uppercase;
+  }
 `
 export const TickerWrapper = styled.div`
 	overflow: hidden;
@@ -59,6 +67,12 @@ export const TickerWrapper = styled.div`
   @media ${device.lg}{
     margin: 0 -50px;
     padding-bottom: 118px;
+  }
+  @media ${device.md}{
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 `
 export const TickerText = styled.div`
@@ -103,6 +117,17 @@ export const Brand = styled.div`
     & svg {
       &:nth-of-type(2){
         transform: scale(0.6);
+      }
+    }
+  }
+  @media ${device.md}{
+    width: 132px;
+    height: 132px;
+    margin-left: 30px;
+    margin-right: 30px;
+    & svg {
+      &:nth-of-type(2){
+        transform: scale(0.45);
       }
     }
   }
