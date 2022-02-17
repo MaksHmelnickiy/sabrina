@@ -220,6 +220,55 @@ export const Item = styled.div`
       }
     }
   }
+  @media ${device.lg}{
+    &:nth-of-type(1) {
+      padding: 30px 60px 35px 58px;
+      & > span {
+        padding-right: 0;
+        padding-left: 4px;
+      }
+      & > svg {
+        right: 26%;
+        bottom: -43px;
+      }
+    } 
+    &:nth-of-type(2) {
+      padding: 30px 60px 35px 58px;
+      & > span {
+        padding-right: 0;
+        padding-left: 4px;
+      }
+      & > svg {
+        right: 17%;
+        bottom: -65px;
+      }
+    } 
+    &:nth-of-type(3) {
+      padding: 30px 60px 35px 58px;
+      & > span {
+        padding-right: 0;
+        padding-left: 4px;
+      }
+      & > div{
+        padding: 0;
+        right: 0;
+      }
+      & > svg {
+        right: 39%;
+      }
+    } 
+    &:nth-of-type(4) {
+      padding: 30px 60px 35px 58px;
+      & > span {
+        padding-right: 0;
+        padding-left: 4px;
+      }
+      & > div{
+        text-align: left;
+        right: 0;
+      }
+    } 
+  }
 `
 export const Text = styled.span`
   color: ${props => props.theme.titleH4};

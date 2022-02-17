@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../../constants/breakpoints';
 import { DefaultBtnStyles, IButtonBaseProps } from '../styled';
 
 export const TertiaryBtn = styled(DefaultBtnStyles)<IButtonBaseProps>`
@@ -53,6 +54,14 @@ display: flex;
   }
   & > div {
     top: -27%;
+  }
+}
+@media ${device.lg}{
+  width: 165px;
+  height: 165px;
+  & i{
+    text-transform: uppercase;
+    font-size: 16px;
   }
 }
 ${props => {

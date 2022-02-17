@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../../constants/breakpoints';
 import { DefaultBtnStyles, IButtonBaseProps } from '../styled';
 
 export const PrimaryBtn = styled(DefaultBtnStyles)<IButtonBaseProps>`
@@ -52,6 +53,14 @@ export const PrimaryBtn = styled(DefaultBtnStyles)<IButtonBaseProps>`
     }
     & > div {
       top: -27%;
+    }
+  }
+  @media ${device.lg}{
+    width: 165px;
+    height: 165px;
+    & i{
+      text-transform: uppercase;
+      font-size: 16px;
     }
   }
   ${props => {
@@ -142,6 +151,16 @@ export const PrimaryBtn = styled(DefaultBtnStyles)<IButtonBaseProps>`
             top: -50%;
             transform: rotate(15deg);
             left: -55%;
+          }
+        }
+        @media ${device.lg}{
+          & > div{
+            width: 140px;
+            left: -65%;
+            top: -40%;
+            & svg {
+              max-width:100%;
+            }
           }
         }
       `

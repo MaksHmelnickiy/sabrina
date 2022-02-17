@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../../constants/breakpoints';
 import { DefaultBtnStyles, IButtonBaseProps } from '../styled';
 
 export const Secondary = styled(DefaultBtnStyles)<IButtonBaseProps>`
@@ -61,5 +62,11 @@ display: flex;
     transform: rotate(-90deg);
   }
 }
-
+  @media ${device.lg} {
+    width: 171px;
+    height: 171px;
+    & i {
+      font-size: 16px;
+    }
+  }
 `;

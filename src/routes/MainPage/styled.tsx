@@ -9,4 +9,7 @@ export const ContentContainer = styled.div`
   @media ${device.xxl} {
     padding-top: 172px;
   }
+  @media ${device.lg}{
+    padding: 182px 50px 0px 50px;
+  }
 `
