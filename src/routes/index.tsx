@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Switch, Route, Redirect, Link } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { ThemeProvider } from "styled-components";
 import { DarkTheme, GreenTheme, LightTheme } from '../constants/colors';
 import Header from '../components/Header';
@@ -9,16 +9,19 @@ import NotFoundPage from './NotFoundPage';
 
 import { Container } from './styled';
 import Footer from '../components/Footer';
+import Cookie from '../components/Cookies';
 
 const IndexRoute = (): React.ReactElement => {
+  const [hide, setHide] = React.useState(true)
   const [theme, setTheme] = React.useState(DarkTheme);
-  const onClick = (event: any ) => {
+  const onClick = (event: React.MouseEvent<HTMLElement, MouseEvent> ) => {
+    const target  = event.target as HTMLElement;
     if(
-      event.target.localName === 'a' ||
-      event.target.localName === 'button' ||
-      event.target.localName === 'input' ||
-      event.target.localName === 'textarea' ||
-      event.target.lacelName === 'button' ||
+      target.localName === 'a' ||
+      target.localName === 'button' ||
+      target.localName === 'input' ||
+      target.localName === 'textarea' ||
+      target.localName === 'button' ||
       document.querySelector('.modal')
       ){
       return false
@@ -44,6 +47,7 @@ const IndexRoute = (): React.ReactElement => {
               <Route path="/404" component={NotFoundPage} />
               <Redirect to="/404" />
             </Switch>
+            <Cookie onClickPolicy={() => console.log('ddd')} setShow={() => setHide(false)} isShow={hide} />
             <Footer />
           </Suspense>
       </Container>
