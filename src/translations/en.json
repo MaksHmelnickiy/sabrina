@@ -78,6 +78,11 @@
       "text": "All rights reserved 2021  ©  Radius.",
       "policy": "Privacy policy",
       "term": "Term of use"
+    },
+    "cookies": {
+      "button": "Accept",
+      "text": "This site uses cookies to give you the best browsing experience. By using this website you are agreeing to our ",
+      "link": "Cookie Policy."
     }
   }
 }
