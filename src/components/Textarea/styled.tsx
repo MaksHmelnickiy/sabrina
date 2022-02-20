@@ -1,12 +1,13 @@
 import styled from 'styled-components';
-import { Link } from 'react-scroll';
+import { device } from '../../constants/breakpoints';
 
-interface ILogoProps {
-  className?: string 
-}
-
-export const Container = styled(Link)<ILogoProps>`
-  
+export const Container = styled.div`
+  @media ${device.lg}{
+    max-width: 50%;
+  }
+  @media ${device.md}{
+    max-width: none;
+  }
 `
 export const CustomTextarea = styled.textarea`
   border: 1px solid #FFBDBD;
@@ -28,4 +29,5 @@ export const Label = styled.label`
   font-family: 'Biotif';
   display: block;
   margin-bottom: 14px;
+
 `

@@ -83,6 +83,18 @@
       "button": "Accept",
       "text": "This site uses cookies to give you the best browsing experience. By using this website you are agreeing to our ",
       "link": "Cookie Policy."
+    },
+    "policy": {
+      "title": {
+        "1":"We are a headhunting company, specialized in IT and also Jobs in the field of Marketing and Sales",
+        "2": "What do we do differently?",
+        "3": "That's why we don't just ask our clients about their tech stack, but also"
+      },
+      "text": {
+        "1": "Who doesn't know it or hasn't experienced it at least once in their professional career? And to those who don't know it - lucky you! It's Sunday afternoon and the weekly carousel of thoughts about the approaching Monday begins. Not in the mood for Mondays? Then it's time to change something. We have made it our mission to find a job for you that will change your Monday. That will make it an enjoyable day of the week. And even if it still doesn't become your favourite day, it can be better, right?",
+        "2": "Who doesn't know it or hasn't experienced it at least once in their professional career? And to those who don't know it - lucky you! It's Sunday afternoon and the weekly carousel of thoughts about the approaching Monday begins. Not in the mood for Mondays? Then it's time to change something. We have made it our mission to find a job for you that will change your Monday. That will make it an enjoyable day of the week. And even if it still doesn't become your favourite day, it can be better, right? Who doesn't know it or hasn't experienced it at least once in their professional career? And to those who don't know it - lucky you! It's Sunday afternoon and the weekly carousel of thoughts about the approaching Monday begins. Not in the mood for Mondays? Then it's time to change something. We have made it our mission to find a job for you that will change your Monday. That will make it an enjoyable day of the week. And even if it still doesn't become your favourite day, it can be better, right?",
+        "3": "Who doesn't know it or hasn't experienced it at least once in their professional career? And to those who don't know it - lucky you! It's Sunday afternoon and the weekly carousel of thoughts about the approaching Monday begins. Not in the mood for Mondays? Then it's time to change something. We have made it our mission to find a job for you that will change your Monday. That will make it an enjoyable day of the week. And even if it still doesn't become your favourite day, it can be better, right? Who doesn't know it or hasn't experienced it at least once in their professional career? And to those who don't know it - lucky you! It's Sunday afternoon and the weekly carousel of thoughts about the approaching Monday begins. Not in the mood for Mondays? Then it's time to change something. We have made it our mission to find a job for you that will change your Monday. That will make it an enjoyable day of the week. And even if it still doesn't become your favourite day, it can be better, right?"
+      }
     }
   }
 }

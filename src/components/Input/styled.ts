@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../constants/breakpoints';
 
 
 interface ILabelProps {
@@ -8,6 +9,9 @@ interface ILabelProps {
 export const Container = styled.div`
   position: relative;
   margin-bottom: 61px;
+  @media ${device.md}{
+    margin-bottom: 40px;
+  }
 `;
 
 export const CustomInput = styled.input`

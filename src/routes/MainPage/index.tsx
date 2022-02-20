@@ -75,7 +75,7 @@ const MainPage = (): React.ReactElement => {
             text='In this section I want to show some of my partners I work with and recommend'
           >
             <Tab title="Candidate">
-              <Form ref={formCandidate} onSubmit={sendEmailCandidate}>
+              <Form className="form-candidate" ref={formCandidate} onSubmit={sendEmailCandidate}>
                 <Input type="text" name="user_email" label='Email' />
                 <Input type="text" name="user_name" label='Full Name' />
                 <Input type="text" name="user_job" label='Job Position' />
@@ -86,7 +86,7 @@ const MainPage = (): React.ReactElement => {
               </Form>
             </Tab>
             <Tab title="Company">
-              <Form ref={formCompany} onSubmit={sendEmailCompany}>
+              <Form className="form-company" ref={formCompany} onSubmit={sendEmailCompany}>
                 <Input type="text" name="user_company" label='Company Name' />
                 <Input type="text" name="user_job" label='Job Position' />
                 <Input type="text" name="user_email" label='E-mail' />

@@ -15,7 +15,7 @@ export const Label = styled.label`
   line-height: 150%;
   color: #F0EEF4;
   font-family: 'Biotif';
-  display:flex;
+  display: inline-flex;
   align-items: center;
   cursor: pointer;
   transition: 0.2s;
