@@ -283,8 +283,10 @@ export const SocialBox = styled.div`
 export const Box = styled.div`
   display: flex;
 `
-export const FooterLink = styled(Link)`
+export const FooterLink = styled.button`
   display: flex;
+  padding: 0;
+  border: none;
   cursor: pointer;
   color: ${props => props.theme.footerLink};
   transition: 0.2s;
@@ -294,6 +296,7 @@ export const FooterLink = styled(Link)`
   opacity: 0.7;
   font-family: 'Biotif';
   margin-left: 44px;
+  background: none;
   &:hover {
     color: ${props => props.theme.headerLinkHover};
     opacity: 1;

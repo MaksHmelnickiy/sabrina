@@ -21,8 +21,11 @@ import {
   SocialBox
 } from './styled';
 
-
-const Footer = (): React.ReactElement => {
+interface IFooter {
+  onClickPolicy?: React.MouseEventHandler<HTMLButtonElement>;
+  onClickTerms?: React.MouseEventHandler<HTMLButtonElement>;
+}
+const Footer = ({onClickPolicy, onClickTerms}:IFooter) => {
   const {t} = useTranslation()
 
   return (
@@ -66,8 +69,8 @@ const Footer = (): React.ReactElement => {
       </FooterTop> 
       <FooterBottom>
         <Text>{t('footer.text')}</Text>
-        <FooterLink to='/'>{t('footer.policy')}</FooterLink>
-        <FooterLink to='/'>{t('footer.term')}</FooterLink>
+        <FooterLink onClick={onClickPolicy}>{t('footer.policy')}</FooterLink>
+        <FooterLink onClick={onClickTerms}>{t('footer.term')}</FooterLink>
       </FooterBottom>
     </Container>
   );

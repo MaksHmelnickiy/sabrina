@@ -23,12 +23,30 @@ export const FormsContainer = styled.div`
   
 `
 export const Form = styled.form`
+  &.form-company {
 
+  }
 `
 export const Wrapper = styled.div`
   max-width: 1486px;
   padding: 0 15px;
   width: 100%;
+  @media ${device.xxl} {
+    display: block;
+  }
+  @media ${device.xxl} {
+    max-width: 1220px;
+  }
+  @media ${device.xl} {
+    max-width: 1030px;
+  }
+  @media ${device.lg} {
+    max-width: none;
+    padding: 0 65px 0 50px;
+  }
+  @media ${device.md} {
+    padding: 0 25px 0 25px;
+  }
 `;
 
 export const Close = styled.button`
@@ -54,14 +72,66 @@ export const CustomTabs = styled(Tabs)`
   padding-bottom: 50px;
   min-height: 765px;
   position: relative;
+  width: 100%;
   &>div {
     width: calc(50% - 125px);
   }
+  @media ${device.xxxl} {
+    &>div {
+      width: calc(50% - 50px);
+    }
+  }
+  @media ${device.xl} {
+    &>div {
+      width: calc(50% - 35px);
+    }
+  }
+  @media ${device.lg} {
+    flex-direction: column-reverse;
+    padding-bottom: 100px;
+    & > div {
+      width: 100%;
+    }
+  }
+  @media ${device.md} {
+    padding-top: 80px;
+    padding-bottom: 230px;
+  }
+
 `
 export const CustomButton = styled(Button)`
   position: absolute;
   bottom: 70px;
   right: 28%;
+  color: #D89477;
+  & > div{
+    color: #fff;
+  }
+  & i {
+    color: #121C1C;
+  }
+  @media ${device.lg}{
+    left: auto;
+    right: 40px;
+    bottom: 50px;
+    & > div {
+      left: -58%;
+      top: 0%;
+      transform: rotate(160deg);
+    }
+    &:hover {
+      & > div {
+        left: -58%;
+        top: 0%;
+        transform: rotate(160deg);
+      }
+    }
+  }
+  @media ${device.md}{
+    bottom: 50px;
+    left: 144px;
+    right: auto;
+  }
 `
 
 

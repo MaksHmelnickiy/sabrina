@@ -1,5 +1,4 @@
 import React from 'react';
-import { ICONS_MAP } from '../../constants/icons';
 import { Container, CustomTextarea, Label } from './styled';
 
 interface ITextarea {
@@ -10,7 +9,7 @@ interface ITextarea {
 
 const Textarea = ({className,name,label}:ITextarea): React.ReactElement => {
   return (
-    <Container className={className} spy={true} smooth={true} to='main'>
+    <Container className={className}>
         <Label>{label}</Label>
         <CustomTextarea name={name} />
     </Container>

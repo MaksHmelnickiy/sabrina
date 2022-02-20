@@ -8,7 +8,6 @@ export const Container = styled.div`
   padding-top: 22px;
 `
 export const StyledButton = styled.button<IButtonProps>`
-    margin: 0px 4px;
     background: rgba(255,255,255,0);
     color: ${({ selected }) => (selected ? `#D89477` : `#F0EEF4`)};
     box-shadow: none;
@@ -22,6 +21,7 @@ export const StyledButton = styled.button<IButtonProps>`
     line-height: inherit;
     cursor: pointer;
     margin-right: 8px;
+    margin-bottom: 8px;
     transition: 0.2s;
     font-family: 'Biotif';
     border: 1px solid ${({ selected }) => (selected ? '#D89477' : '#54525C')} ;
