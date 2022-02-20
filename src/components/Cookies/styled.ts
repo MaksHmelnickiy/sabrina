@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../constants/breakpoints';
 
 export const Container = styled.div`
   position: fixed;
@@ -16,6 +17,9 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media ${device.md} {
+    flex-wrap: wrap;
+  }
 `
 export const Text = styled.div`
   color: #A1A2AC;
@@ -44,8 +48,10 @@ export const Policy = styled.button`
 `
 export const Flex = styled.div`
   display: flex;
-  align-items: center;
   margin-right: 30px;
+  & > svg {
+    min-width: 56px;
+  }
 `
 export const Button = styled.button`
   border: 1px solid #D89477;
@@ -61,8 +67,13 @@ export const Button = styled.button`
   width: 100%;
   transition: 0.2s;
   cursor: pointer;
+  min-width: 320px;
   &:hover {
     border-color: #fff;
     color: #fff;
+  }
+  @media ${device.md} {
+    max-width: none;
+    margin-top: 30px;
   }
 `
