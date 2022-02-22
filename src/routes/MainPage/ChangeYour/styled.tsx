@@ -1,7 +1,28 @@
-import styled from 'styled-components';
+import styled, {keyframes, css} from 'styled-components';
 import Button from '../../../components/Button';
 import Title  from '../../../components/Title';
+
 import { device } from '../../../constants/breakpoints';
+
+const showTop = keyframes`
+  0 {
+    height: 0;
+  }
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 0px;
+  }
+`;
+const PhotoAnimation = keyframes`
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+`
 
 export const Container = styled.div`
   max-width: 1520px;
@@ -29,32 +50,61 @@ export const Container = styled.div`
 export const PartTitle = styled.div`
   text-align: right;
 `;
-export const Photo = styled.img`
-  max-width: calc(50% - 13px);
-  &:nth-of-type(2){
-    margin-top: 98px;
-  }
-  @media ${device.xl}{
-    &:nth-of-type(2){
-      margin-top: 103px;
-    }
-    &:nth-of-type(1){
-      margin-top: 20px;
-    }
-  }
-  @media ${device.lg}{
-    max-width: calc(50% - 5px);
-    &:nth-of-type(2){
-      margin-top: 78px;
-    }
-  }
-  @media ${device.md} {
-    &:nth-of-type(2){
-      margin-top: 61px;
-    }
-  }
+
+export const Photo = styled.img<{isAnimationStart: boolean}>`
+  width: 100%;
+  display: block;
+  opacity: 0;
+  ${props => props.isAnimationStart ? css`animation: 0.1s ${PhotoAnimation} 1.8s ease-in-out; animation-fill-mode: forwards;` : ''}
 `;
+export const PhotoItem = styled.div<{isAnimationStart: boolean}>`
+  position: relative;
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 0;
+    background: ${props => props.theme.bgPhoto};
+    ${props => props.isAnimationStart ? css`animation: 1.5s ${showTop} 1s ease-in-out; animation-fill-mode: forwards;` : ''}
+  }
+`
 export const PhotoWrapper = styled.div`
+overflow: hidden;
+  & > div {
+    max-width: calc(50% - 13px);
+    &:nth-of-type(2){
+      margin-top: 98px;
+    }
+    @media ${device.xl}{
+      &:nth-of-type(2){
+        margin-top: 103px;
+      }
+      &:nth-of-type(1){
+        margin-top: 20px;
+      }
+    }
+    @media ${device.lg}{
+      max-width: calc(50% - 5px);
+      &:nth-of-type(2){
+        margin-top: 78px;
+      }
+    }
+    @media ${device.md} {
+      &:nth-of-type(2){
+        margin-top: 61px;
+      }
+    }
+
+    &:nth-of-type(2){
+      &:after {
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
   max-width: 756px;
   width: 100%;
   position: absolute;
@@ -108,6 +158,23 @@ export const SvgIcon = styled.div`
     }
   }
 `;
+export const Part = styled.div<{isState: boolean}>`
+  ${props => props.isState ? `
+    &:nth-of-type(1){
+      display: none;
+    }
+    &:nth-of-type(2){
+      display: block;
+    }
+    ` : `
+    &:nth-of-type(1){
+      display: block;
+    }
+    &:nth-of-type(2){
+      display: none;
+    }
+  `}
+`
 export const Text = styled.div`
   font-weight: 600;
   font-size: 20px;
@@ -162,16 +229,7 @@ export const StyledButton = styled(Button)`
 export const CustomTitle = styled(Title)`
   position: relative;
   z-index: 1;
-  @media ${device.xxl}{
-    & div {
-      padding-top:23px;
-    }
-  }
-  @media ${device.lg}{
-    & div {
-      padding-top:0px;
-    }
-  }
+
   @media ${device.md}{
     text-align: center;
     & > div {

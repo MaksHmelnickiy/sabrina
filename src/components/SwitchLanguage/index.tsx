@@ -1,6 +1,7 @@
 import React from 'react';
 import { ICONS_MAP } from '../../constants/icons';
 import { Container, Item } from './styled';
+import Fade from 'react-reveal/Fade';
 
 interface IItem {
   value: string;
@@ -27,8 +28,10 @@ const SwitchLanguage = ({languages, onChange, className, showOnMobile, defaultLa
 
         return (
           <Item value={item.value} selected={item.value === value} onClick={onClick} key={index}>
-            {item.value === value ? <ICONS_MAP.Triangle /> : null}
-            {item.label}
+              {item.value === value ? <ICONS_MAP.Triangle /> : null}
+            <Fade delay={600}>
+              {item.label}
+            </Fade>
           </Item>
         )
       })}

@@ -1,8 +1,8 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
-import StickyBox from "react-sticky-box";
 import videoUrl from '../../../assets/img/video.mp4';
 import imgUrl from '../../../assets/img/girlVideo.png';
+import Fade from 'react-reveal/Fade';
 import Ticker from 'react-ticker'
 import { ICONS_MAP } from '../../../constants/icons';
 import {
@@ -18,8 +18,10 @@ import {
   StyledButton,
   List,
   Item,
-  StyledButtonMobile
+  StyledButtonMobile,
+  Animation
 } from './styled';
+import Slide from 'react-reveal/Slide';
 
 interface Props {
   id?: string;
@@ -28,6 +30,7 @@ interface Props {
 
 const About = ({id, onClick}:Props): React.ReactElement => {
   const {t} = useTranslation()
+
   const dataList = [
     t('about.list.1'),
     t('about.list.2'),
@@ -37,6 +40,7 @@ const About = ({id, onClick}:Props): React.ReactElement => {
     t('about.list.6'),
     t('about.list.7'),
   ]
+
   return (
     <>
       <TickerWrapper id={id}>
@@ -47,32 +51,37 @@ const About = ({id, onClick}:Props): React.ReactElement => {
         </Ticker>
       </TickerWrapper>
       <Container>
-        <TextContainer>
-          <SecondaryTitle variant='h3' >{t('about.we_are_a_headhunting')}</SecondaryTitle>
-          <Text>{t('about.we_does_now')}<br/>{t('about.we_have_made')}</Text>
-          <CustomTitle variant='h4' >{t('about.what_do_we_do_differently')}</CustomTitle>
-          <Text>{t('about.in_order_to_really')}</Text>
-          <CustomTitle variant='h4' >{t('about.thats_why_we_dont')}</CustomTitle>
-          <Text>{t('about.in_this_way')}</Text>
-          <Text>{t('about.it_is_our_job')}</Text>
-          <Text>{t('about.of_course_even')}</Text>
-        </TextContainer>
+          <TextContainer>
+            <SecondaryTitle variant='h3' ><Fade bottom big cascade>{t('about.we_are_a_headhunting')}</Fade></SecondaryTitle>
+            <Text><Fade bottom delay={200}>{t('about.we_does_now')}<br/>{t('about.we_have_made')}</Fade></Text>
+            <CustomTitle variant='h4'><Fade bottom delay={300} big cascade>{t('about.what_do_we_do_differently')}</Fade></CustomTitle>
+            <Text><Fade bottom delay={400}>{t('about.in_order_to_really')}</Fade></Text>
+            <CustomTitle variant='h4'><Fade bottom delay={500} big cascade>{t('about.thats_why_we_dont')}</Fade></CustomTitle>
+            <Text><Fade bottom delay={400}>{t('about.in_this_way')}</Fade></Text>
+            <Text><Fade bottom delay={400}>{t('about.it_is_our_job')}</Fade></Text>
+            <Text><Fade bottom delay={400}>{t('about.of_course_even')}</Fade></Text>
+          </TextContainer>
         <ImageContainer>
           <VideoContainer>
-            <video autoPlay muted loop><source  src={videoUrl} type='video/mp4' /></video>
-            <img src={imgUrl} alt="Girl" />
+            <Animation>
+              <Slide delay={800} right><video autoPlay muted loop><source  src={videoUrl} type='video/mp4' /></video></Slide>
+              <Slide delay={800} right />
+            </Animation>
+            <Fade delay={200}><img src={imgUrl} alt="Girl" /></Fade>
             <StyledButton onClick={onClick} arrowPosition='bottom' arrowShort>{t('about.button')}</StyledButton>
           </VideoContainer>
-          <List>
-            {dataList.map((item, index) => {
-              return (
-                <Item key={index}>
-                  <ICONS_MAP.SnowFlake />
-                  {item}
-                </Item>
-              )
-            })}
-          </List>
+            <List>
+              <Fade bottom delay={300}>
+              {dataList.map((item, index) => {
+                return (
+                  <Item key={index}>
+                    <ICONS_MAP.SnowFlake />
+                    {item}
+                  </Item>
+                )
+              })}
+              </Fade>
+            </List>
           <StyledButtonMobile onClick={onClick} arrowPosition='bottom' arrowShort>{t('about.button')}</StyledButtonMobile>
         </ImageContainer>
       </Container>

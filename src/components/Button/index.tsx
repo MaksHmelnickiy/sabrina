@@ -1,13 +1,11 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import type { TButtonTypes } from './types';
 import { ICONS_MAP } from '../../constants/icons';
 import { PrimaryBtn } from './styles/primary';
 import { Secondary } from './styles/secondary';
-import { DangerBtn } from './styles/danger';
 import { TertiaryBtn } from './styles/tertiary';
-import { TransparentBtn } from './styles/transparent';
 import { IconBtn } from './styles/icon';
-import { IconSolid } from './styles/iconSolid';
 import { ArrowLongIcon, ArrowShortIcon, Text, ArrowDarkIcon } from './styled';
 
 interface IButtonProps extends React.ComponentProps<'button'> {
@@ -33,21 +31,15 @@ const Button = ({
   arrowDark,
   arrowPosition,
 }: IButtonProps) => {
-
+  const [isAnimateStart, setAnimateStart] = React.useState(false)
   const getBtnComponent = React.useCallback(() => {
     switch (variant) {
       case 'primary':
         return PrimaryBtn;
-      case 'danger':
-        return DangerBtn;
       case 'tertiary':
         return TertiaryBtn;
-      case 'transparent':
-        return TransparentBtn;
       case 'icon':
         return IconBtn;
-      case 'iconSolid':
-        return IconSolid;
       case 'secondary':
         return Secondary;
       default:
@@ -67,7 +59,9 @@ const Button = ({
         arrowShort={arrowShort}
         arrowDark={arrowDark}
         arrowPosition={arrowPosition}
+        isAnimationStart={isAnimateStart}
       >
+        <Fade onReveal={() => setAnimateStart(true)} />
         {arrowLong && 
           <ArrowLongIcon>
             <ICONS_MAP.ArrowLong />
@@ -80,16 +74,15 @@ const Button = ({
         }
         {arrowDark && 
           <ArrowDarkIcon>
-            <ICONS_MAP.ArrowDark />
+              <ICONS_MAP.ArrowDark />
           </ArrowDarkIcon>
         }
-        
-        <Text>
-          {variant === 'primary' || !variant ? <ICONS_MAP.CircleIcon /> : ''}
-          {variant === 'tertiary' && <ICONS_MAP.CircleIcon />}
-          {variant === 'secondary' ? <ICONS_MAP.Drawing /> : ''}
-          {children && <i>{children}</i>}
-        </Text>
+          <Text>
+            {variant === 'primary' || !variant ? <ICONS_MAP.CircleIcon /> : ''}
+            {variant === 'tertiary' && <ICONS_MAP.CircleIcon />}
+            {variant === 'secondary' ? <ICONS_MAP.Drawing /> : ''}
+            {children && <i>{children}</i>}
+          </Text>
     </BtnComponent>
   );
 };

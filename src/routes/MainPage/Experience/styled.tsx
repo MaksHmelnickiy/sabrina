@@ -1,7 +1,16 @@
-import styled from 'styled-components';
+import styled, {keyframes, css} from 'styled-components';
 import Button from '../../../components/Button';
 import Title from '../../../components/Title';
 import { device } from '../../../constants/breakpoints';
+
+const showAnimate = keyframes`
+  0% {
+    opacity: 0;
+  };
+  100% {
+    opacity: 1;
+  };
+`
 
 export const Container = styled.div`
   max-width: 1520px;
@@ -35,6 +44,7 @@ export const StyledButton = styled(Button)`
   position: absolute; 
   left: 181px;
   bottom: 49px;
+  z-index: 3;
   & > div {
     color: ${props => props.theme.buttonPrimaryArrow};
   }
@@ -70,11 +80,18 @@ export const Text = styled.div`
     padding-bottom: 23px
   }
 `
-export const IconWrapper = styled.div`
+export const IconWrapper = styled.div<{isAnimationStart: string}>`
   color: ${props => props.theme.iconDefault};
   position: absolute;
   right: 76px;
   top: 86px;
+  & path:nth-of-type(2){
+    opacity: 0;
+    ${props => props.isAnimationStart === 'true' ? css`
+      animation: 2s ${showAnimate} 1s linear;
+      animation-fill-mode: forwards;
+  `: '' }
+  }
   @media ${device.xxl}{
     width: 166px;
     right: 52px;

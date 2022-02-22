@@ -10,6 +10,7 @@ import {
   Brand,
   BrandContainer,
 } from './styled';
+import Fade from 'react-reveal/Fade';
 
 interface Props {
   id?: string;
@@ -21,8 +22,8 @@ const Network = ({id}:Props): React.ReactElement => {
   return (
     <>
       <Container id={id}>
-        <CustomTitle variant='h2'>{t('net.title')}</CustomTitle>
-        <Text>{t('net.text')}</Text>
+        <CustomTitle variant='h2'><Fade bottom big cascade>{t('net.title')}</Fade></CustomTitle>
+        <Text><Fade bottom delay={400}>{t('net.text')}</Fade></Text>
       </Container>
       <TickerWrapper>
         <Ticker speed={5}>

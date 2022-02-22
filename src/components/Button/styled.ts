@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {keyframes, css} from 'styled-components';
 
 export interface IButtonBaseProps extends React.ComponentProps<'button'> {
   endIcon?: React.ReactElement;
@@ -8,7 +8,29 @@ export interface IButtonBaseProps extends React.ComponentProps<'button'> {
   arrowLong?: boolean;
   arrowShort?: boolean;
   arrowDark?: boolean;
+  isAnimationStart: boolean;
 }
+
+const animateArrow = keyframes`
+  from{
+    transform: rotate(45deg) translate(-100px, -100px);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+`
+const animateBuble = keyframes`
+  from{
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+`
 
 export const DefaultBtnStyles = styled.button<IButtonBaseProps>`
   display: flex;
@@ -21,6 +43,18 @@ export const DefaultBtnStyles = styled.button<IButtonBaseProps>`
   width: 100%;
   & * {
     pointer-events: none;
+  }
+  & > span > svg {
+    opacity: 0;
+    ${props => props.isAnimationStart ? css`animation: 0.5s ${animateBuble} 0.5s linear forwards;` : ''}
+  }
+  & > span i {
+    opacity: 0;
+    ${props => props.isAnimationStart ? css`animation: 0.5s ${animateBuble} 0.5s linear forwards;` : ''}
+  }
+  & > div > svg {
+    opacity: 0;
+    ${props => props.isAnimationStart ? css`animation: 0.5s ${animateArrow} 1s linear forwards;` : ''}
   }
 `;
 

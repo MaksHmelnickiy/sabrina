@@ -1,6 +1,17 @@
-import styled from 'styled-components';
+import styled, {keyframes, css} from 'styled-components';
 import { device } from '../../../constants/breakpoints';
 import { DefaultBtnStyles, IButtonBaseProps } from '../styled';
+
+const animateArrowTop = keyframes`
+  from{
+    transform: rotate(90deg) translate(70px, 100px);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+`
 
 export const PrimaryBtn = styled(DefaultBtnStyles)<IButtonBaseProps>`
   color:  ${props => props.theme.buttonPrimary};
@@ -96,7 +107,7 @@ export const PrimaryBtn = styled(DefaultBtnStyles)<IButtonBaseProps>`
 
           `;
         case 'bottom':
-          return ` 
+          return css` 
           & > div {
             left: 79%;
             top: 63%;
@@ -112,6 +123,10 @@ export const PrimaryBtn = styled(DefaultBtnStyles)<IButtonBaseProps>`
               top: 30%;
               transform: rotate(-20deg);
             }
+          }
+          & > div > svg {
+            opacity: 0;
+            ${props.isAnimationStart ? css`animation: 0.5s ${animateArrowTop} 1s linear forwards;` : ''}
           }
           `;
         default:

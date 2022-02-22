@@ -1,8 +1,37 @@
-import styled from 'styled-components';
+import styled, {keyframes, css} from 'styled-components';
 import Button from '../../../components/Button';
 import Title from '../../../components/Title';
 import BgImage from '../../../assets/img/jobsPhoto.png';
 import { device } from '../../../constants/breakpoints';
+
+const animation = keyframes`
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+`;
+const animationBg = keyframes`
+  from {
+    background-position: 1000px 0;
+  }
+
+  to {
+    background-position: center top;
+  }
+`;
+const animationBox = keyframes`
+  from{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
   max-width: 1520px;
@@ -137,22 +166,37 @@ export const Description = styled.div`
     padding-right: 0;
   }
 `
-export const Image = styled.div`
+export const Image = styled.div<{isAnimationStart: boolean}>`
   width: calc(50% - 91px);
   background: url(${BgImage});
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 1000px 0;
+  position: relative;
+  ${props => props.isAnimationStart ? css`
+    animation: 0.75s ${animationBg} 0.5s ease-in-out forwards;
+    &::after {
+      animation: 0.75s ${animation} 0.5s ease-in-out 2 alternate;
+      background: ${props => props.theme.bgPhoto};
+      position: absolute;
+      width: 0;
+      height: 100%;
+      right: 0;
+      content: '';
+      display: block;
+      top: 0;
+    }
+  ` : ''}
   @media ${device.xxl}{
-    background-position: top;
     width: calc(50% - 118px);
     position: relative;
+    height: 448px;
   }
   @media ${device.xl}{
-    background-position: center;
     width: calc(40% - 40px);
     position: relative;
-
+    height: 320px;
+    margin: auto 0;
   }
   @media ${device.lg}{
     width: 100%;
@@ -176,10 +220,14 @@ export const TitleBox = styled.div`
     width: 100%;
   }
 `
-export const DescriptionBox = styled.div`
+export const DescriptionBox = styled.div<{isAnimationStart: boolean}>`
   width: 27.5%;
   padding-left:52px; 
   position: relative;
+  ${props => props.isAnimationStart ? css`
+    opacity: 0;
+    animation: 0.5s ${animationBox} 2s linear forwards;
+  ` : ''}
   & > svg {
     color: ${props => props.theme.iconDefault};
     display: block;
