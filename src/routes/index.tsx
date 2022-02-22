@@ -81,7 +81,7 @@ const IndexRoute = (): React.ReactElement => {
             </ModalWrapper>
             <Route
               render={({ location }) =>
-                location.pathname !== "/404" && <Cookie onClickPolicy={() => setShowPolicyModal(true)} setShow={() => setHideCookie(false)} isShow={!hideCookie} />
+                location.pathname !== "/404" && <Cookie onClickPolicy={() => setShowPolicyModal(true)} setShow={() => setHideCookie(false)} isShow={hideCookie} />
               }
             />
           </Suspense>
