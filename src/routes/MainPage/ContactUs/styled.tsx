@@ -1,9 +1,37 @@
-import styled from 'styled-components';
+import styled, {keyframes, css} from 'styled-components';
 import Button from '../../../components/Button';
 import Title from '../../../components/Title';
 import BgImage from '../../../assets/img/man.png';
 import { device } from '../../../constants/breakpoints';
 
+const animation = keyframes`
+  from{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`
+const animationBtn = keyframes`
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
+const animationImage = keyframes`
+  from{
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`
 export const Container = styled.div`
   max-width: 1520px;
   width: 100%;
@@ -104,13 +132,15 @@ export const CustomTitle = styled(Title)`
     padding-right: 0px;
   }
 `
-export const Box = styled.div`
+export const Box = styled.div<{isAnimationStart: boolean}>`
   position: absolute;
   right: 0;
   top: 150px;
   max-width: 420px;
   text-align: right;
   padding-top: 104px;
+  opacity: 0;
+  ${props => props.isAnimationStart ? css`animation: 0.5s ${animation} 1s linear; animation-fill-mode: forwards;` : ''}
   & > svg {
     position: absolute;
     color: ${props => props.theme.iconDefault};
@@ -184,7 +214,7 @@ export const BoxText = styled(Text)`
     padding-top: 30px;
   }
 `
-export const Image = styled.div`
+export const Image = styled.div<{isAnimationStart: boolean}>`
   height: 686px;
   background: url(${BgImage});
   background-size: cover;
@@ -193,6 +223,22 @@ export const Image = styled.div`
   margin: 0 -15px;
   margin-top: -196px;
   position: relative;
+  opacity: 0;
+  ${props => props.isAnimationStart ? css`animation: 0.5s ${animationImage} 1.5s linear; animation-fill-mode: forwards;` : ''}
+  & > button {
+    & > span > svg {
+      opacity: 0;
+      ${props => props.isAnimationStart ? css`animation-delay: 2s;` : ''}
+    }
+    & > span i {
+      opacity: 0;
+      ${props => props.isAnimationStart ? css`animation-delay: 2s;` : ''}
+    }
+    & > div > svg {
+      opacity: 0;
+      ${props => props.isAnimationStart ? css`animation-delay: 2.5s;` : ''}
+    }
+  }
   @media ${device.xxl}{
     margin-top: -112px;
     height: 572px;

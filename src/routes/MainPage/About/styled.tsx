@@ -122,7 +122,7 @@ export const ImageContainer = styled.div`
     position: static;
   }
 `
-export const Text = styled.p`
+export const Text = styled.div`
   font-weight: normal;
   font-size: 18px;
   line-height: 23px;
@@ -211,8 +211,31 @@ export const VideoContainer = styled.div`
     transform: translateX(-50%);
     & img {
       left: 49%;
-      transform: translateX(-50%);
+      margin-left: -125px;
     }
+  }
+  & > div {
+    & > video {
+      display: block;
+    }
+  }
+`
+export const Animation = styled.div`
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  & > div {
+    animation-direction: alternate !important;
+    animation-iteration-count: 2 !important;
+    background: ${props => props.theme.bgPhoto};
+    position: absolute;
+    width: 100%;
+    height: 100% !important;
+    right: 0;
+    bottom: 0;
+  }
+  @media ${device.lg}{
+    display: block;
   }
 `
 export const StyledButton = styled(Button)`
@@ -304,7 +327,7 @@ export const StyledButtonMobile = styled(Button)`
     }
   }
 `
-export const List = styled.ul`
+export const List = styled.div`
   margin-top: 200px;
   @media ${device.xxl}{
     position: absolute;
@@ -321,7 +344,7 @@ export const List = styled.ul`
     padding-right: 0px;
   }
 `
-export const Item = styled.li`
+export const Item = styled.div`
   font-weight: normal;
   font-size: 24px;
   line-height: 33px;

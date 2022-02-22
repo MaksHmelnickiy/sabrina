@@ -1,6 +1,46 @@
-import styled from 'styled-components';
+import styled, {keyframes, css} from 'styled-components';
 import { device } from '../../constants/breakpoints';
 
+const animation = keyframes`
+  from{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`
+const animationArrow1 = keyframes`
+  from{
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`
+const animationArrow2 = keyframes`
+  from{
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`
+const animationArrow3 = keyframes`
+  from{
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`
 export const List = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -11,47 +51,72 @@ export const List = styled.div`
     margin-right: 0px;
   }
 `
-export const Item = styled.div`
+export const Item = styled.div<{isAnimationStart: boolean}>`
   background: ${props => props.theme.expBg};
   margin: 10px;
   border-radius: 3px;
   display: flex;
   align-items: center;
   position: relative;
+  & .react-reveal {
+    width: 0 !important;
+    height: 0 !important;
+    min-width: 0 !important; 
+    padding: 0 !important;
+    position: absolute;
+  }
   @media ${device.xl}{
     margin: 15px 0px;
     justify-content: center;
   }
   &:nth-of-type(1){
+    ${props => props.isAnimationStart ? css`animation: 0.5s ${animation} 0.4s linear; animation-fill-mode: forwards;` : ''}
+    opacity: 0;
+    z-index: 2;
     width: calc(50% - 20px);
     padding: 40px 150px 42px 64px;
     & > svg {
       right: -77px;
       top: 47%;
       transform: translateY(-50%);
+      opacity: 0;
+      ${props => props.isAnimationStart ? css`animation: 0.5s ${animationArrow1} 1.6s linear; animation-fill-mode: forwards;` : ''}
     }
   }
   &:nth-of-type(2){
+    ${props => props.isAnimationStart ? css`animation: 0.5s ${animation} 0.8s linear; animation-fill-mode: forwards;` : ''}
+    opacity: 0;
+    z-index: 1;
     width: calc(50% - 20px);
     padding: 49px 150px 35px 88px;
     & > svg {
       right: 73px;
       bottom: -74px;
+      opacity: 0;
+      ${props => props.isAnimationStart ? css`animation: 0.5s ${animationArrow2} 2s linear; animation-fill-mode: forwards;` : ''}
     }
   }
   &:nth-of-type(3){
+    ${props => props.isAnimationStart ? css`animation: 0.5s ${animation} 1.2s linear; animation-fill-mode: forwards;` : ''}
+    opacity: 0;
+    z-index: 1;
     width: calc(66.5% - 20px);
     padding: 43px 130px 36px 59px;
     & > svg {
       right: -55px;
       top: 58%;
       transform: translateY(-50%);
+      opacity: 0;
+      ${props => props.isAnimationStart ? css`animation: 0.5s ${animationArrow3} 2.4s linear; animation-fill-mode: forwards;` : ''}
     }
     & > span {
       padding-left: 0px;
     }
   }
   &:nth-of-type(4){
+    ${props => props.isAnimationStart ? css`animation: 0.5s ${animation} 1.6s linear; animation-fill-mode: forwards;` : ''}
+    opacity: 0;
+    z-index: 0;
     width: calc(33.5% - 20px);
     padding: 86px 42px 36px 54px;
     display: block;
@@ -113,6 +178,7 @@ export const Item = styled.div`
     &:nth-of-type(1){
       padding: 30px 60px 35px 58px;
       width: 100%;
+      z-index: 3;
       & > div > svg {
         max-width: 100%;
       }
@@ -141,6 +207,7 @@ export const Item = styled.div`
     &:nth-of-type(2){
       padding: 35px 60px 35px 58px;
       width: 100%;
+      z-index: 2;
       & > div > svg {
         max-width: 100%;
       }
@@ -168,6 +235,7 @@ export const Item = styled.div`
     &:nth-of-type(3){
       padding: 40px 60px 66px 58px;
       width: 100%;
+      z-index: 1;
       & > div > svg {
         max-width: 100%;
       }
@@ -223,6 +291,7 @@ export const Item = styled.div`
   @media ${device.lg}{
     &:nth-of-type(1) {
       padding: 30px 60px 35px 58px;
+      
       & > span {
         padding-right: 0;
         padding-left: 4px;

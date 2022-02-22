@@ -22,7 +22,7 @@ const ModalWrapper = ({isShow, onClose, children}: IModal) => {
       {isShow &&
         <Container className="modal">
           <Close onClick={onClose}><ICONS_MAP.Close /></Close>
-          <CustomScrollbars onScroll={() => setOnScroll(true)} onScrollVisible={onScroll}>
+          <CustomScrollbars onScroll={() => setOnScroll(true)} isscrollvisible={onScroll.toString()}>
             {children}
           </CustomScrollbars>
         </Container>

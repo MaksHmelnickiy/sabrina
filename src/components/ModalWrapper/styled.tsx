@@ -36,11 +36,8 @@ export const Close = styled.button`
     top: 12px;
   }
 `
-export interface IScrollProps {
-  onScrollVisible?: boolean;
-}
 
-export const CustomScrollbars = styled(Scrollbars)<IScrollProps>`
+export const CustomScrollbars = styled(Scrollbars)<{isscrollvisible?: string;}>`
   width: 100%;
   height: auto !important;
 
@@ -57,7 +54,7 @@ export const CustomScrollbars = styled(Scrollbars)<IScrollProps>`
     width: 2px !important;
     background: #2A2A2A !important;
     right: 130px !important;
-    ${props => props.onScrollVisible ? 'opacity: 1;' : 'opacity: 0;'}
+    ${props => props.isscrollvisible === 'true' ? 'opacity: 1;' : 'opacity: 0;'}
     & > div{
       background: #FFFFFF !important;
       width: 6px !important;

@@ -1,5 +1,7 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
+import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
 import ExperienceList from '../../../components/ExperienceList';
 import { ICONS_MAP } from '../../../constants/icons';
 import {
@@ -17,6 +19,7 @@ interface Props {
 
 const Experience = ({id, onClick}:Props): React.ReactElement => {
   const {t} = useTranslation()
+  const [isAnimateStart, setAnimateStart] = React.useState(false)
   const experienceData = [
     {
       label: t('exp.list.1'),
@@ -37,9 +40,9 @@ const Experience = ({id, onClick}:Props): React.ReactElement => {
   ]
   return (
     <Container id={id}>
-      <IconWrapper><ICONS_MAP.Plain /></IconWrapper>
-      <CustomTitle variant='h2'>{t('exp.title')}</CustomTitle>
-      <Text>{t('exp.text')}</Text>
+      <IconWrapper isAnimationStart={isAnimateStart.toString()}><Slide bottom onReveal={() => setAnimateStart(true)} duration={1000}><ICONS_MAP.Plain /></Slide></IconWrapper>
+      <CustomTitle variant='h2'><Fade bottom big cascade>{t('exp.title')}</Fade></CustomTitle>
+      <Text><Fade bottom>{t('exp.text')}</Fade></Text>
       <ExperienceList data={experienceData} />
       <StyledButton onClick={onClick} variant='secondary'>{t('exp.button')}</StyledButton>
     </Container>

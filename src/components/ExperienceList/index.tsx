@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import { ICONS_MAP } from '../../constants/icons';
 import { List, Text, IconWrapper, Item } from './styled';
 
@@ -13,13 +14,14 @@ interface IExperienceList {
 }
 
 const ExperienceList = ({className, data}:IExperienceList) => {
-
+  const [isAnimateStart, setAnimateStart] = React.useState(false)
   return (
     <List className={className}>
 
       {data.map((item, index) => {
         return (
-          <Item key={index}>
+          <Item isAnimationStart={isAnimateStart} key={index}>
+            <Fade onReveal={() => setAnimateStart(true)} />
             <IconWrapper>{item.icon}</IconWrapper>
             <Text>{item.label}</Text>
             {index === 0 ? <ICONS_MAP.ExpArr1 /> : ''}

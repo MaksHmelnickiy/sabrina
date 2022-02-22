@@ -56,6 +56,9 @@ const GlobalReset = createGlobalStyle`
   *{
     box-sizing: border-box;
   }
+  .react-reveal{
+    overflow: hidden;
+  }
 `;
 
 export default GlobalReset;

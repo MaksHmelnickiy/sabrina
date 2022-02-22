@@ -48,13 +48,21 @@ const IndexRoute = (): React.ReactElement => {
     <ThemeProvider theme={theme}>
       <Container onClick={event => onClick(event)}>
           <Suspense fallback={null}>
-            <Header />
+            <Route
+              render={({ location }) =>
+                location.pathname !== "/404" && <Header />
+              }
+            />
             <Switch>
               <Route component={MainPage} path="/" exact />
               <Route path="/404" component={NotFoundPage} />
               <Redirect to="/404" />
             </Switch>
-            <Footer onClickPolicy={() => setShowPolicyModal(true)} />
+            <Route
+              render={({ location }) =>
+                location.pathname !== "/404" && <Footer onClickPolicy={() => setShowPolicyModal(true)} />
+              }
+            />
             <ModalWrapper isShow={showPolicyModal} onClose={() => setShowPolicyModal(false)}>
               <Box>
                 <CustomTitle variant='h3' >{t('policy.title.1')}</CustomTitle>
@@ -71,7 +79,11 @@ const IndexRoute = (): React.ReactElement => {
                 <Text>{t('policy.text.3')}</Text>
               </Box>
             </ModalWrapper>
-            <Cookie onClickPolicy={() => setShowPolicyModal(true)} setShow={() => setHideCookie(false)} isShow={hideCookie} />
+            <Route
+              render={({ location }) =>
+                location.pathname !== "/404" && <Cookie onClickPolicy={() => setShowPolicyModal(true)} setShow={() => setHideCookie(false)} isShow={!hideCookie} />
+              }
+            />
           </Suspense>
       </Container>
     </ThemeProvider>
