@@ -196,8 +196,8 @@ export const DescriptionBox = styled.div<{isAnimationStart: boolean}>`
   width: 27.5%;
   padding-left:52px; 
   position: relative;
+  opacity: 0;
   ${props => props.isAnimationStart ? css`
-    opacity: 0;
     animation: 0.5s ${fadeRight} 2s linear forwards;
   ` : ''}
   & > svg {
