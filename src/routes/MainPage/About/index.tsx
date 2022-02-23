@@ -79,14 +79,17 @@ const About = ({id, onClick}:Props): React.ReactElement => {
           </VideoContainer>
             <List>
               <Fade bottom delay={300}>
-              {dataList.map((item, index) => {
+              {/* {dataList.map((item, index) => {
                 return (
                   <Item key={index}>
                     <ICONS_MAP.SnowFlake />
                     {item}
                   </Item>
                 )
-              })}
+              })} */}
+                <Item>
+                  {t('about.list.1')}
+                </Item>
               </Fade>
             </List>
           <StyledButtonMobile onClick={onClick} arrowPosition='bottom' arrowShort>{t('about.button')}</StyledButtonMobile>

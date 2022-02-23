@@ -27,11 +27,11 @@ const ContactUs = ({id, onClick}:Props): React.ReactElement => {
   return (
     <Wrapper>
       <Container id={id}>
-        <CustomTitle variant='h2'><Stroke delay='1s' bottom='5px' right='-15px' zIndex='0'/><Fade bottom big cascade>{t('contact.title')}</Fade></CustomTitle>
+        <CustomTitle variant='h2'><Fade bottom big cascade>{t('contact.title')}</Fade></CustomTitle>
         <Text><Fade onReveal={() => setAnimateStart(true)} bottom delay={600}>{t('contact.text')}</Fade></Text>
         <Box isAnimationStart={isAnimateStart}>
           <ICONS_MAP.SnowFlake />
-          <Description>{t('contact.description')}</Description>
+          <Description><Stroke delay='1s' top='5px' right='-15px' zIndex='0'/>{t('contact.description')}</Description>
           <BoxText>{t('contact.offer')}</BoxText>
         </Box>
       </Container>

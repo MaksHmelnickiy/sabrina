@@ -1,17 +1,101 @@
 {
   "common": {
     "header": {
-      "home": "Heim",
-      "why_us": "Warum wir",
-      "about_us": "Über uns",
-      "network": "Netzwerk",
-      "jobs": "Arbeitsplätze"
+      "home": "Home",
+      "why_us": "Why us",
+      "about_us": "About Us",
+      "network": "Network",
+      "jobs": "Jobs"
     },
     "main": {
-      "change_your": "Ändere dein ",
-      "monday": "Montag",
-      "we_are_boutique": "Wir sind ein Boutique Headhunter spezialisiert auf IT",
-      "change_your_life": "Verändere dein Leben"
+      "change_your": "Change your ",
+      "monday": "Monday",
+      "job": "Job",
+      "we_are_boutique": "We are a boutique headhunter specialized in IT",
+      "change_your_life": "Change your life"
+    },
+    "about": {
+      "title": "About Us",
+      "button": "Change your life",
+      "we_are_a_headhunting": "Wir verändern deinen Montag, indem wir einen Job für dich finden, der zu dir passt und dich glücklich macht.",
+      "we_does_now": "Wer kennt es nicht, oder hat es nicht bereits mindestens einmal in seiner beruflichen Laufbahn erlebt? Und an die, die es nicht kennen – ihr glücklichen! Es ist Sonntagnachmittag und das allwöchentliche Gedankenkarussel über den nahenden Montag beginnt. So gar keinen Bock auf Montag?! Dann ist es dringend an der Zeit etwas zu ändern.",
+      "we_have_made": "Wir haben es uns zur Aufgabe gemacht, einen Job für dich zu finden, der deinen Montag verändert. Der ihn zu einem erfreulichen Tag der Woche macht. Und selbst wenn er trotzdem nicht dein Lieblingstag wird, besser darf er werden, oder?",
+      "what_do_we_do_differently": "Was machen wir anders?",
+      "in_order_to_really": "Um in einer Rolle aufzugehen ist an allererster Stelle die Aufgabe wichtig. Jedoch sind auch andere Aspekte darum herum entscheidend und das ist eben für jeden anders. Weil wir alle unterschiedlich sind und auf unterschiedliche Dinge Wert legen. ",
+      "thats_why_we_dont": "Uns interessiert nicht nur der Tech Stack. Wir finden in ausführlichen Gesprächen mit unseren Kunden heraus, wie es ist, Teil des Teams zu sein.",
+      "in_this_way": "So erfahren unsere Kandidaten deutlich mehr über den Job und erleben keine bösen Überraschungen vor Ort. Weder unsere Kandidaten noch Kunden verschwenden wertvolle Zeit bei Bewerbungsgesprächen, in denen sich dann herausstellt, dass ein für eine Partei sehr wichtiger Punkt überhaupt nicht gegeben ist. Wäre dies vorab klar gewesen, hätte das Gespräch erst gar nicht stattgefunden. Jeder Mensch tickt anders. Und genauso sind auch für jeden Menschen unterschiedliche Punkte wichtig.",
+      "it_is_our_job": "Genau das zu erkennen, ist unsere Aufgabe. Unser Job ist es, das Unternehmen und auch die Rolle vorab so tief wie möglich zu durchleuchten, um sie für unsere Kandidaten so transparent wie möglich darzustellen. Im Gegenzug möchten wir auch etwas über unsere Kandidaten erfahren, bevor wir den Kontakt zu unseren Kunden herstellen.",
+      "of_course_even": "Natürlich können auch wir nicht zu 100% garantieren, dass es immer perfekt passt. Aber wir können sehr viel dazu beitragen, dass beide Seiten nur voneinander erfahren, wenn wir selbst daran glauben, dass es passt.",
+      "list": {
+        "1": "Auch ich habe meinen Montag und damit mein komplettes Leben verändert. Nachdem ich über ein Jahrzehnt für einen führenden IT Personaldienstleister, zuletzt 4 Jahre in der Rolle des Vorstandes, gearbeitet habe, war es Zeit etwas Eigenes zu machen. Und wenn nicht jetzt, wann dann alles einmal komplett auf den Kopf stellen und die Branche neu denken? ",
+        "2": "Do the people make a happy impression?",
+        "3": "Do they talk to each other a lot?",
+        "4": "What is the mindset of the owners?",
+        "5": "How new is the equipment?",
+        "6": "How are the working hours regulated?",
+        "7": "Is there flexibility, home office and trust?"
+      }
+    },
+
+    "exp": {
+      "title": "Worauf wartest du?",
+      "text": "Wie oft fragst du dich, was dich in deiner aktuellen Anstellung eigentlich noch hält? Zu oft erwarten wir, dass sich etwas ändert, tun aber jeden Tag das Gleiche wie zuvor. Klar ist jedoch: es wird sich nichts ändern, wenn du nicht den ersten Schritt machst.",
+      "button": "Change your life",
+      "list": {
+        "1": "Wir haben über 15 Jahren Erfahrung in der Besetzung von Positionen bei unseren Kunden.",
+        "2": "Wir sind Experten im Bereich IT und Digitalisierung.",
+        "3": "Wir wissen, dass nicht nur die Skills wichtig sind, um sich für einen neuen Mitarbeiter zu entscheiden. Auch die Persönlichkeit ist entscheidend. Deshalb nehmen wir uns Zeit, um herauszufinden, was unseren Kunden bei der Einstellung neuer Teammitglieder wichtig ist, und führen ausführliche Gespräche mit unseren Kandidaten.",
+        "4": "Wir reagieren schnell und zielorientiert."
+      }
+    },
+    "contact": {
+      "title": "Du oder dein Team haben eine kniffelige Stelle zu besetzen? ",
+      "text": "Die richtigen Talente am Markt zu finden ist zu einer teilweise fast unlösbaren Aufgabe geworden, vor allem im Bereich Tech und Digitalisierung.",
+      "button": "Contact Us",
+      "description": "Wir sind Spezialisten in genau diesem Schwerpunkt, mit über einem Jahrzehnt Erfahrung.",
+      "offer": "Melde dich gerne bei uns und wir machen dir ein individuelles Angebot."
+    },
+    "net": {
+      "title": "Network",
+      "text": "Hier findest du einige unserer Partner, die wir gerne empfehlen."
+    },
+    "jobs": {
+      "title": "Jobs",
+      "text": "Kein passender Job dabei? Schicke uns gerne deinen Lebenslauf und wir melden uns bei dir, um über deine Wünsche zu sprechen.",
+      "button": "Browse Jobs",
+      "description": "Wir helfen dir dabei einen Job zu finden, der zu dir passt.  Damit verändern wir nicht nur deinen Montag, sondern auch den Montag in deinem neuen Team bei unseren Kunden. Für beide Seiten ein Gewinn."
+    },
+    "footer": {
+      "menu": {
+        "1": "Home",
+        "2": "About Us",
+        "3": "Network",
+        "4": "Experts",
+        "5": "Companies",
+        "6": "Jobs"
+      },
+      "social": "Social network",
+      "button": "example@gmail.com",
+      "text": "All rights reserved 2021  ©  Radius.",
+      "policy": "Privacy policy",
+      "term": "Term of use"
+    },
+    "cookies": {
+      "button": "Accept",
+      "text": "This site uses cookies to give you the best browsing experience. By using this website you are agreeing to our ",
+      "link": "Cookie Policy."
+    },
+    "policy": {
+      "title": {
+        "1":"We are a headhunting company, specialized in IT and also Jobs in the field of Marketing and Sales",
+        "2": "What do we do differently?",
+        "3": "That's why we don't just ask our clients about their tech stack, but also"
+      },
+      "text": {
+        "1": "Who doesn't know it or hasn't experienced it at least once in their professional career? And to those who don't know it - lucky you! It's Sunday afternoon and the weekly carousel of thoughts about the approaching Monday begins. Not in the mood for Mondays? Then it's time to change something. We have made it our mission to find a job for you that will change your Monday. That will make it an enjoyable day of the week. And even if it still doesn't become your favourite day, it can be better, right?",
+        "2": "Who doesn't know it or hasn't experienced it at least once in their professional career? And to those who don't know it - lucky you! It's Sunday afternoon and the weekly carousel of thoughts about the approaching Monday begins. Not in the mood for Mondays? Then it's time to change something. We have made it our mission to find a job for you that will change your Monday. That will make it an enjoyable day of the week. And even if it still doesn't become your favourite day, it can be better, right? Who doesn't know it or hasn't experienced it at least once in their professional career? And to those who don't know it - lucky you! It's Sunday afternoon and the weekly carousel of thoughts about the approaching Monday begins. Not in the mood for Mondays? Then it's time to change something. We have made it our mission to find a job for you that will change your Monday. That will make it an enjoyable day of the week. And even if it still doesn't become your favourite day, it can be better, right?",
+        "3": "Who doesn't know it or hasn't experienced it at least once in their professional career? And to those who don't know it - lucky you! It's Sunday afternoon and the weekly carousel of thoughts about the approaching Monday begins. Not in the mood for Mondays? Then it's time to change something. We have made it our mission to find a job for you that will change your Monday. That will make it an enjoyable day of the week. And even if it still doesn't become your favourite day, it can be better, right? Who doesn't know it or hasn't experienced it at least once in their professional career? And to those who don't know it - lucky you! It's Sunday afternoon and the weekly carousel of thoughts about the approaching Monday begins. Not in the mood for Mondays? Then it's time to change something. We have made it our mission to find a job for you that will change your Monday. That will make it an enjoyable day of the week. And even if it still doesn't become your favourite day, it can be better, right?"
+      }
     }
   }
 }
