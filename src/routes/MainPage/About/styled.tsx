@@ -106,13 +106,13 @@ export const ImageContainer = styled.div`
     padding-left: 119px;
     padding-top: 98px;
     position: relative;
-    padding-bottom: 400px;
+    padding-bottom: 500px;
   }
   @media ${device.xl}{
     padding-left: 11px;
     padding-top: 108px;
     position: relative;
-    padding-bottom: 400px;
+    padding-bottom: 500px;
   }
   @media ${device.lg}{
     width: 100%;
@@ -139,9 +139,7 @@ export const Text = styled.div`
       padding-right: 0px;
     }
   }
-  @media ${device.lg}{
-    position: static;
-  }
+
 `
 export const CustomTitle = styled(Title)`
   padding-top: 55px;
@@ -352,6 +350,7 @@ export const Item = styled.div`
   color: ${props => props.theme.list};
   position: relative;
   padding-left: 32px;
+  max-width: 590px;
   & svg{
     position: absolute;
     left: 0;

@@ -169,14 +169,14 @@ export const Description = styled.div`
   font-weight: normal;
   font-size: 24px;
   line-height: 33px;
-  padding-left: 41px; 
+  padding-left: 10px; 
   display: block;
   max-width: 320px;
   margin-left: auto;
   position: relative;
   z-index: 1;
   @media ${device.md}{
-    padding-left: 40px;
+    padding-left: 10px;
   }
 `
 export const BoxText = styled(Text)`

@@ -153,7 +153,7 @@ export const Item = styled.div<{isAnimationStart: boolean}>`
       & > svg { 
         top: auto;
         width: auto;
-        transform: rotate(110deg);
+        transform: rotate(110deg) !important;
         right: -3%;
         bottom: -30px;
       }

@@ -17,17 +17,17 @@
     "about": {
       "title": "About Us",
       "button": "Change your life",
-      "we_are_a_headhunting": "We are a headhunting company, specialized in IT and also Jobs in the field of Marketing and Sales",
-      "we_does_now": "Who doesn't know it or hasn't experienced it at least once in their professional career? And to those who don't know it - lucky you! It's Sunday afternoon and the weekly carousel of thoughts about the approaching Monday begins. Not in the mood for Mondays? Then it's time to change something.",
+      "we_are_a_headhunting": "We change your Monday by finding you a job that fits and makes you happy.",
+      "we_does_now": "Who doesn't know it or hasn't experienced it at least once in their professional career? And to those who don't know it - lucky you! It’s Sunday afternoon and the dreaded thoughts that Monday is just around the corner begin. Not in the mood for Mondays? Then it's time to change something.",
       "we_have_made": "We have made it our mission to find a job for you that will change your Monday. That will make it an enjoyable day of the week. And even if it still doesn't become your favourite day, it can be better, right?",
       "what_do_we_do_differently": "What do we do differently?",
-      "in_order_to_really": "In order to really be absorbed in a job and a role, the task is of course important first and foremost. However, everything else around it is at least as important and that is different for everyone. Because we are all different and value different things",
-      "thats_why_we_dont": "That's why we don't just ask our clients about their tech stack, but also",
-      "in_this_way": "In this way, our candidates learn much more about the position to be filled and do not experience any unpleasant surprises on site. Neither our candidates nor our clients waste valuable time in interviews in which it turns out that a very important point for one party is not given at all. If this had been clear in advance, the interview would not have taken place in the first place. Every person ticks differently. And in the same way, different points are important for each person",
-      "it_is_our_job": "It is our job to recognise this. Our job is to look as deeply as possible into the company and also the role in advance in order to present it as transparently as possible to the candidates. In return, of course, we also want to learn something about candidates before we make contact with our clients. Our clients know us and trust our years of experience with IT experts.",
-      "of_course_even": "Of course, even we cannot guarantee 100% that it will always be a perfect fit in the end. But we can do a lot to ensure that both sides only find out about each other if we ourselves believe that it is a good fit",
+      "in_order_to_really": "In order to really be absorbed in a job and a role, the task is of course important first and foremost. However, everything else around it is at least as important and that is different for everyone. Because we are all different and value different things.",
+      "thats_why_we_dont": "We are not only interested in the tech stack. We find out what it's like to be part of the team through detailed conversations with our clients.",
+      "in_this_way": "This way, our candidates learn much more about the job and do not experience any unpleasant surprises on site. Neither our candidates nor clients waste valuable time in job interviews where it then turns out that a very important point for one side is not given at all. If this had been clear in advance, the interview would not have even taken place. Every person is different. And in the same way, different points are important for each person.",
+      "it_is_our_job": "It is our responsibility to identify exactly that. Our job is to look as deeply as possible into the company and also the role beforehand in order to present it as transparently as possible to candidates. In return, we also want to learn something about our candidates before we connect with our clients.",
+      "of_course_even": "Of course, even we cannot guarantee 100% that it will always be a perfect fit in the end. But we can do a lot to ensure that both sides only find out about each other if we ourselves believe that it is a good fit.",
       "list": {
-        "1": "What is the team like?",
+        "1": "I also changed my Monday and with it my entire life. After working for a leading IT recruitment agency for over a decade, most recently in the role of CSO for 4 years, it was time to do something on my own. And if not now, then when to turn everything completely upside down and rethink the industry?",
         "2": "Do the people make a happy impression?",
         "3": "Do they talk to each other a lot?",
         "4": "What is the mindset of the owners?",
@@ -42,10 +42,10 @@
       "text": "How often do you ask yourself what is keeping you in your current job? Too often we expect something to change, but every day we do the same thing as before. But one thing is clear: nothing will change if you don't take the first step.",
       "button": "Change your life",
       "list": {
-        "1": "We are experts with an experience of 15 years in the headhunting industry",
-        "2": "We are experts to fill IT/Tech roles",
-        "3": "We understand that not only skills are important to decide for a new employee. But also the personality is key. So we take our time to find out what is important to the client if he hires new team members and do deep briefings with the candidates.",
-        "4": "We provide fast results"
+        "1": "We have over 15 years of experience in staffing vacancies for our clients.",
+        "2": "We are experts in the field of IT and digitalisation.",
+        "3": "We understand that it is not only skills that are important when deciding on a new employee. Personality is also crucial. That's why we take the time to find out what is important to our clients when hiring new team members and interview our candidates in detail.",
+        "4": "We are fast in providing results."
       }
     },
     "contact": {
@@ -57,13 +57,13 @@
     },
     "net": {
       "title": "Network",
-      "text": "In this section I want to show some of my partners I work with and recommend"
+      "text": "This is our network we would like to recommend."
     },
     "jobs": {
       "title": "Jobs",
-      "text": "Don't see a job that suits you? Send us your CV and we will contact you to discuss your interests.",
+      "text": "Don't see a job that interests you? Send us your CV and we will get in touch with you to discuss your wishes.",
       "button": "Browse Jobs",
-      "description": "We help our clients find the right candidates for their vacancies quickly and in a solution-oriented manner. In doing so, we not only change our candidates' Mondays, but also your team's Mondays. Tasks are completed faster, deadlines are met, growth is secured"
+      "description": "We help you find a job that is perfect for you.  In this way, we not only change your Monday, but also the Monday in your new team at our clients. A win-win situation for both sides."
     },
     "footer": {
       "menu": {

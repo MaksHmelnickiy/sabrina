@@ -46,5 +46,7 @@ export const Item = styled.button<IItemProps>`
   @media ${device.lg} {
     line-height: 1;
   }
-  
+  & > * {
+    pointer-events: none;
+  }
 `
