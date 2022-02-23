@@ -29,7 +29,6 @@ const GlobalFonts = createGlobalStyle`
     font-family: 'Recoleta';
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
     src: local('PT Sans'), local('Recoleta-Regular'), 
     url(${RecoletaWOFF2}) format('woff2'),
     url(${RecoletaWOFF}) format('woff'),
@@ -39,7 +38,6 @@ const GlobalFonts = createGlobalStyle`
     font-family: 'Recoleta';
     font-weight: 500;
     font-style: normal;
-    font-display: swap;
     src: local('PT Sans'), local('Recoleta-Medium'), 
     url(${RecoletaMediumWOFF2}) format('woff2'),
     url(${RecoletaMediumWOFF}) format('woff'),
@@ -49,7 +47,6 @@ const GlobalFonts = createGlobalStyle`
     font-family: 'Recoleta';
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
     src: local('PT Sans'), local('Recoleta-Bold'), 
     url(${RecoletaBoldWOFF2}) format('woff2'),
     url(${RecoletaBoldWOFF}) format('woff'),
@@ -60,7 +57,6 @@ const GlobalFonts = createGlobalStyle`
     font-family: 'Biotif';
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
     src: local('PT Sans'), local('Biotif-Regular'), 
     url(${BiotifWOFF2}) format('woff2'),
     url(${BiotifWOFF}) format('woff'),
@@ -70,7 +66,6 @@ const GlobalFonts = createGlobalStyle`
     font-family: 'Biotif';
     font-weight: 500;
     font-style: normal;
-    font-display: swap;
     src: local('PT Sans'), local('Biotif-Medium'), 
     url(${BiotifMediumWOFF2}) format('woff2'),
     url(${BiotifMediumWOFF}) format('woff'),
@@ -80,7 +75,6 @@ const GlobalFonts = createGlobalStyle`
     font-family: 'Biotif';
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
     src: local('PT Sans'), local('Biotif-SemiBold'), 
     url(${BiotifSemiBoldWOFF2}) format('woff2'),
     url(${BiotifSemiBoldWOFF}) format('woff'),
