@@ -1,6 +1,7 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
 import Fade from 'react-reveal/Fade';
+import Stroke from '../../../components/Stroke';
 import { ICONS_MAP } from '../../../constants/icons';
 import {
   Container, 
@@ -26,7 +27,7 @@ const ContactUs = ({id, onClick}:Props): React.ReactElement => {
   return (
     <Wrapper>
       <Container id={id}>
-        <CustomTitle variant='h2'><Fade bottom big cascade>{t('contact.title')}</Fade></CustomTitle>
+        <CustomTitle variant='h2'><Stroke delay='1s' bottom='5px' right='-15px' zIndex='0'/><Fade bottom big cascade>{t('contact.title')}</Fade></CustomTitle>
         <Text><Fade onReveal={() => setAnimateStart(true)} bottom delay={600}>{t('contact.text')}</Fade></Text>
         <Box isAnimationStart={isAnimateStart}>
           <ICONS_MAP.SnowFlake />

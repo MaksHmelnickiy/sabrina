@@ -1,46 +1,7 @@
-import styled, {keyframes, css} from 'styled-components';
+import styled, { css } from 'styled-components';
 import { device } from '../../constants/breakpoints';
+import { animationExpListArrow1, animationExpListArrow2, animationExpListArrow3, fadeLeft } from '../../constants/keyframes';
 
-const animation = keyframes`
-  from{
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`
-const animationArrow1 = keyframes`
-  from{
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`
-const animationArrow2 = keyframes`
-  from{
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`
-const animationArrow3 = keyframes`
-  from{
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`
 export const List = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -70,7 +31,7 @@ export const Item = styled.div<{isAnimationStart: boolean}>`
     justify-content: center;
   }
   &:nth-of-type(1){
-    ${props => props.isAnimationStart ? css`animation: 0.5s ${animation} 0.4s linear; animation-fill-mode: forwards;` : ''}
+    ${props => props.isAnimationStart ? css`animation: 0.5s ${fadeLeft} 0.4s linear; animation-fill-mode: forwards;` : ''}
     opacity: 0;
     z-index: 2;
     width: calc(50% - 20px);
@@ -80,11 +41,11 @@ export const Item = styled.div<{isAnimationStart: boolean}>`
       top: 47%;
       transform: translateY(-50%);
       opacity: 0;
-      ${props => props.isAnimationStart ? css`animation: 0.5s ${animationArrow1} 1.6s linear; animation-fill-mode: forwards;` : ''}
+      ${props => props.isAnimationStart ? css`animation: 0.5s ${animationExpListArrow1} 1.6s linear; animation-fill-mode: forwards;` : ''}
     }
   }
   &:nth-of-type(2){
-    ${props => props.isAnimationStart ? css`animation: 0.5s ${animation} 0.8s linear; animation-fill-mode: forwards;` : ''}
+    ${props => props.isAnimationStart ? css`animation: 0.5s ${fadeLeft} 0.8s linear; animation-fill-mode: forwards;` : ''}
     opacity: 0;
     z-index: 1;
     width: calc(50% - 20px);
@@ -93,11 +54,11 @@ export const Item = styled.div<{isAnimationStart: boolean}>`
       right: 73px;
       bottom: -74px;
       opacity: 0;
-      ${props => props.isAnimationStart ? css`animation: 0.5s ${animationArrow2} 2s linear; animation-fill-mode: forwards;` : ''}
+      ${props => props.isAnimationStart ? css`animation: 0.5s ${animationExpListArrow2} 2s linear; animation-fill-mode: forwards;` : ''}
     }
   }
   &:nth-of-type(3){
-    ${props => props.isAnimationStart ? css`animation: 0.5s ${animation} 1.2s linear; animation-fill-mode: forwards;` : ''}
+    ${props => props.isAnimationStart ? css`animation: 0.5s ${fadeLeft} 1.2s linear; animation-fill-mode: forwards;` : ''}
     opacity: 0;
     z-index: 1;
     width: calc(66.5% - 20px);
@@ -107,14 +68,14 @@ export const Item = styled.div<{isAnimationStart: boolean}>`
       top: 58%;
       transform: translateY(-50%);
       opacity: 0;
-      ${props => props.isAnimationStart ? css`animation: 0.5s ${animationArrow3} 2.4s linear; animation-fill-mode: forwards;` : ''}
+      ${props => props.isAnimationStart ? css`animation: 0.5s ${animationExpListArrow3} 2.4s linear; animation-fill-mode: forwards;` : ''}
     }
     & > span {
       padding-left: 0px;
     }
   }
   &:nth-of-type(4){
-    ${props => props.isAnimationStart ? css`animation: 0.5s ${animation} 1.6s linear; animation-fill-mode: forwards;` : ''}
+    ${props => props.isAnimationStart ? css`animation: 0.5s ${fadeLeft} 1.6s linear; animation-fill-mode: forwards;` : ''}
     opacity: 0;
     z-index: 0;
     width: calc(33.5% - 20px);

@@ -34,6 +34,7 @@ import { ReactComponent as ClipIcon } from '../assets/img/clip.svg';
 import { ReactComponent as ArrTabIcon } from '../assets/img/arrTab.svg';
 import { ReactComponent as MenuIcon } from '../assets/img/menu.svg';
 import { ReactComponent as CookieIcon } from '../assets/img/cookie.svg';
+import { ReactComponent as DecorIcon } from '../assets/img/decor.svg';
 
 export const ICONS_MAP = {
     CircleIcon: CircleLogo,
@@ -71,5 +72,6 @@ export const ICONS_MAP = {
     Clip: ClipIcon,
     ArrTab: ArrTabIcon,
     Menu: MenuIcon,
-    Cookie: CookieIcon
+    Cookie: CookieIcon,
+    Decor: DecorIcon
 };

@@ -1,37 +1,11 @@
-import styled, {keyframes, css} from 'styled-components';
+import styled, { css } from 'styled-components';
 import Button from '../../../components/Button';
 import Title from '../../../components/Title';
 import BgImage from '../../../assets/img/man.png';
 import { device } from '../../../constants/breakpoints';
+import { fadeRight, fadeRightXl } from '../../../constants/keyframes';
 
-const animation = keyframes`
-  from{
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`
-const animationBtn = keyframes`
-  from{
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`
-const animationImage = keyframes`
-  from{
-    transform: translateX(-200px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`
+
 export const Container = styled.div`
   max-width: 1520px;
   width: 100%;
@@ -125,6 +99,7 @@ export const Text = styled.div`
 
 export const CustomTitle = styled(Title)`
   padding-right: 510px;
+  position: relative;
   @media ${device.xxl}{
     padding-right: 330px;
   }
@@ -140,7 +115,7 @@ export const Box = styled.div<{isAnimationStart: boolean}>`
   text-align: right;
   padding-top: 104px;
   opacity: 0;
-  ${props => props.isAnimationStart ? css`animation: 0.5s ${animation} 1s linear; animation-fill-mode: forwards;` : ''}
+  ${props => props.isAnimationStart ? css`animation: 0.5s ${fadeRight} 1s linear; animation-fill-mode: forwards;` : ''}
   & > svg {
     position: absolute;
     color: ${props => props.theme.iconDefault};
@@ -224,7 +199,7 @@ export const Image = styled.div<{isAnimationStart: boolean}>`
   margin-top: -196px;
   position: relative;
   opacity: 0;
-  ${props => props.isAnimationStart ? css`animation: 0.5s ${animationImage} 1.5s linear; animation-fill-mode: forwards;` : ''}
+  ${props => props.isAnimationStart ? css`animation: 0.5s ${fadeRightXl} 1.5s linear; animation-fill-mode: forwards;` : ''}
   & > button {
     & > span > svg {
       opacity: 0;
@@ -264,6 +239,8 @@ export const Image = styled.div<{isAnimationStart: boolean}>`
   }
 `
 export const Wrapper =styled.div`
+  position: relative;
+  z-index: 1;
   @media ${device.lg}{
     position: relative;
     padding-bottom: 200px;

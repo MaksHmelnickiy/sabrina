@@ -1,17 +1,7 @@
-import styled, {css, keyframes} from 'styled-components';
+import styled, {css} from 'styled-components';
 import { device } from '../../../constants/breakpoints';
 import { DefaultBtnStyles, IButtonBaseProps } from '../styled';
-
-const animateArrowRight = keyframes`
-  from{
-    transform: rotate(90deg) translate(70px, 100px);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-`
+import { animateArrowTop } from '../../../constants/keyframes';
 
 export const Secondary = styled(DefaultBtnStyles)<IButtonBaseProps>`
 color:  ${props => props.theme.buttonSecondary};
@@ -43,7 +33,7 @@ display: flex;
   top: -17%;
   z-index:1;
   & > svg {
-    ${props => props.isAnimationStart ? css`animation: 0.5s ${animateArrowRight} 1s linear forwards;` : ''}
+    ${props => props.isAnimationStart ? css`animation: 0.5s ${animateArrowTop} 1s linear forwards;` : ''}
   }
 }
 & > span {

@@ -18,6 +18,7 @@ import {
   Part,
   PhotoItem
 } from './styled';
+import Stroke from '../../../components/Stroke';
 
 interface Props {
   id?: string;
@@ -61,7 +62,7 @@ const ChangeYour = ({id, onClick}:Props): React.ReactElement => {
           <Part isState={isState}><Fade duration={1000} bottom big cascade>{t('main.monday')}</Fade></Part>
           <Part isState={isState}><Fade duration={1000} bottom big cascade>{t('main.job')}</Fade></Part>
       </PartTitle>
-    </CustomTitle><Text><Fade delay={1700}>{t('main.we_are_boutique')}</Fade></Text>
+    </CustomTitle><Text><Fade delay={1700}>{t('main.we_are_boutique')}</Fade><Stroke delay='2s' top='-25px' left='6px'  /></Text>
     </Container>
   );
 };

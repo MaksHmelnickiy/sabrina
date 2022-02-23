@@ -1,37 +1,9 @@
-import styled, {keyframes, css} from 'styled-components';
+import styled, { css } from 'styled-components';
 import Button from '../../../components/Button';
 import Title from '../../../components/Title';
 import BgImage from '../../../assets/img/jobsPhoto.png';
 import { device } from '../../../constants/breakpoints';
-
-const animation = keyframes`
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-`;
-const animationBg = keyframes`
-  from {
-    background-position: 1000px 0;
-  }
-
-  to {
-    background-position: center top;
-  }
-`;
-const animationBox = keyframes`
-  from{
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-`;
+import { animateLayoutX, animationBg, fadeRight } from '../../../constants/keyframes';
 
 export const Container = styled.div`
   max-width: 1520px;
@@ -176,7 +148,7 @@ export const Image = styled.div<{isAnimationStart: boolean}>`
   ${props => props.isAnimationStart ? css`
     animation: 0.75s ${animationBg} 0.5s ease-in-out forwards;
     &::after {
-      animation: 0.75s ${animation} 0.5s ease-in-out 2 alternate;
+      animation: 0.75s ${animateLayoutX} 0.5s ease-in-out 2 alternate;
       background: ${props => props.theme.bgPhoto};
       position: absolute;
       width: 0;
@@ -226,7 +198,7 @@ export const DescriptionBox = styled.div<{isAnimationStart: boolean}>`
   position: relative;
   ${props => props.isAnimationStart ? css`
     opacity: 0;
-    animation: 0.5s ${animationBox} 2s linear forwards;
+    animation: 0.5s ${fadeRight} 2s linear forwards;
   ` : ''}
   & > svg {
     color: ${props => props.theme.iconDefault};

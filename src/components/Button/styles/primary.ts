@@ -1,17 +1,7 @@
-import styled, {keyframes, css} from 'styled-components';
+import styled, {css} from 'styled-components';
 import { device } from '../../../constants/breakpoints';
+import { animateArrowTop } from '../../../constants/keyframes';
 import { DefaultBtnStyles, IButtonBaseProps } from '../styled';
-
-const animateArrowTop = keyframes`
-  from{
-    transform: rotate(90deg) translate(70px, 100px);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-`
 
 export const PrimaryBtn = styled(DefaultBtnStyles)<IButtonBaseProps>`
   color:  ${props => props.theme.buttonPrimary};

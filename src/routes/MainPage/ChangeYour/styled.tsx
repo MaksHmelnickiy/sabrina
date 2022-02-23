@@ -1,28 +1,11 @@
-import styled, {keyframes, css} from 'styled-components';
+import styled, { css } from 'styled-components';
 import Button from '../../../components/Button';
 import Title  from '../../../components/Title';
 
 import { device } from '../../../constants/breakpoints';
+import { animateLayoutY, opacity } from '../../../constants/keyframes';
 
-const showTop = keyframes`
-  0 {
-    height: 0;
-  }
-  50% {
-    height: 100%;
-  }
-  100% {
-    height: 0px;
-  }
-`;
-const PhotoAnimation = keyframes`
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-`
+
 
 export const Container = styled.div`
   max-width: 1520px;
@@ -55,7 +38,7 @@ export const Photo = styled.img<{isAnimationStart: boolean}>`
   width: 100%;
   display: block;
   opacity: 0;
-  ${props => props.isAnimationStart ? css`animation: 0.1s ${PhotoAnimation} 1.8s ease-in-out; animation-fill-mode: forwards;` : ''}
+  ${props => props.isAnimationStart ? css`animation: 0.1s ${opacity} 1.8s ease-in-out; animation-fill-mode: forwards;` : ''}
 `;
 export const PhotoItem = styled.div<{isAnimationStart: boolean}>`
   position: relative;
@@ -68,7 +51,7 @@ export const PhotoItem = styled.div<{isAnimationStart: boolean}>`
     top: 0;
     height: 0;
     background: ${props => props.theme.bgPhoto};
-    ${props => props.isAnimationStart ? css`animation: 1.5s ${showTop} 1s ease-in-out; animation-fill-mode: forwards;` : ''}
+    ${props => props.isAnimationStart ? css`animation: 1.5s ${animateLayoutY} 1s ease-in-out; animation-fill-mode: forwards;` : ''}
   }
 `
 export const PhotoWrapper = styled.div`
@@ -180,7 +163,7 @@ export const Text = styled.div`
   font-size: 20px;
   line-height: 27px;
   font-family: 'Biotif';
-  max-width: 282px;
+  max-width: 260px;
   text-align: right;
   position: absolute;
   right: 0;

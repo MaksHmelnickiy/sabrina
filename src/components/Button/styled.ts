@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, {keyframes, css} from 'styled-components';
+import styled, { css } from 'styled-components';
+import { animateArrow, animateBuble } from '../../constants/keyframes';
 
 export interface IButtonBaseProps extends React.ComponentProps<'button'> {
   endIcon?: React.ReactElement;
@@ -10,27 +11,6 @@ export interface IButtonBaseProps extends React.ComponentProps<'button'> {
   arrowDark?: boolean;
   isAnimationStart: boolean;
 }
-
-const animateArrow = keyframes`
-  from{
-    transform: rotate(45deg) translate(-100px, -100px);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-`
-const animateBuble = keyframes`
-  from{
-    transform: scale(0) rotate(45deg);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1) rotate(0);
-    opacity: 1;
-  }
-`
 
 export const DefaultBtnStyles = styled.button<IButtonBaseProps>`
   display: flex;

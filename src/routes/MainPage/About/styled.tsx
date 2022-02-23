@@ -130,6 +130,7 @@ export const Text = styled.div`
   padding-bottom: 20px;
   color: ${props => props.theme.text};
   font-family: 'Biotif';
+  position: relative;
   &:nth-of-type(1){
     padding-right: 36px;
   }

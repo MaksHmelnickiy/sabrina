@@ -1,16 +1,8 @@
-import styled, {keyframes, css} from 'styled-components';
+import styled, { css } from 'styled-components';
 import Button from '../../../components/Button';
 import Title from '../../../components/Title';
 import { device } from '../../../constants/breakpoints';
-
-const showAnimate = keyframes`
-  0% {
-    opacity: 0;
-  };
-  100% {
-    opacity: 1;
-  };
-`
+import { opacity } from '../../../constants/keyframes';
 
 export const Container = styled.div`
   max-width: 1520px;
@@ -88,7 +80,7 @@ export const IconWrapper = styled.div<{isAnimationStart: string}>`
   & path:nth-of-type(2){
     opacity: 0;
     ${props => props.isAnimationStart === 'true' ? css`
-      animation: 2s ${showAnimate} 1s linear;
+      animation: 2s ${opacity} 1s linear;
       animation-fill-mode: forwards;
   `: '' }
   }
