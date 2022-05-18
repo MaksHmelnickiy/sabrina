@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -27,6 +27,12 @@
     <title>React App</title>
   </head>
   <body>
+    <script>
+      let div = document.createElement('meta');
+      div.setAttribute('name', 'viewport')
+      div.setAttribute('content', 'width=device-width,user-scalable=no')
+      document.head.append(div)
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
