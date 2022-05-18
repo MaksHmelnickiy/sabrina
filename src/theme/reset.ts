@@ -59,20 +59,6 @@ const GlobalReset = createGlobalStyle`
   .react-reveal{
     overflow: hidden;
   }
-  @media screen and (-webkit-min-device-pixel-ratio:0) { 
-    select,
-    textarea,
-    input {
-    font-size: 16px !important; 
-    }
-    }
-    @media screen and (-webkit-min-device-pixel-ratio:0) { 
-    select:focus,
-    textarea:focus,
-    input:focus {
-    font-size: 16px !important; ; 
-    }
-    }
 `;
 
 export default GlobalReset;
