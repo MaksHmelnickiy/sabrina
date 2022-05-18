@@ -59,6 +59,9 @@ const GlobalReset = createGlobalStyle`
   .react-reveal{
     overflow: hidden;
   }
+  input{
+    font-size: 16px !important;
+  }
 `;
 
 export default GlobalReset;
